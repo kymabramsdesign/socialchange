@@ -18,7 +18,7 @@
 
 <!-- Load Font from Typekit -->
 <script src="https://use.typekit.net/hlk7rqm.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>try{Typekit.load({ async: false });}catch(e){}</script>
 
 <?php wp_head(); ?>
 </head>

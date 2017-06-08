@@ -275,11 +275,38 @@ a:focus, a:hover, a:active { outline: 0; }
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+.site-content { min-height: calc(100vh - 228px); }
+
 .site-footer { background-color: #CEFBCE; height: 116px; }
 
-.the-circle { bottom: 23px; left: -34px; position: absolute; }
+@media screen and (max-width: 600px) { .site-footer { height: 132px; } }
 
-.site-content { min-height: calc(100vh - 228px); }
+.site-footer .site-info { padding-top: 28px; display: flex; justify-content: space-between; }
+
+@media screen and (max-width: 900px) { .site-footer .site-info { flex-wrap: wrap; } }
+
+@media screen and (max-width: 600px) { .site-footer .site-info { padding-top: 20px; }
+  .site-footer .site-info .footer-item { width: 100%; } }
+
+.site-footer .site-info .copy { float: left; font-family: "din-2014", sans-serif; font-weight: 600; letter-spacing: 2px; margin-left: 15px; }
+
+@media screen and (max-width: 900px) { .site-footer .site-info .copy { width: 100%; } }
+
+.site-footer .site-info .site-subtitle { font-family: "din-2014", sans-serif; margin-left: -67px; }
+
+@media screen and (max-width: 900px) { .site-footer .site-info .site-subtitle { margin-left: 15px; } }
+
+.site-footer .site-info .social { margin-right: 30px; }
+
+@media screen and (max-width: 900px) { .site-footer .site-info .social { margin-top: -25px; } }
+
+@media screen and (max-width: 600px) { .site-footer .site-info .social { margin-top: 8px; } }
+
+.site-footer .site-info .social img { height: 18px; padding-left: 18px; }
+
+@media screen and (max-width: 600px) { .site-footer .site-info .social img { height: 25px; padding-left: 14px; padding-right: 6px; } }
+
+.the-circle { float: left; margin-top: -23px; margin-left: -34px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

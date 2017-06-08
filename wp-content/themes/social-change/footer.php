@@ -13,13 +13,16 @@
 
 	</div><!-- #content -->
 
-  <img src="/wp-content/themes/social-change/img/adler-circle-116.png" alt="Adler circle" class="the-circle" />
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
+  <img src="/wp-content/themes/social-change/img/adler-circle-116.png" alt="Adler circle" class="the-circle" />
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'social-change' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'social-change' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'social-change' ), 'social-change', '<a href="https://automattic.com/" rel="designer">Brandon Trumfio for Kym Abrams Design</a>' ); ?>
+			<div class="copy footer-item">ADLER UNIVERSITY <?php echo date("Y"); ?></div>
+      <div class="site-subtitle footer-item">A Magazine for Alumni and Friends of Adler University</div>
+      <div class="social footer-item">
+        <a href="#" target="_blank"><img src="/wp-content/themes/social-change/img/facebook.png" alt="Facebook" /></a>
+        <a href="#" target="_blank"><img src="/wp-content/themes/social-change/img/twitter.png" alt="Twitter" /></a>
+        <a href="#" target="_blank"><img src="/wp-content/themes/social-change/img/pinterest.png" alt="Pinterest" /></a>
+      </div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

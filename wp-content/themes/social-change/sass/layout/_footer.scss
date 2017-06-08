@@ -1,15 +1,81 @@
-.site-footer {
-  background-color: $mint;
-  height: 116px;
-}
-
-.the-circle {
-  bottom: 23px;
-  left: -34px;
-  position: absolute;
-}
-
 // keeps footer on the bottom of the page
 .site-content {
   min-height: calc(100vh - 228px); // content minus site-header and site-footer
+}
+
+.site-footer {
+  background-color: $mint;
+  height: 116px;
+
+  @media screen and (max-width:600px) {
+    height: 132px;
+  }
+
+  .site-info {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width:900px) {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width:600px) {
+      padding-top: 20px;
+
+      .footer-item {
+        width: 100%;
+      }
+    }
+
+    .copy {
+      float: left;
+      font-family: $font__menu;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-left: 15px;
+
+      @media screen and (max-width:900px) {
+        width: 100%;
+      }
+    }
+
+    .site-subtitle {
+      font-family: $font__menu;
+      margin-left: -67px; //width of circle showing + left margin on copy - right margin on social
+
+      @media screen and (max-width:900px) {
+        margin-left: 15px;
+      }
+    }
+
+    .social {
+      margin-right: 30px;
+
+      @media screen and (max-width:900px) {
+        margin-top: -25px;
+      }
+
+      @media screen and (max-width:600px) {
+        margin-top: 8px;
+      }
+
+      img {
+        height: 18px;
+        padding-left: 18px;
+
+        @media screen and (max-width:600px) {
+          height: 25px;
+          padding-left: 14px;
+          padding-right: 6px;
+        }
+      }
+    }
+  }
+}
+
+.the-circle {
+  float: left;
+  margin-top: -23px;
+  margin-left: -34px;
 }
