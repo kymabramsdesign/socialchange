@@ -1,0 +1,66 @@
+
+// Hide on all pages except for single posts
+.a2a_floating_style {
+  display: none;
+}
+
+.single-post .a2a_floating_style {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  display: block;
+  padding: 0 !important;
+
+  @media screen and (max-width:767px) {
+    display: none;
+  }
+
+  a {
+    padding: 8px 0 !important;
+    text-align: center;
+
+    img {
+      height: 20px !important;
+      opacity: .5;
+      transition: opacity .5s ease-in-out;
+    }
+
+    &.a2a_button_email img {
+      height: 18px !important;
+    }
+
+    &:hover img {
+      opacity: .75;
+      transition: opacity .35s ease-in-out;
+    }
+  }
+}
+
+.addtoany_share_save_container.addtoany_content_bottom {
+  display: none;
+
+  @media screen and (max-width:767px) {
+    display: block;
+
+    a {
+      padding: 8px !important;
+      text-align: center;
+
+      &:first-of-type {
+        padding-left: 0 !important;
+      }
+
+      img {
+        height: 24px !important;
+        opacity: .5;
+      }
+
+      &.a2a_button_email img {
+        height: 22px !important;
+      }
+
+      &:hover img {
+        opacity: .75;
+      }
+    }
+  }
+}
