@@ -1,3 +1,29 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+h1 {
+  font-family: $font__main;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 44px;
+  margin: 0;
+}
+
+h2 {
+  font-family: $font__main;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 44px;
+  margin: 0;
+}
+
+h5 {
+  font-family: $font__menu;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 3px;
+  margin: 0;
+  text-transform: uppercase;
+}

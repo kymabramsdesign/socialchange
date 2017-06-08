@@ -108,7 +108,13 @@ body, button, input, select, textarea { color: #404040; font-family: sans-serif;
 
 h1, h2, h3, h4, h5, h6 { clear: both; }
 
-p { margin-bottom: 1.5em; }
+h1 { font-family: sans-serif; font-size: 38px; font-weight: 400; line-height: 44px; margin: 0; }
+
+h2 { font-family: sans-serif; font-size: 38px; font-weight: 400; line-height: 44px; margin: 0; }
+
+h5 { font-family: "din-2014", sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; letter-spacing: 3px; margin: 0; text-transform: uppercase; }
+
+p { font-weight: 100; margin-bottom: 1.5em; }
 
 dfn, cite, em, i { font-style: italic; }
 
@@ -189,6 +195,12 @@ a:focus, a:hover, a:active { outline: 0; }
 --------------------------------------------------------------*/
 .main-navigation { display: none; }
 
+button#responsive-menu-button { right: 21px !important; }
+
+@media screen and (min-width: 1441px) { button#responsive-menu-button { right: 2vw !important; } }
+
+@media screen and (max-width: 767px) { button#responsive-menu-button { right: 11px !important; } }
+
 .responsive-menu-item-link { font-family: "din-2014", sans-serif; letter-spacing: 1.5px; text-transform: uppercase; }
 
 .responsive-menu-subarrow { left: 174px !important; }
@@ -253,6 +265,12 @@ a:focus, a:hover, a:active { outline: 0; }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.site-content { margin: 0 30px; }
+
+@media screen and (min-width: 1441px) { .site-content { margin: 0 2.5vw; } }
+
+@media screen and (max-width: 767px) { .site-content { margin: 0 20px; } }
+
 .sticky { display: block; }
 
 .hentry { margin: 0 0 1.5em; }
@@ -264,6 +282,32 @@ a:focus, a:hover, a:active { outline: 0; }
 .page-content, .entry-content, .entry-summary { margin: 1.5em 0 0; }
 
 .page-links { clear: both; margin: 0 0 1.5em; }
+
+.header-image { background-position: center; background-repeat: no-repeat; background-size: cover; height: 633px; width: 100%; }
+
+@media screen and (max-width: 900px) { .header-image { height: 500px; } }
+
+@media screen and (max-width: 767px) { .header-image { height: 300px; } }
+
+@media screen and (max-width: 500px) { .header-image { height: 200px; } }
+
+.article-headings { text-align: center; }
+
+.article-headings h1 { color: #000; }
+
+.article-headings h2 { color: #666; }
+
+.article-headings h5 { margin-bottom: 13px; }
+
+.article-headings h5 a { text-decoration: none; color: #9e2345; }
+
+.article-content { padding-top: 52px; }
+
+.article-content p { margin-left: 18.5vw; margin-right: 18.5vw; font-size: 24px; line-height: 38px; margin-bottom: 47px; margin-top: 25px; }
+
+@media screen and (max-width: 767px) { .article-content p { margin-left: 30px; margin-right: 30px; } }
+
+.article-content .wp-caption-text { font-weight: 200; margin-bottom: 44px !important; text-align: left; }
 
 /*--------------------------------------------------------------
 ## Comments

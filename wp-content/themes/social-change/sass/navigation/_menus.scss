@@ -3,6 +3,17 @@
 }
 
 // Responsive Menu Overrides
+button#responsive-menu-button {
+	right: 21px !important;
+
+	@media screen and (min-width:1441px) {
+    right: 2vw !important;
+  }
+
+  @media screen and (max-width:767px) {
+    right: 11px !important;
+  }
+}
 
 .responsive-menu-item-link {
 	font-family: $font__menu;

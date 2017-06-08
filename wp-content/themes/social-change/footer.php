@@ -29,5 +29,8 @@
 
 <?php wp_footer(); ?>
 
+<!-- Load Custom JS file -->
+<script src="/wp-content/themes/social-change/js/custom.js"></script>
+
 </body>
 </html>

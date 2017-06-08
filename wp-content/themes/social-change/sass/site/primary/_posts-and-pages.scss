@@ -1,3 +1,15 @@
+.site-content {
+  margin: 0 30px;
+
+  @media screen and (min-width:1441px) {
+    margin: 0 2.5vw;
+  }
+
+  @media screen and (max-width:767px) {
+    margin: 0 20px;
+  }
+}
+
 .sticky {
 	display: block;
 }
@@ -25,4 +37,70 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+// Single Post Styling
+.header-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 633px;
+  width: 100%;
+
+  @media screen and (max-width:900px) {
+    height: 500px;
+  }
+
+  @media screen and (max-width:767px) {
+    height: 300px;
+  }
+
+  @media screen and (max-width:500px) {
+    height: 200px;
+  }
+}
+
+.article-headings {
+  text-align: center;
+
+  h1 {
+    color: $black;
+  }
+
+  h2 {
+    color: $grey;
+  }
+
+  h5 {
+    margin-bottom: 13px;
+
+    a {
+      text-decoration: none;
+      color: $magenta;
+    }
+  }
+}
+
+.article-content {
+  padding-top: 52px;
+
+  p {
+    margin-left: 18.5vw;
+    margin-right: 18.5vw;
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 47px;
+    margin-top: 25px;
+
+    @media screen and (max-width:767px) {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+
+  .wp-caption-text {
+    font-weight: 200;
+    margin-bottom: 44px !important;
+    text-align: left;
+  }
 }
