@@ -24,12 +24,18 @@
  	}
 }
 
-.responsive-menu-item-link {
+.responsive-menu-item-link,
+#responsive-menu-additional-content {
 	padding-left: 50px !important;
 }
 
 #responsive-menu-container {
 	padding-top: 140px !important;
+
+	@media screen and (max-width: 767px) {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
 
 	#responsive-menu li.responsive-menu-item a:hover {
 		color: $grey !important;
@@ -46,5 +52,16 @@
 	color: $black !important;
 }
 
+.responsive-menu-open {
 
+	body {
+		overflow: hidden;
+	}
 
+	.page-overlay {
+		background: rgba(0, 0, 0, 0.52);
+		height: 100vh;
+		position: fixed;
+		width: 100vw;
+	}
+}

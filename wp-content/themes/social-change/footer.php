@@ -13,6 +13,8 @@
 
 	</div><!-- #content -->
 
+  <img src="/wp-content/themes/social-change/img/adler-circle-116.png" alt="Adler circle" class="the-circle" />
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'social-change' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'social-change' ), 'WordPress' ); ?></a>

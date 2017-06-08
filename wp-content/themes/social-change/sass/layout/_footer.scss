@@ -1,0 +1,15 @@
+.site-footer {
+  background-color: $mint;
+  height: 116px;
+}
+
+.the-circle {
+  bottom: 23px;
+  left: -34px;
+  position: absolute;
+}
+
+// keeps footer on the bottom of the page
+.site-content {
+  min-height: calc(100vh - 228px); // content minus site-header and site-footer
+}

@@ -197,15 +197,21 @@ a:focus, a:hover, a:active { outline: 0; }
 
 .menu-item-has-children:last-of-type .responsive-menu-subarrow { left: 104px !important; }
 
-.responsive-menu-item-link { padding-left: 50px !important; }
+.responsive-menu-item-link, #responsive-menu-additional-content { padding-left: 50px !important; }
 
 #responsive-menu-container { padding-top: 140px !important; }
 
-#responsive-menu-container #responsive-menu li.responsive-menu-item a:hover { color: #595959 !important; }
+@media screen and (max-width: 767px) { #responsive-menu-container { max-width: 100% !important; width: 100% !important; } }
 
-.responsive-menu-submenu-open li a { background-color: #CEFBCE !important; color: #595959 !important; }
+#responsive-menu-container #responsive-menu li.responsive-menu-item a:hover { color: #666 !important; }
+
+.responsive-menu-submenu-open li a { background-color: #CEFBCE !important; color: #666 !important; }
 
 #responsive-menu-container #responsive-menu li.responsive-menu-item.responsive-menu-item-has-children ul li a:hover { background-color: #e4f7e4 !important; color: #000 !important; }
+
+.responsive-menu-open body { overflow: hidden; }
+
+.responsive-menu-open .page-overlay { background: rgba(0, 0, 0, 0.52); height: 100vh; position: fixed; width: 100vw; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -265,6 +271,15 @@ a:focus, a:hover, a:active { outline: 0; }
 .comment-content a { word-wrap: break-word; }
 
 .bypostauthor { display: block; }
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer { background-color: #CEFBCE; height: 116px; }
+
+.the-circle { bottom: 23px; left: -34px; position: absolute; }
+
+.site-content { min-height: calc(100vh - 228px); }
 
 /*--------------------------------------------------------------
 # Infinite scroll
