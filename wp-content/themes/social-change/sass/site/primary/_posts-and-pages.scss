@@ -113,25 +113,51 @@
   }
 }
 
+/* Related and Comments section */
+
+.related-comment {
+  background-color: $beige;
+  margin: 0 -30px;
+  padding-bottom: 145px;
+  padding-top: 116px;
+  margin-top: 116px;
+
+  @media screen and (min-width:1441px) {
+    margin: 0 -2.5vw;
+  }
+
+  .toggle-buttons {
+    display: flex;
+    justify-content: center;
+
+    div {
+      margin: 0 15px;
+      font-size: 20px;
+      color: $light-grey;
+      padding: 0 20px;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+
+      &.active {
+        color: #4f4f4f;
+        border-bottom: 3px solid $olive;
+      }
+
+      &:hover {
+        color: #4f4f4f;
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+}
+
 /* Related Articles Styling */
 
 .realted-articles {
-  overflow: hidden;
 
-  ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 200vw;
-
-    li {
+    .item {
       line-height: 20px;
-      margin-right: 18px;
       text-align: center;
-      width: 279px;
 
       a {
         color: $black;
@@ -161,5 +187,4 @@
         }
       }
     }
-  }
 }

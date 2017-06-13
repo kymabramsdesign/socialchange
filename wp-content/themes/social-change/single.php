@@ -28,10 +28,19 @@ get_header(); ?>
 				<?php the_field('article_content'); ?>
 			</div>
 
-			<?php
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<div class="related-comment">
+		<div class="toggle-buttons">
+			<div class="related-news active">Related News</div>
+			<div class="comments">Comments</div>
+		</div>
+
+		<?php
 			while ( have_posts() ) : the_post();
 
-				the_post_navigation();
+				 // this is the post navigation the_post_navigation();
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -42,35 +51,33 @@ get_header(); ?>
 			?>
 
 			<div class="realted-articles">
+			<?php
+			/*
+			*  Loop through related Post objects
+			*/
 
-				<?php
-					/*
-					*  Loop through related Post objects
-					*/
+			$posts = get_field('related_articles');
 
-					$posts = get_field('related_articles');
+			if( $posts ): ?>
+				<div class="owl-carousel">
+					<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+						<?php setup_postdata($post); ?>
+						<div class="item">
 
-					if( $posts ): ?>
-				    <ul>
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-				       <?php setup_postdata($post); ?>
-				       <li>
+		          <a href="<?php the_permalink(); ?>">
+		          	<?php echo get_the_post_thumbnail($p->ID, 'thumbnail'); ?></a>
+		          <h5><?php $categories = get_the_category( $p->ID );
+		          echo esc_html($categories[0]->name ); ?></h5>
+		          	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-		            <a href="<?php the_permalink(); ?>">
-		            	<?php echo get_the_post_thumbnail($p->ID, 'thumbnail'); ?></a>
-		            <h5><?php $categories = get_the_category( $p->ID );
-		            echo esc_html($categories[0]->name ); ?></h5>
-		            	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			       </div><!-- item -->
+			    <?php endforeach; ?>
+				</div><!-- owl-carousel -->
+				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 
-				       </li>
-				    <?php endforeach; ?>
-				    </ul>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-				<?php endif; ?>
 			</div><!-- related-articles -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div><!-- related-comment -->
 
 
 

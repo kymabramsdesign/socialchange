@@ -30,6 +30,7 @@
 <?php wp_footer(); ?>
 
 <!-- Load Custom JS file -->
+<script src="/wp-content/themes/social-change/js/owl.carousel.min.js"></script>
 <script src="/wp-content/themes/social-change/js/custom.js"></script>
 
 </body>

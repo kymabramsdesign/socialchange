@@ -6,6 +6,32 @@
 
 ( function( $ ) {
 
+  // Initialize and configure Owl Carousel
+
+  $('.owl-carousel').owlCarousel({
+    loop: false,
+    margin: 18,
+    stagePadding: 60,
+    nav: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        425:{
+            items:2
+        },
+        768:{
+            items:3
+        },
+        1120:{
+            items:4
+        },
+        1440:{
+            items:5
+        }
+    }
+  })
+
   // Script for the Floating Share buttons
   $(window).on('load resize', function(e) {
   var windowWidth = $(window).width();

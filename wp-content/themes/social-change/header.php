@@ -20,6 +20,9 @@
 <script src="https://use.typekit.net/hlk7rqm.js"></script>
 <script>try{Typekit.load({ async: false });}catch(e){}</script>
 
+<!-- Load Owl Carousel CSS -->
+<link rel="stylesheet" href="/wp-content/themes/social-change/css/owl.carousel.min.css">
+
 <?php wp_head(); ?>
 </head>
 
