@@ -1,5 +1,5 @@
 
-// Hide on all pages except for single posts
+/* Hide on all pages except for single posts*/
 .a2a_floating_style {
   display: none;
 }
@@ -11,25 +11,53 @@
   padding: 0 !important;
 
   @media screen and (max-width:767px) {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -50px;
+    margin-left: -10px;
+
+    &:before {
+      content: 'Share:';
+      padding-right: 15px;
+      padding-top: 6px;
+      color: $grey;
+    }
   }
 
   a {
     padding: 8px 0 !important;
     text-align: center;
 
+    @media screen and (max-width:767px) {
+      padding: 0 20px 0 0 !important;
+    }
+
     img {
       height: 20px !important;
       opacity: .5;
+      -webkit-transition: opacity .5s ease-in-out;
+      -o-transition: opacity .5s ease-in-out;
       transition: opacity .5s ease-in-out;
+
+      @media screen and (max-width:767px) {
+        height: 25px !important;
+      }
     }
 
     &.a2a_button_email img {
       height: 18px !important;
+
+      @media screen and (max-width:767px) {
+        height: 25px !important;
+        padding-top: 2px;
+      }
     }
 
     &:hover img {
       opacity: .75;
+      -webkit-transition: opacity .35s ease-in-out;
+      -o-transition: opacity .35s ease-in-out;
       transition: opacity .35s ease-in-out;
     }
   }

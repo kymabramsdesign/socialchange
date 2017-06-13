@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+  clear: both;
 }
 
 h1 {
@@ -8,6 +8,11 @@ h1 {
   font-weight: 400;
   line-height: 44px;
   margin: 0;
+
+  @media screen and (max-width:767px) {
+    font-size: 26px;
+    line-height: 34px;
+  }
 }
 
 h2 {
@@ -16,6 +21,11 @@ h2 {
   font-weight: 400;
   line-height: 44px;
   margin: 0;
+
+  @media screen and (max-width:767px) {
+    font-size: 26px;
+    line-height: 34px;
+  }
 }
 
 h5 {

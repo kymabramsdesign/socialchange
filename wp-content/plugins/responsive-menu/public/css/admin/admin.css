@@ -32,11 +32,16 @@
     text-align: center;
 }
 
+.container-fluid form.form-horizontal .selectize-input,
 .container-fluid form.form-horizontal .bootstrap-select,
 .container-fluid form.form-horizontal input,
 .container-fluid form.form-horizontal textarea {
     width: calc(100% - 75px) !important;
     display: inline-block;
+}
+
+.container-fluid form.form-horizontal input#responsive-menu-button-trigger-type-selectized {
+    width: auto !important;
 }
 
 .container-fluid form.form-horizontal .input-group input {
@@ -135,6 +140,17 @@
     margin-right: 5px;
 }
 
+.selectize-control.multi .selectize-input > div,
+.selectize-control.multi .selectize-input > div.active {
+    background: #5cb85c;
+    color: white;
+}
+
+.selectize-control.multi .selectize-input > div[data-value="mouseover"],
+.selectize-control.multi .selectize-input > div.active[data-value="mouseover"] {
+    background: #DE4B42;
+}
+
 .pro::before,
 .semi-pro::before {
     content: "PRO";
@@ -161,7 +177,7 @@
     font-weight: normal;
 }
 
-.example {
+.sub_sub_title {
     padding-top: 2px;
     color: dimgray;
     font-size: 10px;
@@ -174,6 +190,14 @@
     margin-left: 5px;
 }
 
+.option-highlight .well,
+.option-highlight,
+.table-hover > tbody > tr.option-highlight
+.table-hover > tbody > tr.option-highlight:hover,
+.table-hover > tbody > tr.option-highlight td,
+.table-hover > tbody > tr.option-highlight td:hover {
+    background-color: #ffff99 !important;
+}
 
 .draggable {
     border: 1px solid #DADADA;
