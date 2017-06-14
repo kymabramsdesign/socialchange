@@ -883,7 +883,11 @@ button#responsive-menu-button {
 }
 
 .related-comment .toggle-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 52px;
 }
@@ -895,6 +899,8 @@ button#responsive-menu-button {
   font-size: 20px;
   margin: 0 15px;
   padding: 0 20px;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
@@ -905,6 +911,8 @@ button#responsive-menu-button {
 
 .related-comment .toggle-buttons div:hover {
   color: #4f4f4f;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1026,6 +1034,10 @@ button#responsive-menu-button {
   -webkit-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-backface-visibility: hidden;
 }
 
 .related-articles .item img:hover {
@@ -1033,6 +1045,10 @@ button#responsive-menu-button {
   -webkit-transition: opacity .3s ease-in-out;
   -o-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-backface-visibility: hidden;
 }
 
 /*--------------------------------------------------------------
