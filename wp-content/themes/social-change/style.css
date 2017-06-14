@@ -491,10 +491,11 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+  border-radius: 0;
+  border: 1px solid #d8d8d8;
   color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
   padding: 3px;
+  background-color: #f9f9f9;
 }
 
 input[type="text"]:focus,
@@ -514,14 +515,20 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
   color: #111;
+  outline: none;
 }
 
 select {
-  border: 1px solid #ccc;
+  border: 1px solid #d8d8d8;
 }
 
 textarea {
+  padding: 18px;
   width: 100%;
+}
+
+textarea::placeholder {
+  color: #a5a5a5;
 }
 
 /*--------------------------------------------------------------
@@ -912,24 +919,28 @@ button#responsive-menu-button {
   }
 }
 
-.comments-area .comment-list {
+.comments-area .comment-list,
+.comments-area .comment-respond {
   list-style: none;
   margin: 0 18.5vw;
   padding: 0;
 }
 
 @media screen and (max-width: 767px) {
-  .comments-area .comment-list {
+  .comments-area .comment-list,
+  .comments-area .comment-respond {
     margin: 0;
   }
 }
 
-.comments-area .comment-list .depth-1 {
+.comments-area .comment-list .depth-1,
+.comments-area .comment-respond .depth-1 {
   border-bottom: 1px solid #d8d8d8;
   padding-bottom: 60px;
 }
 
-.comments-area .comment-list .comment-author {
+.comments-area .comment-list .comment-author,
+.comments-area .comment-respond .comment-author {
   color: #4f4f4f;
   font-weight: 700;
   margin-bottom: 0;
@@ -937,27 +948,57 @@ button#responsive-menu-button {
   text-transform: capitalize;
 }
 
-.comments-area .comment-list .comment-content p {
+.comments-area .comment-list .comment-content p,
+.comments-area .comment-respond .comment-content p {
   color: #4f4f4f;
   margin-top: 0;
 }
 
-.comments-area .comment-list .comment-content p:last-of-type {
+.comments-area .comment-list .comment-content p:last-of-type,
+.comments-area .comment-respond .comment-content p:last-of-type {
   margin-bottom: 0;
 }
 
-.comments-area .comment-list .date-reply {
+.comments-area .comment-list .date-reply,
+.comments-area .comment-respond .date-reply {
   color: #a3a3a3;
   font-weight: 300;
 }
 
-.comments-area .comment-list .date-reply a {
+.comments-area .comment-list .date-reply a,
+.comments-area .comment-respond .date-reply a {
   color: #a3a3a3;
   text-decoration: none;
 }
 
-.comments-area .comment-list .date-reply a:hover {
+.comments-area .comment-list .date-reply a:hover,
+.comments-area .comment-respond .date-reply a:hover {
   color: #9e2345;
+}
+
+.comments-area .form-submit {
+  margin-bottom: 0;
+}
+
+.comments-area .logged-in-as a,
+.comments-area .logged-in-as {
+  text-decoration: none;
+  color: #a3a3a3;
+}
+
+.comments-area .logged-in-as a:hover,
+.comments-area .logged-in-as:hover {
+  color: #9e2345;
+}
+
+.comment-form-comment {
+  margin-top: 40px;
+}
+
+.comment-reply-title,
+.comment-notes,
+.comment-form-url {
+  display: none;
 }
 
 /* Related Articles Styling */

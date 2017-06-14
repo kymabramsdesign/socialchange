@@ -160,7 +160,8 @@
     margin: 0 2.5vw;
   }
 
-  .comment-list {
+  .comment-list,
+  .comment-respond {
     list-style: none;
     margin: 0 18.5vw;
     padding: 0;
@@ -205,6 +206,30 @@
       }
     }
   }
+
+  .form-submit {
+    margin-bottom: 0;
+  }
+
+  .logged-in-as a,
+  .logged-in-as {
+    text-decoration: none;
+    color: $light-grey;
+
+    &:hover {
+      color: $magenta;
+    }
+  }
+}
+
+.comment-form-comment {
+  margin-top: 40px;
+}
+
+.comment-reply-title,
+.comment-notes,
+.comment-form-url {
+  display: none;
 }
 
 /* Related Articles Styling */
