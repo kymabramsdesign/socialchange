@@ -329,7 +329,6 @@ class Walker_Comment extends Walker {
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 					<p class="comment-author">
 						<?php
-							/* translators: %s: comment author link */
 							printf( __( '%s' ),
 								sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) )
 							);
