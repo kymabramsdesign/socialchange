@@ -531,9 +531,9 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  -webkit-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 a:focus, a:hover, a:active {
@@ -901,38 +901,93 @@ button#responsive-menu-button {
   transition: all .2s ease-in-out;
 }
 
-.comments-section {
+.comments-area {
   display: none;
+  margin: 0 30px;
+}
+
+@media screen and (min-width: 1441px) {
+  .comments-area {
+    margin: 0 2.5vw;
+  }
+}
+
+.comments-area .comment-list {
+  list-style: none;
+  margin: 0 18.5vw;
+  padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .comments-area .comment-list {
+    margin: 0;
+  }
+}
+
+.comments-area .comment-list .depth-1 {
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 60px;
+}
+
+.comments-area .comment-list .comment-author {
+  color: #4f4f4f;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+
+.comments-area .comment-list .comment-content p {
+  color: #4f4f4f;
+  margin-top: 0;
+}
+
+.comments-area .comment-list .comment-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.comments-area .comment-list .date-reply {
+  color: #a3a3a3;
+  font-weight: 300;
+}
+
+.comments-area .comment-list .date-reply a {
+  color: #a3a3a3;
+  text-decoration: none;
+}
+
+.comments-area .comment-list .date-reply a:hover {
+  color: #9e2345;
 }
 
 /* Related Articles Styling */
-.realted-articles .item {
+.related-articles .item {
   line-height: 20px;
   text-align: center;
 }
 
-.realted-articles .item a {
+.related-articles .item a {
   color: #000;
   text-decoration: none;
 }
 
-.realted-articles .item a:hover {
+.related-articles .item a:hover {
   color: #666;
 }
 
-.realted-articles .item h5 {
+.related-articles .item h5 {
   color: #9e2345;
   margin-bottom: 6px;
   margin-top: 20px;
 }
 
-.realted-articles .item img {
+.related-articles .item img {
   -webkit-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
 }
 
-.realted-articles .item img:hover {
+.related-articles .item img:hover {
   opacity: .75;
   -webkit-transition: opacity .3s ease-in-out;
   -o-transition: opacity .3s ease-in-out;

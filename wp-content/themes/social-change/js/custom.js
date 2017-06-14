@@ -44,12 +44,12 @@
       var whichSection = $(this).attr('class');
 
       $('.toggle-buttons div').toggleClass('active');
-      if ( whichSection == 'comments') {
+      if ( whichSection == 'comments-button') {
         $('.related-articles').hide();
-        $('.comments-section').fadeIn();
+        $('.comments-area').fadeIn();
       }
       else {
-        $('.comments-section').hide();
+        $('.comments-area').hide();
         $('.related-articles').fadeIn('slow');
       }
       return false;

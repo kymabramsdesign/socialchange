@@ -152,44 +152,95 @@
   }
 }
 
-.comments-section {
+.comments-area {
   display: none;
+  margin: 0 30px;
+
+  @media screen and (min-width: 1441px) {
+    margin: 0 2.5vw;
+  }
+
+  .comment-list {
+    list-style: none;
+    margin: 0 18.5vw;
+    padding: 0;
+
+    @media screen and (max-width: 767px) {
+      margin: 0;
+    }
+
+    .depth-1 {
+      border-bottom: 1px solid $rules;
+      padding-bottom: 60px;
+    }
+
+    .comment-author {
+      color: $text-grey;
+      font-weight: 700;
+      margin-bottom: 0;
+      margin-top: 40px;
+      text-transform: capitalize;
+    }
+
+    .comment-content p {
+      color: $text-grey;
+      margin-top: 0;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .date-reply {
+      color: $light-grey;
+      font-weight: 300;
+
+      a {
+        color: $light-grey;
+        text-decoration: none;
+
+        &:hover {
+          color: $magenta;
+        }
+      }
+    }
+  }
 }
 
 /* Related Articles Styling */
 
-.realted-articles {
+.related-articles {
 
-    .item {
-      line-height: 20px;
-      text-align: center;
+  .item {
+    line-height: 20px;
+    text-align: center;
 
-      a {
-        color: $black;
-        text-decoration: none;
+    a {
+      color: $black;
+      text-decoration: none;
 
-        &:hover {
-          color: $grey;
-        }
-      }
-
-      h5 {
-        color: $magenta;
-        margin-bottom: 6px;
-        margin-top: 20px;
-      }
-
-      img {
-        -webkit-transition: opacity .5s ease-in-out;
-        -o-transition: opacity .5s ease-in-out;
-        transition: opacity .5s ease-in-out;
-
-        &:hover {
-          opacity: .75;
-          -webkit-transition: opacity .3s ease-in-out;
-          -o-transition: opacity .3s ease-in-out;
-          transition: opacity .3s ease-in-out;
-        }
+      &:hover {
+        color: $grey;
       }
     }
+
+    h5 {
+      color: $magenta;
+      margin-bottom: 6px;
+      margin-top: 20px;
+    }
+
+    img {
+      -webkit-transition: opacity .5s ease-in-out;
+      -o-transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out;
+
+      &:hover {
+        opacity: .75;
+        -webkit-transition: opacity .3s ease-in-out;
+        -o-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
+      }
+    }
+  }
 }

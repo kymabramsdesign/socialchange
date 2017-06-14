@@ -34,10 +34,8 @@ get_header(); ?>
 	<div class="related-comment">
 		<div class="toggle-buttons">
 			<div class="related-news active">Related News</div>
-			<div class="comments">Comments</div>
+			<div class="comments-button">Comments</div>
 		</div>
-
-		<div class="comments-section">
 
 			<?php
 				while ( have_posts() ) : the_post();
@@ -51,7 +49,6 @@ get_header(); ?>
 
 				endwhile; // End of the loop.
 				?>
-			</div><!-- comments-section -->
 
 			<div class="related-articles">
 			<?php
