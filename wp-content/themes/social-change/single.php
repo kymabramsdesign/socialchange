@@ -37,20 +37,23 @@ get_header(); ?>
 			<div class="comments">Comments</div>
 		</div>
 
-		<?php
-			while ( have_posts() ) : the_post();
+		<div class="comments-section">
 
-				 // this is the post navigation the_post_navigation();
+			<?php
+				while ( have_posts() ) : the_post();
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+					 // this is the post navigation the_post_navigation();
 
-			endwhile; // End of the loop.
-			?>
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 
-			<div class="realted-articles">
+				endwhile; // End of the loop.
+				?>
+			</div><!-- comments-section -->
+
+			<div class="related-articles">
 			<?php
 			/*
 			*  Loop through related Post objects

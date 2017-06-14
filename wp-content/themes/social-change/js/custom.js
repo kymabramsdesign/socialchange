@@ -32,7 +32,33 @@
     }
   })
 
+  // Script for toggle of Related News and Comments
+
+  $('.toggle-buttons div').on('click', function() {
+    var active = $(this).hasClass('active');
+
+    if (active == true) {
+      // Do nothing
+    }
+    else {
+      var whichSection = $(this).attr('class');
+
+      $('.toggle-buttons div').toggleClass('active');
+      if ( whichSection == 'comments') {
+        $('.related-articles').hide();
+        $('.comments-section').fadeIn();
+      }
+      else {
+        $('.comments-section').hide();
+        $('.related-articles').fadeIn('slow');
+      }
+      return false;
+    }
+  });
+
+
   // Script for the Floating Share buttons
+
   $(window).on('load resize', function(e) {
   var windowWidth = $(window).width();
 

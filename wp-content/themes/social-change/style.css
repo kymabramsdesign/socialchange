@@ -864,10 +864,9 @@ button#responsive-menu-button {
 /* Related and Comments section */
 .related-comment {
   background-color: #f7f7f7;
-  margin: 0 -30px;
+  margin: 116px -30px 0;
   padding-bottom: 145px;
   padding-top: 116px;
-  margin-top: 116px;
 }
 
 @media screen and (min-width: 1441px) {
@@ -879,25 +878,31 @@ button#responsive-menu-button {
 .related-comment .toggle-buttons {
   display: flex;
   justify-content: center;
+  margin-bottom: 52px;
 }
 
 .related-comment .toggle-buttons div {
-  margin: 0 15px;
-  font-size: 20px;
+  border-bottom: 3px solid transparent;
   color: #a3a3a3;
-  padding: 0 20px;
   cursor: pointer;
+  font-size: 20px;
+  margin: 0 15px;
+  padding: 0 20px;
   transition: all .3s ease-in-out;
 }
 
 .related-comment .toggle-buttons div.active {
-  color: #4f4f4f;
   border-bottom: 3px solid #948932;
+  color: #4f4f4f;
 }
 
 .related-comment .toggle-buttons div:hover {
   color: #4f4f4f;
   transition: all .2s ease-in-out;
+}
+
+.comments-section {
+  display: none;
 }
 
 /* Related Articles Styling */
