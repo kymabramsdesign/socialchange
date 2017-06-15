@@ -32,6 +32,28 @@
     }
   })
 
+  // Script for toggle Search bar
+
+  $('.search').on('click', function() {
+    var visible = $('.widget-area').hasClass('visible');
+
+    if ( visible == false ) {
+      $('.widget-area').addClass('visible').slideDown('200');
+      $(this).delay('1000').css({
+        'background-image': 'url(/wp-content/themes/social-change/img/exit.png)',
+        'background-size': '90%'
+      });
+    }
+    else {
+      $('.widget-area').removeClass('visible').slideUp('fast');
+      $(this).delay('1000').css({
+        'background-image': 'url(/wp-content/themes/social-change/img/search.png)',
+        'background-size': '100%'
+      });
+    }
+  });
+
+
   // Script for toggle of Related News and Comments
 
   $('.toggle-buttons div').on('click', function() {

@@ -1,20 +1,21 @@
-// Header Styles
+/* Header Styles*/
 
 .site-branding {
   text-align: center;
 }
 
 .search {
-  height: 23px;
-  width: 23px;
   background-image: url(/wp-content/themes/social-change/img/search.png);
-  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 23px;
+  left: 30px;
   position: fixed;
   top: 25px;
-  left: 30px;
-  cursor: pointer;
+  width: 23px;
+  z-index: 9999997;
 
   @media screen and (min-width:1441px) {
     left: 2.5vw;
@@ -26,6 +27,54 @@
 }
 
 .widget-area {
-  position: absolute;
-  top: 100px;
+  background-color: $mint;
+  display: none;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999996;
+
+  .widget {
+    margin: 18px 30px 18px 70px;
+
+    @media screen and (min-width:1441px) {
+      margin: 18px 2.5vw 18px 5vw;
+    }
+
+    @media screen and (max-width:767px) {
+      margin-left: 60px;
+      margin-right: 20px;
+    }
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .search-field {
+    height: 40px;
+    width: 84%;
+
+    @media screen and (max-width:767px) {
+      width: 78%;
+    }
+    @media screen and (max-width:500px) {
+      width: 64%;
+    }
+  }
+
+  .search-submit {
+    float: right;
+    height: 40px;
+    width: 14.5%;
+
+    @media screen and (max-width:767px) {
+      width: 20.5%;
+    }
+    @media screen and (max-width:500px) {
+      padding: .6em .5em .4em;
+      width: 34%;
+    }
+  }
 }
