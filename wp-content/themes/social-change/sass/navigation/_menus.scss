@@ -3,6 +3,7 @@
 }
 
 // Responsive Menu Overrides
+
 button#responsive-menu-button {
 	right: 21px !important;
 
@@ -74,5 +75,6 @@ button#responsive-menu-button {
 		height: 100vh;
 		position: fixed;
 		width: 100vw;
+		z-index: 100;
 	}
 }
