@@ -21,6 +21,16 @@ blockquote, q {
 	}
 }
 
+.article-content blockquote {
+	margin: 0 40px;
+
+	p {
+		color: $olive;
+		font-size: 34px;
+		line-height: 42px;
+	}
+}
+
 hr {
 	background-color: $color__background-hr;
 	border: 0;

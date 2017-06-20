@@ -27,3 +27,23 @@ input[type="submit"] {
 		outline: none;
 	}
 }
+
+.article-content button {
+	background: $white;
+	border-color: $olive;
+	border-width: 2px;
+	color: $olive;
+	font-family: $font__menu;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 3px;
+  line-height: 18px;
+  margin-top: 10px;
+	padding: 13px 40px 12px;
+	text-transform: uppercase;
+
+	&:hover {
+		background: $olive;
+		color: $white;
+	}
+}

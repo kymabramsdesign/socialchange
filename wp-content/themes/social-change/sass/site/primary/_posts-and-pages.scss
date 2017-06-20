@@ -76,8 +76,17 @@
 
     a {
       text-decoration: none;
-      color: $magenta;
+      color: $olive;
     }
+  }
+
+  .date-posted {
+    color: $date;
+    font-family: $font__menu;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 16px 0 43px;
+    text-transform: uppercase;
   }
 }
 
@@ -234,6 +243,14 @@
   }
 }
 
+.depth-1 .comment-respond,
+.depth-2 .comment-respond,
+.depth-3 .comment-respond,
+.depth-4 .comment-respond,
+.depth-5 .comment-respond {
+  margin: 0;
+}
+
 .comment-form-comment {
   margin-top: 40px;
 }
@@ -262,7 +279,7 @@
     }
 
     h5 {
-      color: $magenta;
+      color: $olive;
       margin-bottom: 6px;
       margin-top: 20px;
     }

@@ -35,7 +35,7 @@
 
     img {
       height: 20px !important;
-      opacity: .5;
+      opacity: .3;
       -webkit-transition: opacity .5s ease-in-out;
       -o-transition: opacity .5s ease-in-out;
       transition: opacity .5s ease-in-out;
@@ -55,7 +55,7 @@
     }
 
     &:hover img {
-      opacity: .75;
+      opacity: .7;
       -webkit-transition: opacity .35s ease-in-out;
       -o-transition: opacity .35s ease-in-out;
       transition: opacity .35s ease-in-out;
