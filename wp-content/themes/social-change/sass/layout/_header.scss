@@ -2,6 +2,24 @@
 
 .site-branding {
   text-align: center;
+
+  img {
+    padding: 44px 0 0;
+    width: 263px;
+  }
+
+  hr {
+    background-color: transparent;
+    margin: 36px auto 68px;
+    width: 47px;
+    border-bottom: 1px dotted $black;
+  }
+
+  h5 {
+    color: $black;
+    font-weight: 500;
+    margin: 22px 0 37px;
+  }
 }
 
 .search {
@@ -13,7 +31,7 @@
   height: 23px;
   left: 30px;
   position: fixed;
-  top: 25px;
+  top: 62px;
   width: 23px;
   z-index: 9999997;
 
@@ -37,10 +55,10 @@
   z-index: 9999996;
 
   .widget {
-    margin: 18px 30px 18px 70px;
+    margin: 48px 30px 24px 70px;
 
     @media screen and (min-width:1441px) {
-      margin: 18px 2.5vw 18px 5vw;
+      margin: 48px 2.5vw 24px 5vw;
     }
 
     @media screen and (max-width:767px) {
@@ -54,7 +72,7 @@
   }
 
   .search-field {
-    height: 40px;
+    height: 50px;
     width: 84%;
 
     @media screen and (max-width:767px) {
@@ -67,7 +85,7 @@
 
   .search-submit {
     float: right;
-    height: 40px;
+    height: 50px;
     width: 14.5%;
 
     @media screen and (max-width:767px) {

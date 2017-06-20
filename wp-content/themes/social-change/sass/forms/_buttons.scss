@@ -2,13 +2,17 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid $rules;
-	border-radius: 0;
 	background: $beige;
+	border-radius: 0;
+	border: 2px solid $rules;
 	color: $light-grey;
-	@include font-size(1);
-	line-height: 1;
-	padding: .6em 1em .4em;
+	font-family: $font__menu;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 18px;
+	padding: 13px 40px 12px;
+	text-transform: uppercase;
 	-webkit-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -31,16 +35,8 @@ input[type="submit"] {
 .article-content button {
 	background: $white;
 	border-color: $olive;
-	border-width: 2px;
 	color: $olive;
-	font-family: $font__menu;
-	font-size: 14px;
-	font-weight: 700;
-	letter-spacing: 3px;
-  line-height: 18px;
   margin-top: 10px;
-	padding: 13px 40px 12px;
-	text-transform: uppercase;
 
 	&:hover {
 		background: $olive;

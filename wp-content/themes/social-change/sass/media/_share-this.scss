@@ -10,6 +10,10 @@
   display: block;
   padding: 0 !important;
 
+  @media screen and (min-width:1441px) {
+    left: 2.5vw !important;
+  }
+
   @media screen and (max-width:767px) {
     display: -webkit-box;
     display: -ms-flexbox;
