@@ -1309,23 +1309,29 @@ button#responsive-menu-button {
 ## Header
 --------------------------------------------------------------*/
 /* Header Styles*/
-.site-branding {
+.site-header {
+  position: fixed;
+  width: 100%;
+}
+
+.site-header .site-branding {
+  background-color: rgba(255, 255, 255, 0.96);
   text-align: center;
 }
 
-.site-branding img {
+.site-header .site-branding img {
   padding: 44px 0 0;
   width: 263px;
 }
 
-.site-branding hr {
+.site-header .site-branding hr {
   background-color: transparent;
   margin: 36px auto 68px;
   width: 47px;
   border-bottom: 1px dotted #000;
 }
 
-.site-branding h5 {
+.site-header .site-branding h5 {
   color: #000;
   font-weight: 500;
   margin: 22px 0 37px;
@@ -1423,6 +1429,10 @@ button#responsive-menu-button {
     padding: .6em .5em .4em;
     width: 34%;
   }
+}
+
+.content-area {
+  margin-top: 187px;
 }
 
 /*--------------------------------------------------------------
