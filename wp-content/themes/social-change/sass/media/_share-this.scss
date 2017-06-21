@@ -4,11 +4,13 @@
   display: none;
 }
 
+
 .single-post .a2a_floating_style {
   background-color: transparent !important;
   border-radius: 0 !important;
   display: block;
   padding: 0 !important;
+  z-index: 998 !important;
 
   @media screen and (min-width:1441px) {
     left: 2.5vw !important;

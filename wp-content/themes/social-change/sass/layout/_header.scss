@@ -35,6 +35,7 @@
   }
 
   &.scrolled {
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.1);
     box-shadow: 0 0 10px rgba(0,0,0,.1);
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
@@ -92,6 +93,7 @@
 
 .widget-area {
   background-color: $mint;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,.4);
   box-shadow: 0 0 20px rgba(0,0,0,.4);
   display: none;
   left: 0;
@@ -200,6 +202,10 @@
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   width: 100%;
+
+  @media screen and (min-width:1441px) {
+      margin-left: -2.5vw;
+    }
 }
 
 // Styles for the single blog post headers
@@ -236,11 +242,7 @@
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    z-index: 9999996;
-
-    @media screen and (min-width:1441px) {
-      margin-left: -2.5vw;
-    }
+    z-index: 1000;
 
     .left-item,
     .right-item {
@@ -305,7 +307,7 @@
   }
 
   .preview {
-    background-color: $white;
+    background-color: transparent;
     position: absolute;
     top: 74px;
     text-align: center;
@@ -313,14 +315,20 @@
     z-index: 9999999;
 
     &.next-image {
+      -webkit-box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
       box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
       right: 0;
+      -webkit-transform: translateX(300px);
+      -ms-transform: translateX(300px);
       transform: translateX(300px);
     }
 
     &.previous-image {
+      -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
       left: 0;
+      -webkit-transform: translateX(-300px);
+      -ms-transform: translateX(-300px);
       transform: translateX(-300px);
     }
 
@@ -329,11 +337,21 @@
     }
 
     p {
-      margin: 2px 10px 12px;
-      font-size: 15px;
-      line-height: 21px;
       color: $black;
+      font-size: 15px;
       font-weight: 500;
+      line-height: 21px;
+      margin: 2px 10px 12px;
     }
   }
+}
+
+.blog-overlay {
+  background: rgba(255,255,255,.6);
+  display: none;
+  height: 100vh;
+  margin-top: -187px;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
 }
