@@ -1532,9 +1532,9 @@ button#responsive-menu-button {
   margin-left: -30px;
   padding: 0 80px;
   position: fixed;
-  -webkit-transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
-  transform: translateY(-100px);
+  -webkit-transform: translateY(-300px);
+  -ms-transform: translateY(-300px);
+  transform: translateY(-300px);
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -1625,11 +1625,6 @@ button#responsive-menu-button {
     font-size: 11px;
     width: 108px;
   }
-}
-
-.single-post.scrolled .scrolled-header .left-item:hover a,
-.single-post.scrolled .scrolled-header .right-item:hover a {
-  color: #000;
 }
 
 .single-post.scrolled .scrolled-header .center-item {
