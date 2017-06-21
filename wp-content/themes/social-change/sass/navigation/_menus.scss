@@ -75,6 +75,19 @@ button#responsive-menu-button {
 		height: 100vh;
 		position: fixed;
 		width: 100vw;
-		z-index: 100;
+		z-index: 1001;
+	}
+}
+
+.responsive-menu-button {
+	-webkit-transition: top .3s ease-in-out !important;
+	-o-transition: top .3s ease-in-out !important;
+	transition: top .3s ease-in-out !important;
+
+	&.scrolled {
+		top: 12px !important;
+		-webkit-transition: top .3s ease-in-out !important;
+	  -o-transition: top .3s ease-in-out !important;
+	  transition: top .3s ease-in-out !important;
 	}
 }

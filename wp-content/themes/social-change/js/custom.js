@@ -106,11 +106,11 @@
       $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop();
 
-        var topDistance = ($('.article-content p').offset().top) - 58;
+        var topDistance = ($('.article-content p').offset().top) - 94;
 
         if ( (topDistance) < scrollTop ) {
           $('.a2a_floating_style').css({
-            'top' : '58px',
+            'top' : '94px',
             'position' : 'fixed'
           });
         }
@@ -124,5 +124,25 @@
       });
     }
   });
+
+  // Script for Header Resize on Scroll
+
+  $(window).scroll(function() {
+    var scrollPosition = $(this).scrollTop();
+    var headerImage = $('.content-area').offset();
+    headerImage = headerImage.top + 53;
+
+    if ( scrollPosition >= headerImage ) {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
+      // alert(headerImage);
+    }
+    else {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
+    }
+  });
+
+  // Script for Header reformat on Single Blog post
+
+
 
 } )( jQuery );

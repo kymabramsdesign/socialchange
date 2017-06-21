@@ -9,6 +9,14 @@
 
 get_header(); ?>
 
+	<div class="scrolled-header">
+		<div class="left-item scrolly"><?php echo previous_post('%', $link = 'PREVIOUS STORY', 'PREVIOUS STORY', TRUE) ?></div>
+		<div class="center-item scrolly"><h4><?php echo get_the_title( $post_id ); ?><?php if( $subhead = get_field('post_subheader') ){ ?>
+					<span class="grey"><?php the_field('post_subheader'); ?></span>
+				<?php } ?></h4></div>
+		<div class="right-item scrolly"><?php echo next_post('%', $link = 'NEXT STORY', 'NEXT STORY', TRUE ) ?></div>
+	</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -27,6 +35,7 @@ get_header(); ?>
 			<div class="article-content">
 				<?php the_field('article_content'); ?>
 			</div>
+			<div class="navigation"><p><?php posts_nav_link(); ?></p></div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
@@ -37,10 +46,12 @@ get_header(); ?>
 			<div class="comments-button">Comments</div>
 		</div>
 
+
 			<?php
 				while ( have_posts() ) : the_post();
 
-					 // this is the post navigation the_post_navigation();
+					 // the_post_navigation();
+
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
