@@ -142,6 +142,29 @@
 
   // Script for Header reformat on Single Blog post
 
+  $('.right-item, .preview.next-image').on('mouseover', function() {
+    $('.preview.next-image').css({
+      'transform': 'translateX(0)',
+      'transition': 'all .3s ease-in-out'
+    });
+  })
+  .on('mouseout', function() {
+    $('.preview.next-image').css({
+      'transform': 'translateX(300px)'
+    });
+  });
+
+  $('.left-item, .preview.previous-image').on('mouseover', function() {
+    $('.preview.previous-image').css({
+      'transform': 'translateX(0)',
+      'transition': 'all .3s ease-in-out'
+    });
+  })
+  .on('mouseout', function() {
+    $('.preview.previous-image').css({
+      'transform': 'translateX(-300px)'
+    });
+  });
 
 
 } )( jQuery );

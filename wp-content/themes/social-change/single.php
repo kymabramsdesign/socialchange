@@ -10,12 +10,37 @@
 get_header(); ?>
 
 	<div class="scrolled-header">
-		<div class="left-item scrolly"><?php echo previous_post('%', $link = 'PREVIOUS STORY', 'PREVIOUS STORY', TRUE) ?></div>
-		<div class="center-item scrolly"><h4><?php echo get_the_title( $post_id ); ?><?php if( $subhead = get_field('post_subheader') ){ ?>
+		<div class="left-item scrolly">
+			<?php echo previous_post('%', $link = 'PREVIOUS STORY', 'PREVIOUS STORY', TRUE) ?>
+		</div><!-- .left-item -->
+
+		<div class="center-item scrolly">
+			<h4><?php echo get_the_title( $post_id ); ?>
+				<?php if( $subhead = get_field('post_subheader') ){ ?>
 					<span class="grey"><?php the_field('post_subheader'); ?></span>
-				<?php } ?></h4></div>
-		<div class="right-item scrolly"><?php echo next_post('%', $link = 'NEXT STORY', 'NEXT STORY', TRUE ) ?></div>
-	</div>
+				<?php } ?>
+			</h4>
+		</div><!-- .center-item -->
+
+		<div class="right-item scrolly">
+			<?php echo next_post('%', $link = 'NEXT STORY', 'NEXT STORY', TRUE ) ?>
+		</div><!-- .right-item -->
+
+		<div class="preview previous-image" style="position:absolute;">
+			<?php
+			$prevPost = get_previous_post();
+			$prevthumbnail = get_the_post_thumbnail($prevPost->ID, array(252,252) );?>
+			<?php previous_post_link('%link',"$prevthumbnail  <p>%title</p>", FALSE); ?>
+		</div><!-- .previous-image -->
+
+		<div class="preview next-image" style="position:absolute;">
+			<?php $nextPost = get_next_post();
+			$nextThumbnail = get_the_post_thumbnail( $nextPost->ID, array(252,252) );
+			echo next_post_link( '%link',"$nextThumbnail  <p>%title</p>", FALSE ); ?>
+		</div><!-- .next-image -->
+
+	</div><!-- .scrolled-header -->
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
