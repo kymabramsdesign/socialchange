@@ -1327,7 +1327,6 @@ button#responsive-menu-button {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.97);
 }
 
 .site-header .site-branding {
@@ -1521,8 +1520,15 @@ button#responsive-menu-button {
 }
 
 .scrolled-header {
-  top: -200px;
-  transform: scale(0);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -30px;
+  padding: 0 80px;
+  position: fixed;
+  transform: translateY(-100px);
+  transition: all .3s ease-in-out;
+  width: 100%;
 }
 
 .single-post.scrolled .site-header {
@@ -1531,22 +1537,14 @@ button#responsive-menu-button {
   height: 74px;
 }
 
-.single-post.scrolled .site-header .site-branding {
+.single-post.scrolled .site-header .site-branding img {
   opacity: 0;
 }
 
 .single-post.scrolled .scrolled-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-left: -30px;
-  padding: 0 80px;
-  position: fixed;
+  transform: translateY(0);
   transition: all .3s ease-in-out;
-  width: 100%;
   z-index: 1002;
-  top: 0;
-  transform: scale(1);
 }
 
 @media screen and (min-width: 1441px) {

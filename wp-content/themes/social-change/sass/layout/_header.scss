@@ -4,7 +4,6 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(255,255,255,.97);
 
   .site-branding {
     background-color: rgba(255,255,255,.97);
@@ -182,12 +181,15 @@
 }
 
 .scrolled-header {
-  // display: none;
-  // -webkit-transition: all .3s ease-in-out;
-  // -o-transition: all .3s ease-in-out;
-  // transition: all .3s ease-in-out;
-  top: -200px;
-  transform: scale(0);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -30px;
+  padding: 0 80px;
+  position: fixed;
+  transform: translateY(-100px);
+  transition: all .3s ease-in-out;
+  width: 100%;
 }
 
 // Styles for the single blog post headers
@@ -197,23 +199,15 @@
     transition: all .5s ease-in-out;
     height: 74px;
 
-    .site-branding {
+    .site-branding img {
       opacity: 0;
     }
   }
 
   .scrolled-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-left: -30px;
-    padding: 0 80px;
-    position: fixed;
+    transform: translateY(0);
     transition: all .3s ease-in-out;
-    width: 100%;
     z-index: 1002;
-    top: 0;
-    transform: scale(1);
 
     @media screen and (min-width:1441px) {
       margin-left: -2.5vw;
