@@ -685,7 +685,7 @@ button#responsive-menu-button {
   height: 100vh;
   position: fixed;
   width: 100vw;
-  z-index: 1001;
+  z-index: 1005;
 }
 
 .responsive-menu-button {
@@ -1520,29 +1520,57 @@ button#responsive-menu-button {
 }
 
 .scrolled-header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-left: -30px;
   padding: 0 80px;
   position: fixed;
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
   transform: translateY(-100px);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   width: 100%;
 }
 
 .single-post.scrolled .site-header {
+  backface-visibility: hidden;
   background-color: rgba(255, 255, 255, 0.97);
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  height: 74px;
+}
+
+.single-post.scrolled .site-header .site-branding {
   height: 74px;
 }
 
 .single-post.scrolled .site-header .site-branding img {
   opacity: 0;
+  -webkit-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  transform: translateY(-200px);
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  width: 263px;
 }
 
 .single-post.scrolled .scrolled-header {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   z-index: 1002;
 }
@@ -1555,15 +1583,21 @@ button#responsive-menu-button {
 
 .single-post.scrolled .scrolled-header .left-item,
 .single-post.scrolled .scrolled-header .right-item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-left: 2px solid #eaeaea;
   border-right: 2px solid #eaeaea;
-  height: 74px;
-  text-align: center;
-  width: 172px;
-  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  height: 74px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 0 10px;
+  text-align: center;
+  width: 172px;
 }
 
 .single-post.scrolled .scrolled-header .left-item a,

@@ -134,7 +134,6 @@
 
     if ( scrollPosition >= headerImage ) {
       $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
-      // alert(headerImage);
     }
     else {
       $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
