@@ -137,13 +137,6 @@
     }
     else {
       contentArea = contentArea.top + 53;
-    }
-
-    if ( scrollPosition >= contentArea ) {
-      $('.site-header, .single-post').addClass('scrolled');
-    }
-    else {
-      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
 
       // Script for Header reformat on Single Blog post
 
@@ -190,6 +183,13 @@
          $('.left-item a, .right-item a').css('color', '#727272');
          $('.preview').css('background', 'transparent');
       });
+    }
+
+    if ( scrollPosition >= contentArea ) {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
+    }
+    else {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
     }
   });
 

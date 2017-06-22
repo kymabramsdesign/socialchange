@@ -1315,6 +1315,67 @@ button#responsive-menu-button {
 }
 
 /*--------------------------------------------------------------
+## Post listing pages
+--------------------------------------------------------------*/
+h1 {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+}
+
+.article-container .article-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1380px;
+  padding: 0;
+  text-align: center;
+}
+
+.article-container .article-list .item {
+  margin: 0 20px 133px;
+  transition: all .4s ease-in-out;
+  width: 29%;
+}
+
+@media screen and (max-width: 1024px) {
+  .article-container .article-list .item {
+    margin: 0 10px 133px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .article-container .article-list .item {
+    width: 46%;
+  }
+}
+
+.article-container .article-list .item h5 {
+  color: #948932;
+  margin-bottom: 12px;
+  margin-top: 22px;
+}
+
+.article-container .article-list .item .title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .article-container .article-list .item .title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 .comment-content a {
@@ -1329,12 +1390,12 @@ button#responsive-menu-button {
 ## Footer
 --------------------------------------------------------------*/
 .site-content {
-  min-height: calc(100vh - 288px);
+  min-height: calc(100vh - 116px);
 }
 
 @media screen and (max-width: 610px) {
   .site-content {
-    min-height: calc(100vh - 282px);
+    min-height: calc(100vh - 111px);
   }
 }
 

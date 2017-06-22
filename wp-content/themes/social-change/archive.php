@@ -12,36 +12,31 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
+		<h1><?php echo the_archive_title('',''); ?></h1>
+		<div class="article-container">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			/*
+			*  Loop through related Post objects
+			*/
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+			if( $posts ): ?>
+				<div class="article-list">
+					<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+						<?php setup_postdata($post); ?>
+						<div class="item">
 
-			endwhile;
+		          <a href="<?php the_permalink(); ?>">
+		          	<?php echo get_the_post_thumbnail($p->ID, 'article-listing'); ?></a>
+		          <h5><?php $categories = get_the_category( $p->ID );
+		          echo esc_html($categories[0]->name ); ?></h5>
+		          	<a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+			       </div><!-- item -->
+			    <?php endforeach; ?>
+				</div><!-- owl-carousel -->
+				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
+			</div><!-- .article-content -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

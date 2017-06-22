@@ -1,9 +1,9 @@
 // keeps footer on the bottom of the page
 .site-content {
-  min-height: calc(100vh - 288px); // content minus site-header and site-footer(plus footer top-margin)
+  min-height: calc(100vh - 116px);
 
   @media screen and (max-width:610px) {
-    min-height: calc(100vh - 282px); // content minus site-header and site-footer(plus footer top-margin)
+    min-height: calc(100vh - 111px);
   }
 }
 

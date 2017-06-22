@@ -1,0 +1,57 @@
+// Post Listings Page Styling
+
+h1 {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+
+  .article-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1380px;
+    padding: 0;
+    text-align: center;
+
+    .item {
+      margin: 0 20px 133px;
+      transition: all .4s ease-in-out;
+      width: 29%;
+
+      @media screen and (max-width: 1024px) {
+        margin: 0 10px 133px;
+      }
+
+      @media screen and (max-width: 900px) {
+        width: 46%;
+      }
+
+      img {
+
+      }
+
+      h5 {
+        color: $olive;
+        margin-bottom: 12px;
+        margin-top: 22px;
+      }
+
+      .title {
+        color: $black;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        text-decoration: none;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

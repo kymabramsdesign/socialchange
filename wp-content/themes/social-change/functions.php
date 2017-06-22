@@ -141,3 +141,34 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+// Custom Functions for Social Change Theme
+function my_theme_archive_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+
+    return $title;
+}
+
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+
+// Adding new thumbnail sizes
+add_theme_support( 'post-thumbnails' );
+
+// Add featured image sizes
+function add_custom_sizes() {
+add_image_size( 'article-listing', 340, 250, true ); // width, height, crop
+}
+add_action('after_setup_theme','add_custom_sizes');
+
