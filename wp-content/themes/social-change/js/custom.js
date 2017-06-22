@@ -133,14 +133,14 @@
     var contentArea = $('.content-area').offset();
 
     if ( screenWidth <= 767 ) {
-      contentArea = contentArea.top - 53 ;
+      contentArea = contentArea.top - 180 ;
     }
     else {
       contentArea = contentArea.top + 53;
     }
 
     if ( scrollPosition >= contentArea ) {
-      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
+      $('.site-header, .single-post').addClass('scrolled');
     }
     else {
       $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');

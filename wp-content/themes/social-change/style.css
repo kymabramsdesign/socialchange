@@ -684,6 +684,7 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   button#responsive-menu-button {
     right: 11px !important;
+    top: 12px !important;
   }
 }
 
@@ -1491,12 +1492,25 @@ button#responsive-menu-button {
   text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+  .site-header .site-branding {
+    background-color: #fff;
+  }
+}
+
 .site-header .site-branding img {
   padding: 44px 0 0;
   width: 263px;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .site-header .site-branding img {
+    padding: 91px 50px 0;
+    width: 100%;
+  }
 }
 
 .site-header .site-branding hr {
@@ -1531,6 +1545,14 @@ button#responsive-menu-button {
   transition: all .3s ease-in-out;
 }
 
+@media screen and (max-width: 767px) {
+  .site-header.scrolled .site-branding img {
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+}
+
 .site-header.scrolled .site-branding hr {
   display: none;
   -webkit-transition: all .3s ease-in-out;
@@ -1563,6 +1585,7 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .search {
+    top: 26px;
     left: 20px;
   }
 }
@@ -1601,8 +1624,7 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .widget-area .widget {
-    margin-left: 60px;
-    margin-right: 20px;
+    margin: 15px 20px 15px 60px;
   }
 }
 
@@ -1620,13 +1642,9 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .widget-area .search-field {
-    width: 78%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .widget-area .search-field {
-    width: 64%;
+    height: 46px;
+    margin-bottom: 15px;
+    width: 100%;
   }
 }
 
@@ -1642,14 +1660,9 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .widget-area .search-submit {
-    width: 20.5%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .widget-area .search-submit {
-    padding: 13px 0 12px;
-    width: 34%;
+    height: 46px;
+    margin-bottom: 15px;
+    width: 100%;
   }
 }
 
@@ -1676,6 +1689,12 @@ button#responsive-menu-button {
 
 .content-area {
   margin-top: 187px;
+}
+
+@media screen and (max-width: 767px) {
+  .content-area {
+    margin-top: 223px;
+  }
 }
 
 .scrolled-header {
