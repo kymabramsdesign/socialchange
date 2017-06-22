@@ -17,6 +17,10 @@ input[type="submit"] {
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 
+  @media screen and (max-width:767px) {
+    width: 100%;
+  }
+
 	&:hover {
 		border-color: $light-grey;
 		color: $grey;

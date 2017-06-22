@@ -24,10 +24,20 @@ blockquote, q {
 .article-content blockquote {
 	margin: 0 40px;
 
+	@media screen and (max-width:767px) {
+		margin: 30px 0;
+	}
+
 	p {
 		color: $olive;
 		font-size: 32px;
 		line-height: 42px;
+
+		@media screen and (max-width:767px) {
+			font-size: 22px;
+			font-weight: 400;
+			line-height: 30px;
+		}
 	}
 }
 

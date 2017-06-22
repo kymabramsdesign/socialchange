@@ -45,7 +45,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 
 		<main id="main" class="site-main" role="main">
-<div class="blog-overlay"></div>
+<!-- <div class="blog-overlay"></div> -->
 			<div class="article-headings">
 				<h5><?php echo get_the_tag_list( $post_id ); ?></h5>
 				<h1><?php echo get_the_title( $post_id ); ?></h1>

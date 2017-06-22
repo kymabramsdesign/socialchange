@@ -102,7 +102,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 dfn {
@@ -313,6 +313,13 @@ h3 {
   font-weight: 500;
 }
 
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
 h5 {
   font-family: "din-2014", sans-serif;
   font-size: 13px;
@@ -404,10 +411,24 @@ blockquote:before, blockquote:after, q:before, q:after {
   margin: 0 40px;
 }
 
+@media screen and (max-width: 767px) {
+  .article-content blockquote {
+    margin: 30px 0;
+  }
+}
+
 .article-content blockquote p {
   color: #948932;
   font-size: 32px;
   line-height: 42px;
+}
+
+@media screen and (max-width: 767px) {
+  .article-content blockquote p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+  }
 }
 
 hr {
@@ -433,6 +454,13 @@ li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
+}
+
+@media screen and (max-width: 767px) {
+  li > ul,
+  li > ol {
+    margin: 0;
+  }
 }
 
 dt {
@@ -481,6 +509,15 @@ input[type="submit"] {
   -webkit-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    width: 100%;
+  }
 }
 
 button:hover,
@@ -539,6 +576,28 @@ textarea {
   letter-spacing: .5px;
   padding: 4px 15px 3px;
   background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  textarea {
+    padding: 10px 15px 9px;
+    width: 100%;
+  }
 }
 
 input[type="text"]:focus,
@@ -918,6 +977,14 @@ button#responsive-menu-button {
   margin-top: 76px;
 }
 
+@media screen and (max-width: 767px) {
+  .article-content h3 {
+    margin-bottom: 10px;
+    margin-top: 40px;
+    text-align: left;
+  }
+}
+
 .article-content p {
   margin-left: 18.5vw;
   margin-right: 18.5vw;
@@ -929,11 +996,13 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .article-content p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
     margin-bottom: 27px;
     margin-left: 0;
     margin-right: 0;
+    margin-top: 15px;
   }
 }
 
@@ -966,7 +1035,9 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .related-comment {
-    margin: 116px -20px 0;
+    margin: 80px -20px 0;
+    padding-bottom: 80px;
+    padding-top: 74px;
   }
 }
 
@@ -978,6 +1049,13 @@ button#responsive-menu-button {
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 52px;
+}
+
+@media screen and (max-width: 767px) {
+  .related-comment .toggle-buttons {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
 }
 
 .related-comment .toggle-buttons div {
@@ -993,9 +1071,22 @@ button#responsive-menu-button {
   transition: all .3s ease-in-out;
 }
 
+@media screen and (max-width: 767px) {
+  .related-comment .toggle-buttons div {
+    font-size: 18px;
+    padding: 0 5px;
+  }
+}
+
 .related-comment .toggle-buttons div.active {
   border-bottom: 3px solid #948932;
   color: #4f4f4f;
+}
+
+@media screen and (max-width: 767px) {
+  .related-comment .toggle-buttons div.active {
+    border-bottom: 2px solid #948932;
+  }
 }
 
 .related-comment .toggle-buttons div:hover {
@@ -1008,6 +1099,12 @@ button#responsive-menu-button {
 .comments-area {
   display: none;
   margin: 0 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .comments-area {
+    margin: 0 20px;
+  }
 }
 
 @media screen and (min-width: 1441px) {
@@ -1148,14 +1245,68 @@ button#responsive-menu-button {
   -webkit-backface-visibility: hidden;
 }
 
+.cycloneslider-template-default {
+  margin-bottom: 54px;
+  margin-top: 49px;
+}
+
+@media screen and (max-width: 767px) {
+  .cycloneslider-template-default {
+    margin: 40px 0;
+  }
+  .cycloneslider-template-default .cycloneslider-caption {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+  .cycloneslider-template-default .cycloneslider-caption-title {
+    display: none !important;
+  }
+}
+
 .cycloneslider-template-default .cycloneslider-caption-description {
   font-size: 16px !important;
   font-weight: 300;
 }
 
-.cycloneslider-template-default {
-  margin-bottom: 54px;
-  margin-top: 49px;
+@media screen and (max-width: 767px) {
+  .cycloneslider-template-default .cycloneslider-caption-description {
+    font-size: 14px !important;
+    line-height: 16px !important;
+    padding: 8px 10px 8px !important;
+  }
+}
+
+.cycloneslider-template-default .cycloneslider-pager {
+  bottom: -35px !important;
+  right: 8px !important;
+  top: inherit !important;
+}
+
+@media screen and (max-width: 767px) {
+  .cycloneslider-template-default .cycloneslider-pager {
+    position: relative !important;
+    bottom: -18px !important;
+    right: initial !important;
+    text-align: center;
+  }
+}
+
+.cycloneslider-template-default .cycloneslider-pager span {
+  background: #d8d8d8 !important;
+  height: 10px !important;
+  margin: 0 0 0 15px !important;
+  width: 10px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .cycloneslider-template-default .cycloneslider-pager span {
+    height: 13px !important;
+    margin: 0 9px !important;
+    width: 13px !important;
+  }
+}
+
+.cycloneslider-template-default .cycloneslider-pager span.cycle-pager-active {
+  background: #948932 !important;
 }
 
 .cycloneslider-template-default.cycloneslider-width-full .cycloneslider-slide img {
@@ -1248,6 +1399,12 @@ button#responsive-menu-button {
   .site-footer .site-info .site-subtitle {
     margin-left: 15px;
     margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-footer .site-info .site-subtitle {
+    line-height: 22px;
   }
 }
 
@@ -1651,6 +1808,12 @@ button#responsive-menu-button {
 
 .single-post.scrolled .scrolled-header .center-item h4 .grey {
   color: #666;
+}
+
+@media screen and (max-width: 1000px) {
+  .single-post.scrolled .scrolled-header .center-item h4 .grey {
+    display: none;
+  }
 }
 
 .single-post.scrolled .preview {

@@ -21,6 +21,11 @@ textarea {
   padding: 4px 15px 3px;
   background-color: #f9f9f9;
 
+  @media screen and (max-width:767px) {
+    padding: 10px 15px 9px;
+    width: 100%;
+  }
+
 	&:focus {
 		color: $color__text-input-focus;
     outline: none;

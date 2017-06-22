@@ -86,7 +86,7 @@
 
     if (windowWidth <= 767 ) {
       var contentPosition = $('.article-content p').offset();
-      var offset = contentPosition.top;
+      var offset = contentPosition.top + 2;
 
       $('.a2a_floating_style').css({
         'top' : offset,
@@ -128,11 +128,18 @@
   // Script for Header Resize on Scroll
 
   $(window).scroll(function() {
+    var screenWidth = $(this).width();
     var scrollPosition = $(this).scrollTop();
-    var headerImage = $('.content-area').offset();
-    headerImage = headerImage.top + 53;
+    var contentArea = $('.content-area').offset();
 
-    if ( scrollPosition >= headerImage ) {
+    if ( screenWidth <= 767 ) {
+      contentArea = contentArea.top - 53 ;
+    }
+    else {
+      contentArea = contentArea.top + 53;
+    }
+
+    if ( scrollPosition >= contentArea ) {
       $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
     }
     else {

@@ -95,6 +95,12 @@
 
   h3 {
     margin-top: 76px;
+
+    @media screen and (max-width:767px) {
+      margin-bottom: 10px;
+      margin-top: 40px;
+      text-align: left;
+    }
   }
 
   p {
@@ -106,11 +112,13 @@
     margin-top: 25px;
 
     @media screen and (max-width:767px) {
-      font-size: 18px;
-      line-height: 30px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
       margin-bottom: 27px;
       margin-left: 0;
       margin-right: 0;
+      margin-top: 15px;
     }
   }
 
@@ -139,7 +147,9 @@
   }
 
   @media screen and (max-width:767px) {
-    margin: 116px -20px 0;
+    margin: 80px -20px 0;
+    padding-bottom: 80px;
+    padding-top: 74px;
   }
 
   .toggle-buttons {
@@ -147,9 +157,14 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-bottom: 52px;
+
+    @media screen and (max-width:767px) {
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+    }
 
     div {
       border-bottom: 3px solid transparent;
@@ -163,9 +178,18 @@
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
 
+      @media screen and (max-width:767px) {
+        font-size: 18px;
+        padding: 0 5px;
+      }
+
       &.active {
         border-bottom: 3px solid $olive;
         color: #4f4f4f;
+
+        @media screen and (max-width:767px) {
+          border-bottom: 2px solid $olive;
+        }
       }
 
       &:hover {
@@ -181,6 +205,10 @@
 .comments-area {
   display: none;
   margin: 0 30px;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 20px;
+  }
 
   @media screen and (min-width: 1441px) {
     margin: 0 2.5vw;
@@ -295,7 +323,7 @@
       transition: opacity .5s ease-in-out;
       -webkit-transform: rotate(0);
       -ms-transform: rotate(0);
-          transform: rotate(0);
+      transform: rotate(0);
       -webkit-backface-visibility: hidden;
 
       &:hover {
@@ -305,23 +333,73 @@
         transition: opacity .3s ease-in-out;
         -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
-            transform: rotate(0);
+        transform: rotate(0);
         -webkit-backface-visibility: hidden;
       }
     }
   }
 }
 
-.cycloneslider-template-default .cycloneslider-caption-description {
-  font-size: 16px !important;
-  font-weight: 300;
-}
+// Slider Styling for Blog posts
 
 .cycloneslider-template-default {
   margin-bottom: 54px;
   margin-top: 49px;
-}
 
-.cycloneslider-template-default.cycloneslider-width-full .cycloneslider-slide img {
-  margin-top: -6.6%;
+  @media screen and (max-width: 767px) {
+    margin: 40px 0;
+
+    .cycloneslider-caption {
+      background: rgba(0,0,0,.6) !important;
+    }
+
+    .cycloneslider-caption-title {
+      display: none !important;
+    }
+  }
+
+  .cycloneslider-caption-description {
+    font-size: 16px !important;
+    font-weight: 300;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px !important;
+      line-height: 16px !important;
+      padding: 8px 10px 8px !important;
+    }
+  }
+
+  .cycloneslider-pager {
+    bottom: -35px !important;
+    right: 8px !important;
+    top: inherit !important;
+
+    @media screen and (max-width: 767px) {
+      position: relative !important;
+      bottom: -18px !important;
+      right: initial !important;
+      text-align: center;
+    }
+
+    span {
+      background: $rules !important;
+      height: 10px !important;
+      margin: 0 0 0 15px !important;
+      width: 10px !important;
+
+      @media screen and (max-width: 767px) {
+        height: 13px !important;
+        margin: 0 9px !important;
+        width: 13px !important;
+      }
+
+      &.cycle-pager-active {
+        background: $olive !important;
+      }
+    }
+  }
+
+  &.cycloneslider-width-full .cycloneslider-slide img {
+    margin-top: -6.6%;
+  }
 }
