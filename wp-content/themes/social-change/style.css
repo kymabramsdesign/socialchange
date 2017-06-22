@@ -1508,8 +1508,8 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .site-header .site-branding img {
-    padding: 91px 50px 0;
-    width: 100%;
+    padding: 91px 0 0;
+    width: 220px;
   }
 }
 
@@ -1725,6 +1725,21 @@ button#responsive-menu-button {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .scrolled-header {
+    margin-left: -20px;
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .left-item,
+  .right-item,
+  .preview {
+    display: none;
+  }
+}
+
 .single-post.scrolled .site-header {
   backface-visibility: hidden;
   background-color: rgba(255, 255, 255, 0.97);
@@ -1747,6 +1762,15 @@ button#responsive-menu-button {
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   width: 263px;
+}
+
+@media screen and (max-width: 767px) {
+  .single-post.scrolled .site-header .site-branding img {
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+    width: 220px;
+  }
 }
 
 .single-post.scrolled .scrolled-header {
@@ -1786,6 +1810,13 @@ button#responsive-menu-button {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .single-post.scrolled .scrolled-header .left-item,
+  .single-post.scrolled .scrolled-header .right-item {
+    display: none;
+  }
+}
+
 .single-post.scrolled .scrolled-header .left-item a,
 .single-post.scrolled .scrolled-header .right-item a {
   color: #727272;
@@ -1809,6 +1840,19 @@ button#responsive-menu-button {
   padding: 0 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .single-post.scrolled .scrolled-header .center-item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 74px;
+    padding: 0;
+  }
+}
+
 .single-post.scrolled .scrolled-header .center-item h4 {
   color: #000;
   font-size: 22px;
@@ -1822,6 +1866,13 @@ button#responsive-menu-button {
   .single-post.scrolled .scrolled-header .center-item h4 {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .single-post.scrolled .scrolled-header .center-item h4 {
+    font-size: 13px;
+    line-height: 18px;
   }
 }
 
