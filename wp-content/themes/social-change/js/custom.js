@@ -81,49 +81,53 @@
 
   // Script for the Floating Share buttons
 
-  $(window).on('load resize', function(e) {
-  var windowWidth = $(window).width();
+    $(window).on('load resize', function(e) {
 
-    if (windowWidth <= 767 ) {
-      var contentPosition = $('.article-content p').offset();
-      var offset = contentPosition.top + 2;
+      if ( $('body').hasClass('single-post') ) {
+      var windowWidth = $(window).width();
 
-      $('.a2a_floating_style').css({
-        'top' : offset,
-        'position' : 'absolute'
-      });
-    }
+      if (windowWidth <= 767 ) {
+        var contentPosition = $('.article-content p').offset();
+        var offset = contentPosition.top + 2;
 
-    else {
-      var contentPosition = $('.article-content p').offset();
-      var offset = contentPosition.top;
+        $('.a2a_floating_style').css({
+          'top' : offset,
+          'position' : 'absolute'
+        });
+      }
 
-      $('.a2a_floating_style').css({
-        'top' : offset,
-        'position' : 'absolute'
-      });
+      else {
+        var contentPosition = $('.article-content p').offset();
+        var offset = contentPosition.top;
 
-      $(window).on('scroll', function() {
-        var scrollTop = $(this).scrollTop();
+        $('.a2a_floating_style').css({
+          'top' : offset,
+          'position' : 'absolute'
+        });
 
-        var topDistance = ($('.article-content p').offset().top) - 94;
+        $(window).on('scroll', function() {
+          var scrollTop = $(this).scrollTop();
 
-        if ( (topDistance) < scrollTop ) {
-          $('.a2a_floating_style').css({
-            'top' : '94px',
-            'position' : 'fixed'
-          });
-        }
+          var topDistance = ($('.article-content p').offset().top) - 94;
 
-        else {
-          $('.a2a_floating_style').css({
-            'top' : offset,
-            'position' : 'absolute'
-          });
-        }
-      });
+          if ( (topDistance) < scrollTop ) {
+            $('.a2a_floating_style').css({
+              'top' : '94px',
+              'position' : 'fixed'
+            });
+          }
+
+          else {
+            $('.a2a_floating_style').css({
+              'top' : offset,
+              'position' : 'absolute'
+            });
+          }
+        });
+      }
     }
   });
+
 
   // Script for Header Resize on Scroll
 

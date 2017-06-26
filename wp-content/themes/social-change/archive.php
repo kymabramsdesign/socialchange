@@ -30,7 +30,7 @@ get_header(); ?>
 		          <h5><?php $categories = get_the_category( $p->ID );
 		          echo esc_html($categories[0]->name ); ?></h5>
 		          	<a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a>
-
+		          	<p><?php $excerpt = wp_trim_words( get_field('article_content' ), $num_words = 18, $more = '...' ); echo $excerpt ?></p>
 			       </div><!-- item -->
 			    <?php endforeach; ?>
 				</div><!-- owl-carousel -->

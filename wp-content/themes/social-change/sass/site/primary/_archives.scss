@@ -3,6 +3,10 @@
 h1 {
   margin-bottom: 70px;
   text-align: center;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 50px;
+  }
 }
 
 .article-container {
@@ -16,6 +20,7 @@ h1 {
     max-width: 1380px;
     padding: 0;
     text-align: center;
+    width: 100%;
 
     .item {
       margin: 0 20px 133px;
@@ -27,7 +32,13 @@ h1 {
       }
 
       @media screen and (max-width: 900px) {
+        margin: 0 10px 79px;
         width: 46%;
+      }
+
+      @media screen and (max-width: 600px) {
+        margin: 0 0 45px;
+        width: 100%;
       }
 
       img {

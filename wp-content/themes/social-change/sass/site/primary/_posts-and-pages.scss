@@ -343,11 +343,11 @@
 // Slider Styling for Blog posts
 
 .cycloneslider-template-default {
-  margin-bottom: 54px;
-  margin-top: 49px;
+  margin: 49px auto 54px;
 
   @media screen and (max-width: 767px) {
-    margin: 40px 0;
+    margin: 40px auto;
+
 
     .cycloneslider-caption {
       background: rgba(0,0,0,.6) !important;
@@ -366,6 +366,18 @@
       font-size: 14px !important;
       line-height: 16px !important;
       padding: 8px 10px 8px !important;
+    }
+  }
+
+  &.cycloneslider-width-responsive {
+    margin: 49px 18.5vw 54px;
+
+    @media screen and (min-width: 1380px) {
+      margin: 49px auto 54px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 40px auto;
     }
   }
 
