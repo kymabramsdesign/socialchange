@@ -1,0 +1,73 @@
+// Styling for the Home Page
+
+.content-area.front-page {
+  margin-top: 229px;
+}
+
+.links {
+  margin: 0 0 0 -30px;
+  text-align: center;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  height: calc(100vh - 229px);
+  align-content: center;
+  background: rgba(0,0,0,.4);
+
+  @media screen and (min-width:1441px) {
+    margin-left: -2.5vw;
+  }
+
+  li {
+    width: 100%;
+    margin: 25px 0;
+
+    a {
+      color: $white;
+      font-family: $font__menu;
+      text-transform: uppercase;
+      border-bottom: 3px solid transparent;
+      text-decoration: none;
+      font-size: 44px;
+      letter-spacing: 10px;
+
+      @media screen and (max-width: 900px) {
+        font-size: 40px;
+        letter-spacing: 7px;
+      }
+
+      &:hover {
+        border-bottom: 3px solid $olive;
+      }
+    }
+  }
+}
+
+.image-container {
+
+  width: 100vw;
+  height: calc(100vh - 229px);
+  margin-left: -30px;
+  position: absolute;
+  top: 229px;
+  overflow: hidden;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  // transition: background-image .3s ease-in-out;
+
+  @media screen and (min-width:1441px) {
+    margin-left: -2.5vw;
+  }
+
+  .image-1,
+  .image-2,
+  .image-3,
+  .image-4,
+  .image-5 {
+    display: none;
+  }
+}

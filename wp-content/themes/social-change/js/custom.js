@@ -198,4 +198,63 @@
   });
 
 
+  // Script for Home Page large images and links
+
+  var image1 = $('.image-1').attr('src');
+  var image2 = $('.image-2').attr('src');
+  var image3 = $('.image-3').attr('src');
+  var image4 = $('.image-4').attr('src');
+  var image5 = $('.image-5').attr('src');
+
+  $('.image-container').css('background-image', 'url(' + image3 +')' );
+
+  $('.links li a').on('hover', function() {
+    var currentStory = $(this).parent().attr('class');
+    var currentImage = $('.image-container').css('background-image');
+
+    if ( (currentImage == ('url("' + image1 +'")')) && (currentStory == 'link-1') ) {
+      // Do nothing
+    }
+
+    else if ( (currentImage == ('url("' + image2 +'")')) && (currentStory == 'link-2') ) {
+      // Do nothing
+    }
+
+    else if ( (currentImage == ('url("' + image3 +'")')) && (currentStory == 'link-3') ) {
+      // Do nothing
+    }
+
+    else if ( (currentImage == ('url("' + image4 +'")')) && (currentStory == 'link-4') ) {
+      // Do nothing
+    }
+
+    else if ( (currentImage == ('url("' + image5 +'")')) && (currentStory == 'link-5') ) {
+      // Do nothing
+    }
+
+    else {
+    //   $('.image-container').animate({opacity:0}, 'slow', function() {
+    //   }')
+
+    //   if ( currentStory == 'link-1') {
+    //     $('.image-container').css('background-image', 'url(' + image1 +')' );
+    //   }
+    //   else if ( currentStory == 'link-2') {
+    //     $('.image-container').css('background-image', 'url(' + image2 +')' );
+    //   }
+    //   else if ( currentStory == 'link-3') {
+    //     $('.image-container').css('background-image', 'url(' + image3 +')' );
+    //   }
+    //   else if ( currentStory == 'link-4') {
+    //     $('.image-container').css('background-image', 'url(' + image4 +')' );
+    //   }
+    //   else if ( currentStory == 'link-5') {
+    //     $('.image-container').css('background-image', 'url(' + image5 +')' );
+    //   }
+    // }
+    }
+
+  });
+
+
 } )( jQuery );

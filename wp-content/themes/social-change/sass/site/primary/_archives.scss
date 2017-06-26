@@ -46,9 +46,17 @@ h1 {
       }
 
       h5 {
-        color: $olive;
         margin-bottom: 12px;
         margin-top: 22px;
+
+        a {
+          color: $olive;
+          text-decoration: none;
+
+          &:hover {
+            color: $black;
+          }
+        }
       }
 
       .title {

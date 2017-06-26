@@ -27,8 +27,7 @@ get_header(); ?>
 
 		          <a href="<?php the_permalink(); ?>">
 		          	<?php echo get_the_post_thumbnail($p->ID, 'article-listing'); ?></a>
-		          <h5><?php $categories = get_the_category( $p->ID );
-		          echo esc_html($categories[0]->name ); ?></h5>
+		          <h5><?php echo get_the_tag_list( $post_id ); ?></h5>
 		          	<a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a>
 		          	<p><?php $excerpt = wp_trim_words( get_field('article_content' ), $num_words = 18, $more = '...' ); echo $excerpt ?></p>
 			       </div><!-- item -->
