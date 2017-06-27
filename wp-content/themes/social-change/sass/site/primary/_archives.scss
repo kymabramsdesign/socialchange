@@ -1,4 +1,4 @@
-// Post Listings Page Styling
+/* Post Listings Page Styling*/
 
 .archives {
   margin-bottom: 70px;
@@ -10,12 +10,20 @@
 }
 
 .article-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   .article-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     max-width: 1380px;
     padding: 0;
@@ -23,16 +31,18 @@
     width: 100%;
 
     .item {
-      margin: 0 20px 133px;
+      margin: 0 20px 98px;
+      -webkit-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out;
       width: 29%;
 
       @media screen and (max-width: 1024px) {
-        margin: 0 10px 133px;
+        margin: 0 10px 98px;
       }
 
       @media screen and (max-width: 900px) {
-        margin: 0 10px 79px;
+        margin: 0 10px 40px;
         width: 46%;
       }
 

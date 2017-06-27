@@ -56,7 +56,7 @@
   overflow: hidden;
   position: absolute;
   top: 229px;
-  transition: background-image .5s ease-in-out;
+  transition: background-image .3s ease-in-out;
   width: 100vw;
   z-index: -1;
 
@@ -73,10 +73,48 @@
   }
 }
 
+// Section Styling
+
+.front-page {
+  h1 {
+    margin: 0 0 12px;
+    padding-top: 120px;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+    }
+  }
+  .subheader p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    margin: 10px 15vw 48px;
+    text-align: center;
+    max-width: 1380px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 31px;
+      margin: 20px 0 30px;
+    }
+  }
+}
+
 // Change Agents Section
 .change-agents {
-  h1 {
-    margin: 134px 0 33px;
-    text-align: center;
+  background-color: #f7f1f4;
+  margin-left: -30px;
+  padding: 0 30px;
+  width: 100vw;
+
+  @media screen and (min-width:1441px) {
+    margin-left: -2.5vw;
+    padding: 0 2.5vw;
   }
+}
+
+.article-container {
+  margin-top: 56px;
 }
