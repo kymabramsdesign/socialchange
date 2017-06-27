@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<h1><?php echo the_archive_title('',''); ?></h1>
+		<h1 class="archives"><?php echo the_archive_title('',''); ?></h1>
 		<div class="article-container">
 			<?php
 			/*

@@ -5,34 +5,36 @@
 }
 
 .links {
-  margin: 0 0 0 -30px;
-  text-align: center;
-  padding: 0;
-  list-style: none;
+  align-content: center;
   align-items: center;
+  background: rgba(0,0,0,.4);
   display: flex;
-  width: 100vw;
   flex-wrap: wrap;
   height: calc(100vh - 229px);
-  align-content: center;
-  background: rgba(0,0,0,.4);
+  list-style: none;
+  margin: 0 0 0 -30px;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
 
   @media screen and (min-width:1441px) {
     margin-left: -2.5vw;
   }
 
   li {
-    width: 100%;
+    cursor: pointer;
     margin: 25px 0;
+    width: 100%;
 
     a {
-      color: $white;
-      font-family: $font__menu;
-      text-transform: uppercase;
       border-bottom: 3px solid transparent;
-      text-decoration: none;
+      color: $white;
+      cursor: pointer;
+      font-family: $font__menu;
       font-size: 44px;
       letter-spacing: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
 
       @media screen and (max-width: 900px) {
         font-size: 40px;
@@ -47,17 +49,16 @@
 }
 
 .image-container {
-
-  width: 100vw;
+  background-position: center;
+  background-size: cover;
   height: calc(100vh - 229px);
   margin-left: -30px;
+  overflow: hidden;
   position: absolute;
   top: 229px;
-  overflow: hidden;
+  transition: background-image .5s ease-in-out;
+  width: 100vw;
   z-index: -1;
-  background-size: cover;
-  background-position: center;
-  // transition: background-image .3s ease-in-out;
 
   @media screen and (min-width:1441px) {
     margin-left: -2.5vw;

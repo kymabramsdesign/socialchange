@@ -106,10 +106,14 @@
   p {
     margin-left: 18.5vw;
     margin-right: 18.5vw;
-    font-size: 24px;
-    line-height: 38px;
+    font-size: 22px;
+    line-height: 36px;
     margin-bottom: 39px;
     margin-top: 25px;
+
+    @media screen and (max-width:1024px) {
+      font-size: 20px;
+    }
 
     @media screen and (max-width:767px) {
       font-size: 16px;

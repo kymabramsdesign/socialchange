@@ -419,15 +419,22 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 .article-content blockquote p {
   color: #948932;
-  font-size: 32px;
+  font-size: 30px;
+  font-weight: 400;
   line-height: 42px;
+}
+
+@media screen and (max-width: 1024px) {
+  .article-content blockquote p {
+    font-size: 26px;
+    line-height: 38px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .article-content blockquote p {
     font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
+    line-height: 34px;
   }
 }
 
@@ -703,7 +710,7 @@ button#responsive-menu-button {
 }
 
 .menu-item-has-children:last-of-type .responsive-menu-subarrow {
-  left: 104px !important;
+  left: 115px !important;
 }
 
 .responsive-menu-item-link,
@@ -746,6 +753,9 @@ button#responsive-menu-button {
   position: fixed;
   width: 100vw;
   z-index: 1005;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .responsive-menu-button {
@@ -759,6 +769,10 @@ button#responsive-menu-button {
   -webkit-transition: top .3s ease-in-out !important;
   -o-transition: top .3s ease-in-out !important;
   transition: top .3s ease-in-out !important;
+}
+
+#responsive-menu-additional-content button {
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -873,17 +887,17 @@ button#responsive-menu-button {
 }
 
 .links {
-  margin: 0 0 0 -30px;
-  text-align: center;
-  padding: 0;
-  list-style: none;
+  align-content: center;
   align-items: center;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
-  width: 100vw;
   flex-wrap: wrap;
   height: calc(100vh - 229px);
-  align-content: center;
-  background: rgba(0, 0, 0, 0.4);
+  list-style: none;
+  margin: 0 0 0 -30px;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
 }
 
 @media screen and (min-width: 1441px) {
@@ -893,18 +907,20 @@ button#responsive-menu-button {
 }
 
 .links li {
-  width: 100%;
+  cursor: pointer;
   margin: 25px 0;
+  width: 100%;
 }
 
 .links li a {
-  color: #fff;
-  font-family: "din-2014", sans-serif;
-  text-transform: uppercase;
   border-bottom: 3px solid transparent;
-  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "din-2014", sans-serif;
   font-size: 44px;
   letter-spacing: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 900px) {
@@ -919,15 +935,16 @@ button#responsive-menu-button {
 }
 
 .image-container {
-  width: 100vw;
+  background-position: center;
+  background-size: cover;
   height: calc(100vh - 229px);
   margin-left: -30px;
+  overflow: hidden;
   position: absolute;
   top: 229px;
-  overflow: hidden;
+  transition: background-image .5s ease-in-out;
+  width: 100vw;
   z-index: -1;
-  background-size: cover;
-  background-position: center;
 }
 
 @media screen and (min-width: 1441px) {
@@ -1068,10 +1085,16 @@ button#responsive-menu-button {
 .article-content p {
   margin-left: 18.5vw;
   margin-right: 18.5vw;
-  font-size: 24px;
-  line-height: 38px;
+  font-size: 22px;
+  line-height: 36px;
   margin-bottom: 39px;
   margin-top: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  .article-content p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1411,13 +1434,13 @@ button#responsive-menu-button {
 /*--------------------------------------------------------------
 ## Post listing pages
 --------------------------------------------------------------*/
-h1 {
+.archives {
   margin-bottom: 70px;
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
-  h1 {
+  .archives {
     margin-bottom: 50px;
   }
 }

@@ -206,7 +206,7 @@
   var image4 = $('.image-4').attr('src');
   var image5 = $('.image-5').attr('src');
 
-  $('.image-container').css('background-image', 'url(' + image3 +')' );
+  $('.image-container').css('background-image', 'url(' + image1 +')' );
 
   $('.links li a').on('hover', function() {
     var currentStory = $(this).parent().attr('class');
@@ -233,25 +233,22 @@
     }
 
     else {
-    //   $('.image-container').animate({opacity:0}, 'slow', function() {
-    //   }')
 
-    //   if ( currentStory == 'link-1') {
-    //     $('.image-container').css('background-image', 'url(' + image1 +')' );
-    //   }
-    //   else if ( currentStory == 'link-2') {
-    //     $('.image-container').css('background-image', 'url(' + image2 +')' );
-    //   }
-    //   else if ( currentStory == 'link-3') {
-    //     $('.image-container').css('background-image', 'url(' + image3 +')' );
-    //   }
-    //   else if ( currentStory == 'link-4') {
-    //     $('.image-container').css('background-image', 'url(' + image4 +')' );
-    //   }
-    //   else if ( currentStory == 'link-5') {
-    //     $('.image-container').css('background-image', 'url(' + image5 +')' );
-    //   }
-    // }
+      if ( currentStory == 'link-1') {
+        $('.image-container').css('background-image', 'url(' + image1 +')' );
+      }
+      else if ( currentStory == 'link-2') {
+        $('.image-container').css('background-image', 'url(' + image2 +')' );
+      }
+      else if ( currentStory == 'link-3') {
+        $('.image-container').css('background-image', 'url(' + image3 +')' );
+      }
+      else if ( currentStory == 'link-4') {
+        $('.image-container').css('background-image', 'url(' + image4 +')' );
+      }
+      else if ( currentStory == 'link-5') {
+        $('.image-container').css('background-image', 'url(' + image5 +')' );
+      }
     }
 
   });

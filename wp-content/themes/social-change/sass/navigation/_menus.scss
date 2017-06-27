@@ -33,7 +33,7 @@ button#responsive-menu-button {
 
 .menu-item-has-children:last-of-type {
  	.responsive-menu-subarrow {
- 		left: 104px !important;
+ 		left: 115px !important;
  	}
 }
 
@@ -77,6 +77,9 @@ button#responsive-menu-button {
 		position: fixed;
 		width: 100vw;
 		z-index: 1005;
+		-webkit-transition: all .4s ease-in-out;
+		-o-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
 	}
 }
 
@@ -91,4 +94,9 @@ button#responsive-menu-button {
 	  -o-transition: top .3s ease-in-out !important;
 	  transition: top .3s ease-in-out !important;
 	}
+}
+
+// this is just for the call today
+#responsive-menu-additional-content button {
+	display: none;
 }
