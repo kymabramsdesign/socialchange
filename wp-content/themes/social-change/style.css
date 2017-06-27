@@ -961,6 +961,11 @@ button#responsive-menu-button {
   display: none;
 }
 
+.change-agents h1 {
+  margin: 134px 0 33px;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
