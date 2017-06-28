@@ -888,15 +888,22 @@ button#responsive-menu-button {
 /*--------------------------------------------------------------
 ## Home Page
 --------------------------------------------------------------*/
+/* Styling for the Home Page*/
 .content-area.front-page {
   margin-top: 229px;
 }
 
 .links {
+  -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: calc(100vh - 229px);
   list-style: none;
@@ -948,6 +955,8 @@ button#responsive-menu-button {
   overflow: hidden;
   position: absolute;
   top: 229px;
+  -webkit-transition: background-image .3s ease-in-out;
+  -o-transition: background-image .3s ease-in-out;
   transition: background-image .3s ease-in-out;
   width: 100vw;
   z-index: -1;
@@ -967,6 +976,7 @@ button#responsive-menu-button {
   display: none;
 }
 
+/* Section Styling*/
 .front-page h1 {
   margin: 0 0 12px;
   padding-top: 133px;
@@ -984,8 +994,8 @@ button#responsive-menu-button {
   font-weight: 400;
   line-height: 34px;
   margin: 10px 15vw 48px;
-  text-align: center;
   max-width: 1380px;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -1007,6 +1017,7 @@ button#responsive-menu-button {
   }
 }
 
+/* Change Agents Section*/
 .change-agents {
   background-color: #f7f1f4;
   margin-left: -30px;
@@ -1031,6 +1042,7 @@ button#responsive-menu-button {
   margin-top: 56px;
 }
 
+/* News from Adler.edu*/
 .field-notes {
   background-color: #e5e5e5;
   margin-left: -30px;
@@ -1053,9 +1065,9 @@ button#responsive-menu-button {
 }
 
 .field-notes .related-comment {
-  padding: 0;
-  margin: 57px 0 43px;
   background-color: #e5e5e5;
+  margin: 57px 0 43px;
+  padding: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1070,8 +1082,15 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .field-notes .related-comment .toggle-buttons {
-    justify-content: space-between;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .field-notes .related-comment .toggle-buttons {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 
@@ -1082,9 +1101,9 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   .field-notes .related-comment .toggle-buttons div {
     font-size: 18px;
-    padding: 0 10px;
-    margin: 0;
     line-height: 36px;
+    margin: 0;
+    padding: 0 10px;
   }
   .field-notes .related-comment .toggle-buttons div.active {
     border-bottom: 3px solid #948932;
@@ -1094,8 +1113,8 @@ button#responsive-menu-button {
 @media screen and (max-width: 374px) {
   .field-notes .related-comment .toggle-buttons div {
     font-size: 16px;
-    padding: 0 6px;
     font-weight: 500;
+    padding: 0 6px;
   }
 }
 
@@ -1105,12 +1124,20 @@ button#responsive-menu-button {
 }
 
 .field-notes .field-notes-item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-bottom: 1px solid #bfbfbf;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-left: -30px;
   padding: 27px 45px;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   width: 100vw;
 }
@@ -1124,7 +1151,11 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .field-notes .field-notes-item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-left: -20px;
     padding: 20px 20px;
@@ -1133,22 +1164,30 @@ button#responsive-menu-button {
 
 .field-notes .field-notes-item:hover {
   background-color: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 .field-notes a {
   color: #000;
   text-decoration: none;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
 
 .field-notes a:hover {
   color: #666;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 .field-notes a:hover .notes-title {
   color: #948932;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
