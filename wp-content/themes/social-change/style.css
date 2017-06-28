@@ -1009,6 +1009,96 @@ button#responsive-menu-button {
   margin-top: 56px;
 }
 
+.field-notes {
+  background-color: #e5e5e5;
+  margin-left: -30px;
+  padding: 0 30px 100px;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1441px) {
+  .field-notes {
+    margin-left: -2.5vw;
+    padding: 0 2.5vw;
+  }
+}
+
+.field-notes .field-notes-item {
+  align-items: center;
+  border-bottom: 1px solid #bfbfbf;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -30px;
+  padding: 27px 45px;
+  transition: all .4s ease-in-out;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1441px) {
+  .field-notes .field-notes-item {
+    margin-left: -2.5vw;
+    padding: 27px 5.5vw;
+  }
+}
+
+.field-notes .field-notes-item:hover {
+  background-color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+.field-notes a {
+  color: #000;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+}
+
+.field-notes a:hover {
+  color: #666;
+  transition: all .3s ease-in-out;
+}
+
+.field-notes a:hover .notes-title {
+  color: #948932;
+  transition: all .3s ease-in-out;
+}
+
+.field-notes a p {
+  line-height: 26px;
+}
+
+.field-notes a .notes-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .field-notes a .notes-title {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.field-notes a:last-of-type .field-notes-item {
+  border-bottom: 0;
+}
+
+.field-notes img {
+  margin-left: 130px;
+}
+
+@media screen and (max-width: 1260px) {
+  .field-notes img {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .field-notes img {
+    margin-left: 80px;
+  }
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

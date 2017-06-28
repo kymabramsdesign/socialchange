@@ -118,3 +118,85 @@
 .article-container {
   margin-top: 56px;
 }
+
+// News from Adler.edu
+
+.field-notes {
+  background-color: #e5e5e5;
+  margin-left: -30px;
+  padding: 0 30px 100px;
+  width: 100vw;
+
+  @media screen and (min-width:1441px) {
+    margin-left: -2.5vw;
+    padding: 0 2.5vw;
+  }
+
+  .field-notes-item {
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -30px;
+    padding: 27px 45px;
+    transition: all .4s ease-in-out;
+    width: 100vw;
+
+    @media screen and (min-width: 1441px) {
+      margin-left: -2.5vw;
+      padding: 27px 5.5vw;
+    }
+
+    &:hover {
+      background-color: $white;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  a {
+    color: $black;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      color: $grey;
+      transition: all .3s ease-in-out;
+
+      .notes-title {
+        color: $olive;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    p {
+      line-height: 26px;
+    }
+
+    .notes-title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 20px;
+        line-height: 29px;
+      }
+    }
+
+    &:last-of-type .field-notes-item {
+      border-bottom: 0;
+    }
+  }
+
+  img {
+    margin-left: 130px;
+
+    @media screen and (max-width: 1260px) {
+      margin-left: 80px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-left: 80px;
+    }
+  }
+}

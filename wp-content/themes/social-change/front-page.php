@@ -89,32 +89,60 @@ get_header(); ?>
 
       <div class="article-container">
 
-      <?php if( have_rows('change_agents') ): ?>
+      <?php if( have_rows('alumni_news') ): ?>
 
         <div class="article-list">
-          <?php while( have_rows('change_agents') ): the_row();
+          <?php while( have_rows('alumni_news') ): the_row();
 
             // vars
-            $agent = get_sub_field('agent'); ?>
+            $alumni = get_sub_field('alumni'); ?>
 
-                <div class="item">
-                  <a href="<?php the_permalink($agent); ?>">
-                    <?php echo get_the_post_thumbnail($agent, 'article-listing'); ?></a>
+              <div class="item">
+                <a href="<?php the_permalink($alumni); ?>">
+                  <?php echo get_the_post_thumbnail($alumni, 'article-listing'); ?></a>
 
-                  <h5><?php $post_term = get_the_term_list($agent, 'post_tag' );
-                    print_r($post_term); ?></h5>
-                  <a href="<?php the_permalink($agent); ?>" class="title"><?php echo get_the_title($agent); ?></a>
-                  <p><?php $excerpt = wp_trim_words( get_field('article_content', $agent ), $num_words = 18, $more = '...' );
-                    echo $excerpt ?></p>
-               </div><!-- .item -->
-          <?php endwhile; ?>
+                <h5><?php $post_term = get_the_term_list($alumni, 'post_tag' );
+                  print_r($post_term); ?></h5>
+                <a href="<?php the_permalink($alumni); ?>" class="title"><?php echo get_the_title($alumni); ?></a>
+                <p><?php $excerpt = wp_trim_words( get_field('article_content', $alumni ), $num_words = 18, $more = '...' );
+                  echo $excerpt ?></p>
+             </div><!-- .item -->
+            <?php endwhile; ?>
 
           </div><!-- .article-list -->
 
         <?php endif; ?>
         </div><!-- .article-container -->
 
-    </div><!-- .alumni-news -->
+      </div><!-- .alumni-news -->
+
+    <div id="field-notes" class="field-notes">
+      <h1>Read More on Adler.edu</h1>
+
+      <div class="blog">
+
+        <div class="field-notes-container">
+          <?php while( have_rows('blog') ): the_row();
+
+            // vars
+            $title = get_sub_field('story_title');
+            $subhead = get_sub_field('story_subhead');
+            $link = get_sub_field('story_link');
+            $image = get_sub_field('story_image'); ?>
+
+              <a href="<?php echo $link; ?>" target="_blank">
+                <div class="field-notes-item">
+                  <p><span class="notes-title"><?php echo $title; ?></span><br />
+                  <?php echo $subhead; ?></p>
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"" class="field-notes-image" />
+                </div><!-- .field-notes-item -->
+              </a>
+
+          <?php endwhile; ?>
+        </div><!-- .field-notes-container -->
+      </div><!-- .blog -->
+
+    </div><!-- .field-notes -->
 
 
     </main><!-- #main -->
