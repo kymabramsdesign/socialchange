@@ -969,13 +969,13 @@ button#responsive-menu-button {
 
 .front-page h1 {
   margin: 0 0 12px;
-  padding-top: 120px;
+  padding-top: 133px;
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
   .front-page h1 {
-    padding-top: 60px;
+    padding-top: 53px;
   }
 }
 
@@ -994,6 +994,16 @@ button#responsive-menu-button {
     font-weight: 400;
     line-height: 31px;
     margin: 20px 0 30px;
+  }
+}
+
+.front-page .article-container .article-list .item {
+  margin-bottom: 110px;
+}
+
+@media screen and (max-width: 767px) {
+  .front-page .article-container .article-list .item {
+    margin-bottom: 30px;
   }
 }
 
@@ -1040,6 +1050,58 @@ button#responsive-menu-button {
     margin-left: -20px;
     padding: 0 20px 40px;
   }
+}
+
+.field-notes .related-comment {
+  padding: 0;
+  margin: 57px 0 43px;
+  background-color: #e5e5e5;
+}
+
+@media screen and (max-width: 767px) {
+  .field-notes .related-comment {
+    margin: 25px 0 20px;
+  }
+}
+
+.field-notes .related-comment .toggle-buttons {
+  margin-bottom: 43px;
+}
+
+@media screen and (max-width: 767px) {
+  .field-notes .related-comment .toggle-buttons {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+
+.field-notes .related-comment .toggle-buttons div {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .field-notes .related-comment .toggle-buttons div {
+    font-size: 18px;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 36px;
+  }
+  .field-notes .related-comment .toggle-buttons div.active {
+    border-bottom: 3px solid #948932;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .field-notes .related-comment .toggle-buttons div {
+    font-size: 16px;
+    padding: 0 6px;
+    font-weight: 500;
+  }
+}
+
+.field-notes .news,
+.field-notes .media {
+  display: none;
 }
 
 .field-notes .field-notes-item {

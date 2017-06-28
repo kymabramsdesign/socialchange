@@ -119,6 +119,14 @@ get_header(); ?>
     <div id="field-notes" class="field-notes">
       <h1>Read More on Adler.edu</h1>
 
+      <div class="related-comment">
+        <div class="toggle-buttons">
+          <div class="blog-button active">Blog</div>
+          <div class="news-button">Adler News</div>
+          <div class="media-button">In the Media</div>
+        </div>
+      </div>
+
       <div class="blog">
 
         <div class="field-notes-container">
@@ -141,6 +149,52 @@ get_header(); ?>
           <?php endwhile; ?>
         </div><!-- .field-notes-container -->
       </div><!-- .blog -->
+
+      <div class="news">
+
+        <div class="field-notes-container">
+          <?php while( have_rows('adler_news') ): the_row();
+
+            // vars
+            $title = get_sub_field('story_title');
+            $subhead = get_sub_field('story_subhead');
+            $link = get_sub_field('story_link');
+            $image = get_sub_field('story_image'); ?>
+
+              <a href="<?php echo $link; ?>" target="_blank">
+                <div class="field-notes-item">
+                  <p><span class="notes-title"><?php echo $title; ?></span><br />
+                  <span class="hide-mobile"><?php echo $subhead; ?></span></p>
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"" class="field-notes-image" />
+                </div><!-- .field-notes-item -->
+              </a>
+
+          <?php endwhile; ?>
+        </div><!-- .field-notes-container -->
+      </div><!-- .news -->
+
+      <div class="media">
+
+        <div class="field-notes-container">
+          <?php while( have_rows('media') ): the_row();
+
+            // vars
+            $title = get_sub_field('story_title');
+            $subhead = get_sub_field('story_subhead');
+            $link = get_sub_field('story_link');
+            $image = get_sub_field('story_image'); ?>
+
+              <a href="<?php echo $link; ?>" target="_blank">
+                <div class="field-notes-item">
+                  <p><span class="notes-title"><?php echo $title; ?></span><br />
+                  <span class="hide-mobile"><?php echo $subhead; ?></span></p>
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"" class="field-notes-image" />
+                </div><!-- .field-notes-item -->
+              </a>
+
+          <?php endwhile; ?>
+        </div><!-- .field-notes-container -->
+      </div><!-- .media -->
 
     </div><!-- .field-notes -->
 

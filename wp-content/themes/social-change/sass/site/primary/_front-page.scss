@@ -78,11 +78,11 @@
 .front-page {
   h1 {
     margin: 0 0 12px;
-    padding-top: 120px;
+    padding-top: 133px;
     text-align: center;
 
     @media screen and (max-width: 767px) {
-      padding-top: 60px;
+      padding-top: 53px;
     }
   }
   .subheader p {
@@ -98,6 +98,14 @@
       font-weight: 400;
       line-height: 31px;
       margin: 20px 0 30px;
+    }
+  }
+
+  .article-container .article-list .item {
+    margin-bottom: 110px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
     }
   }
 }
@@ -139,6 +147,51 @@
   @media screen and (max-width: 767px) {
     margin-left: -20px;
     padding: 0 20px 40px;
+  }
+
+  .related-comment {
+    padding: 0;
+    margin: 57px 0 43px;
+    background-color: #e5e5e5;
+
+    @media screen and (max-width: 767px) {
+      margin: 25px 0 20px;
+    }
+
+    .toggle-buttons {
+      margin-bottom: 43px;
+
+      @media screen and (max-width: 767px) {
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      div {
+        font-size: 20px;
+
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+          padding: 0 10px;
+          margin: 0;
+          line-height: 36px;
+
+          &.active {
+            border-bottom: 3px solid $olive;
+          }
+        }
+
+        @media screen and (max-width: 374px) {
+          font-size: 16px;
+          padding: 0 6px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .news,
+  .media {
+    display: none;
   }
 
   .field-notes-item {

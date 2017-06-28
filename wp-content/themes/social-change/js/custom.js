@@ -54,7 +54,7 @@
   });
 
 
-  // Script for toggle of Related News and Comments
+  // Script for toggle of Related News & Comments, and Homepage Field Notes Section
 
   $('.toggle-buttons div').on('click', function() {
     var active = $(this).hasClass('active');
@@ -65,14 +65,28 @@
     else {
       var whichSection = $(this).attr('class');
 
-      $('.toggle-buttons div').toggleClass('active');
+      $('.toggle-buttons div').removeClass('active');
+      $(this).addClass('active');
+
       if ( whichSection == 'comments-button') {
         $('.related-articles').hide();
         $('.comments-area').fadeIn();
       }
-      else {
+      else if ( whichSection == 'related-news') {
         $('.comments-area').hide();
         $('.related-articles').fadeIn('slow');
+      }
+      else if ( whichSection == 'blog-button') {
+        $('.news, .media').hide();
+        $('.blog').fadeIn('slow');
+      }
+      else if ( whichSection == 'news-button') {
+        $('.blog, .media').hide();
+        $('.news').fadeIn('slow');
+      }
+      else if ( whichSection == 'media-button') {
+        $('.blog, .news').hide();
+        $('.media').fadeIn('slow');
       }
       return false;
     }
