@@ -113,6 +113,10 @@
     margin-left: -2.5vw;
     padding: 0 2.5vw;
   }
+
+  @media screen and (max-width: 767px) {
+    margin-left: -20px;
+  }
 }
 
 .article-container {
@@ -132,6 +136,11 @@
     padding: 0 2.5vw;
   }
 
+  @media screen and (max-width: 767px) {
+    margin-left: -20px;
+    padding: 0 20px 40px;
+  }
+
   .field-notes-item {
     align-items: center;
     border-bottom: 1px solid #bfbfbf;
@@ -145,6 +154,13 @@
     @media screen and (min-width: 1441px) {
       margin-left: -2.5vw;
       padding: 27px 5.5vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      align-items: center;
+      justify-content: space-between;
+      margin-left: -20px;
+      padding: 20px 20px;
     }
 
     &:hover {
@@ -170,7 +186,14 @@
 
     p {
       line-height: 26px;
+      margin: 0;
+
+      @media screen and (max-width: 767px) {
+        line-height: 18px;
+      }
     }
+
+
 
     .notes-title {
       font-size: 24px;
@@ -180,6 +203,12 @@
       @media screen and (max-width: 1024px) {
         font-size: 20px;
         line-height: 29px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 600;
       }
     }
 
@@ -196,7 +225,16 @@
     }
 
     @media screen and (max-width: 1024px) {
-      margin-left: 80px;
+      margin-left: 45px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100px;
+      margin-left: 15px;
+    }
+
+    @media screen and (max-width: 374px) {
+      margin-left: 10px;
     }
   }
 }

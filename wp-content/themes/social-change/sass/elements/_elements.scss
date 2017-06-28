@@ -65,3 +65,10 @@ figure {
 }
 
 @import "tables";
+
+@media screen and (max-width:767px) {
+
+	.hide-mobile {
+		display: none !important;
+	}
+}

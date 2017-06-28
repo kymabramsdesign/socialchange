@@ -133,7 +133,7 @@ get_header(); ?>
               <a href="<?php echo $link; ?>" target="_blank">
                 <div class="field-notes-item">
                   <p><span class="notes-title"><?php echo $title; ?></span><br />
-                  <?php echo $subhead; ?></p>
+                  <span class="hide-mobile"><?php echo $subhead; ?></span></p>
                   <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"" class="field-notes-image" />
                 </div><!-- .field-notes-item -->
               </a>
