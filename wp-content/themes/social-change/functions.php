@@ -169,6 +169,7 @@ add_theme_support( 'post-thumbnails' );
 // Add featured image sizes
 function add_custom_sizes() {
 add_image_size( 'article-listing', 340, 250, true ); // width, height, crop
+add_image_size( 'change-circles', 250, 250, true ); // width, height, crop
 }
 add_action('after_setup_theme','add_custom_sizes');
 

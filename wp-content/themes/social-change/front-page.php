@@ -67,7 +67,7 @@ get_header(); ?>
 
                 <div class="item">
                   <a href="<?php the_permalink($agent); ?>">
-                    <?php echo get_the_post_thumbnail($agent, 'article-listing'); ?></a>
+                    <?php echo get_the_post_thumbnail($agent, 'change-circles'); ?></a>
 
                   <h5><?php $post_term = get_the_term_list($agent, 'post_tag' );
                     print_r($post_term); ?></h5>

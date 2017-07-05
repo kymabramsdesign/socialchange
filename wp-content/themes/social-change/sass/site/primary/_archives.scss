@@ -23,31 +23,40 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     max-width: 1380px;
     padding: 0;
     text-align: center;
     width: 100%;
 
+    @media screen and (max-width: 900px) {
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+    }
+
     .item {
-      margin: 0 20px 98px;
+      margin: 0 30px 98px;
       -webkit-transition: all .4s ease-in-out;
       -o-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out;
-      width: 29%;
+      width: 28%;
+
+      @media screen and (max-width: 1200px) {
+        margin: 0 25px 98px;
+      }
 
       @media screen and (max-width: 1024px) {
-        margin: 0 10px 98px;
+        margin: 0 20px 98px;
       }
 
       @media screen and (max-width: 900px) {
-        margin: 0 10px 40px;
+        margin: 0 0 45px;
         width: 46%;
       }
 
       @media screen and (max-width: 600px) {
-        margin: 0 0 45px;
         width: 100%;
       }
 

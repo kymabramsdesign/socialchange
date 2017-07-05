@@ -6,32 +6,6 @@
 
 ( function( $ ) {
 
-  // Initialize and configure Owl Carousel
-
-  $('.owl-carousel').owlCarousel({
-    loop: false,
-    margin: 18,
-    stagePadding: 60,
-    nav: false,
-    responsive:{
-        0:{
-            items:1
-        },
-        425:{
-            items:2
-        },
-        768:{
-            items:3
-        },
-        1120:{
-            items:4
-        },
-        1440:{
-            items:5
-        }
-    }
-  })
-
   // Script for toggle Search bar
 
   $('.search').on('click', function() {
@@ -52,7 +26,6 @@
       });
     }
   });
-
 
   // Script for toggle of Related News & Comments, and Homepage Field Notes Section
 
@@ -92,57 +65,6 @@
     }
   });
 
-
-  // Script for the Floating Share buttons
-
-    $(window).on('load resize', function(e) {
-
-      if ( $('body').hasClass('single-post') ) {
-      var windowWidth = $(window).width();
-
-      if (windowWidth <= 767 ) {
-        var contentPosition = $('.article-content p').offset();
-        var offset = contentPosition.top + 2;
-
-        $('.a2a_floating_style').css({
-          'top' : offset,
-          'position' : 'absolute'
-        });
-      }
-
-      else {
-        var contentPosition = $('.article-content p').offset();
-        var offset = contentPosition.top;
-
-        $('.a2a_floating_style').css({
-          'top' : offset,
-          'position' : 'absolute'
-        });
-
-        $(window).on('scroll', function() {
-          var scrollTop = $(this).scrollTop();
-
-          var topDistance = ($('.article-content p').offset().top) - 94;
-
-          if ( (topDistance) < scrollTop ) {
-            $('.a2a_floating_style').css({
-              'top' : '94px',
-              'position' : 'fixed'
-            });
-          }
-
-          else {
-            $('.a2a_floating_style').css({
-              'top' : offset,
-              'position' : 'absolute'
-            });
-          }
-        });
-      }
-    }
-  });
-
-
   // Script for Header Resize on Scroll
 
   $(window).scroll(function() {
@@ -155,8 +77,25 @@
     }
     else {
       contentArea = contentArea.top + 53;
+    }
 
-      // Script for Header reformat on Single Blog post
+    if ( scrollPosition >= contentArea ) {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
+    }
+    else {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
+    }
+  });
+
+
+  // Find out what page a user is on
+  var isHome = $('body').hasClass('home');
+  var isPost = $('body').hasClass('single');
+
+  // Get Functions for Single Posts
+  if ( isPost == true ) {
+
+    // Script for Header reformat on Single Blog post
 
       $('.right-item, .preview.next-image').on('mouseover', function() {
         $('.preview.next-image').css({
@@ -201,71 +140,141 @@
          $('.left-item a, .right-item a').css('color', '#727272');
          $('.preview').css('background', 'transparent');
       });
-    }
 
-    if ( scrollPosition >= contentArea ) {
-      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
-    }
-    else {
-      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
-    }
-  });
+    // Script for the Floating Share buttons
+    $(window).on('load resize', function(e) {
 
+      var windowWidth = $(window).width();
 
-  // Script for Home Page large images and links
+      if (windowWidth <= 767 ) {
+        var contentPosition = $('.article-content p').offset();
+        var offset = contentPosition.top + 2;
 
-  var image1 = $('.image-1').attr('src');
-  var image2 = $('.image-2').attr('src');
-  var image3 = $('.image-3').attr('src');
-  var image4 = $('.image-4').attr('src');
-  var image5 = $('.image-5').attr('src');
-
-  $('.image-container').css('background-image', 'url(' + image1 +')' );
-
-  $('.links li a').on('hover', function() {
-    var currentStory = $(this).parent().attr('class');
-    var currentImage = $('.image-container').css('background-image');
-
-    if ( (currentImage == ('url("' + image1 +'")')) && (currentStory == 'link-1') ) {
-      // Do nothing
-    }
-
-    else if ( (currentImage == ('url("' + image2 +'")')) && (currentStory == 'link-2') ) {
-      // Do nothing
-    }
-
-    else if ( (currentImage == ('url("' + image3 +'")')) && (currentStory == 'link-3') ) {
-      // Do nothing
-    }
-
-    else if ( (currentImage == ('url("' + image4 +'")')) && (currentStory == 'link-4') ) {
-      // Do nothing
-    }
-
-    else if ( (currentImage == ('url("' + image5 +'")')) && (currentStory == 'link-5') ) {
-      // Do nothing
-    }
-
-    else {
-
-      if ( currentStory == 'link-1') {
-        $('.image-container').css('background-image', 'url(' + image1 +')' );
+        $('.a2a_floating_style').css({
+          'top' : offset,
+          'position' : 'absolute'
+        });
       }
-      else if ( currentStory == 'link-2') {
-        $('.image-container').css('background-image', 'url(' + image2 +')' );
-      }
-      else if ( currentStory == 'link-3') {
-        $('.image-container').css('background-image', 'url(' + image3 +')' );
-      }
-      else if ( currentStory == 'link-4') {
-        $('.image-container').css('background-image', 'url(' + image4 +')' );
-      }
-      else if ( currentStory == 'link-5') {
-        $('.image-container').css('background-image', 'url(' + image5 +')' );
-      }
-    }
 
-  });
+      else {
+        var contentPosition = $('.article-content p').offset();
+        var offset = contentPosition.top;
+
+        $('.a2a_floating_style').css({
+          'top' : offset,
+          'position' : 'absolute'
+        });
+
+        $(window).on('scroll', function() {
+          var scrollTop = $(this).scrollTop();
+
+          var topDistance = ($('.article-content p').offset().top) - 94;
+
+          if ( (topDistance) < scrollTop ) {
+            $('.a2a_floating_style').css({
+              'top' : '94px',
+              'position' : 'fixed'
+            });
+          }
+
+          else {
+            $('.a2a_floating_style').css({
+              'top' : offset,
+              'position' : 'absolute'
+            });
+          }
+        });
+      }
+    });
+
+    // Initialize and configure Owl Carousel
+
+    $('.owl-carousel').owlCarousel({
+      loop: false,
+      margin: 18,
+      stagePadding: 60,
+      nav: false,
+      responsive:{
+          0:{
+              items:1
+          },
+          768:{
+              items:2
+          },
+          850:{
+              items:3
+          },
+          1120:{
+              items:3
+          },
+          1200:{
+              items:4
+          },
+          1600:{
+              items:5
+          }
+      }
+    })
+  }
+
+  // Get Functions for HomePage
+  if ( isHome == true ) {
+
+    // Script for Home Page large images and links
+
+    var image1 = $('.image-1').attr('src');
+    var image2 = $('.image-2').attr('src');
+    var image3 = $('.image-3').attr('src');
+    var image4 = $('.image-4').attr('src');
+    var image5 = $('.image-5').attr('src');
+
+    $('.image-container').css('background-image', 'url(' + image1 +')' );
+
+    $('.links li a').on('hover', function() {
+      var currentStory = $(this).parent().attr('class');
+      var currentImage = $('.image-container').css('background-image');
+
+      if ( (currentImage == ('url("' + image1 +'")')) && (currentStory == 'link-1') ) {
+        // Do nothing
+      }
+
+      else if ( (currentImage == ('url("' + image2 +'")')) && (currentStory == 'link-2') ) {
+        // Do nothing
+      }
+
+      else if ( (currentImage == ('url("' + image3 +'")')) && (currentStory == 'link-3') ) {
+        // Do nothing
+      }
+
+      else if ( (currentImage == ('url("' + image4 +'")')) && (currentStory == 'link-4') ) {
+        // Do nothing
+      }
+
+      else if ( (currentImage == ('url("' + image5 +'")')) && (currentStory == 'link-5') ) {
+        // Do nothing
+      }
+
+      else {
+
+        if ( currentStory == 'link-1') {
+          $('.image-container').css('background-image', 'url(' + image1 +')' );
+        }
+        else if ( currentStory == 'link-2') {
+          $('.image-container').css('background-image', 'url(' + image2 +')' );
+        }
+        else if ( currentStory == 'link-3') {
+          $('.image-container').css('background-image', 'url(' + image3 +')' );
+        }
+        else if ( currentStory == 'link-4') {
+          $('.image-container').css('background-image', 'url(' + image4 +')' );
+        }
+        else if ( currentStory == 'link-5') {
+          $('.image-container').css('background-image', 'url(' + image5 +')' );
+        }
+      }
+
+    });
+  }
 
 
 } )( jQuery );

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cyclone Slider\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-12 06:40+0800\n"
-"PO-Revision-Date: 2017-06-12 06:40+0800\n"
+"POT-Creation-Date: 2017-07-02 19:29+0800\n"
+"PO-Revision-Date: 2017-07-02 19:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: kosinix <kosinix@codefleet.net>\n"
 "Language: ja_JP\n"
@@ -87,16 +87,16 @@ msgstr ""
 #: ../src/CycloneSlider/Admin.php:197
 #: ../src/legacy/inc/class-cyclone-slider.php:209
 msgid "Custom field deleted."
-msgstr ""
+msgstr "カスタムフィールドが削除されました。"
 
 #: ../src/CycloneSlider/Admin.php:200
 msgid "Slideshow published."
-msgstr ""
+msgstr "スライドショーが公開されました。"
 
 #: ../src/CycloneSlider/Admin.php:201
 #: ../src/legacy/inc/class-cyclone-slider.php:213
 msgid "Slideshow saved."
-msgstr ""
+msgstr "スライドショーを保存しました。"
 
 #: ../src/CycloneSlider/Admin.php:240
 #: ../src/legacy/inc/class-cyclone-slider.php:225
@@ -184,11 +184,11 @@ msgstr ""
 #: ../src/CycloneSlider/Admin.php:613
 #: ../src/legacy/inc/class-cyclone-slider.php:519
 msgid "Slideshow Name"
-msgstr ""
+msgstr "スライドショーの名前"
 
 #: ../src/CycloneSlider/Admin.php:614
 msgid "Template"
-msgstr ""
+msgstr "テンプレート"
 
 #: ../src/CycloneSlider/Admin.php:615
 msgid "No. of Slides"
@@ -288,6 +288,134 @@ msgstr ""
 #, fuzzy
 msgid "Tile Slide"
 msgstr "サイクロンスライダー"
+
+#: ../src/CycloneSlider/Data.php:856 ../views/slide-settings.php:17
+msgid "Default"
+msgstr "デフォルト"
+
+#: ../src/CycloneSlider/Data.php:860
+msgid "Swing"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:864
+msgid "Ease-In Quad"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:868
+msgid "Ease-Out Quad"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:872
+msgid "Ease-In OutQuad"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:876
+msgid "Ease-In Cubic"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:880
+msgid "Ease-Out Cubic"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:884
+msgid "Ease-In OutCubic"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:888
+msgid "Ease-In Quart"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:892
+msgid "Ease-Out Quart"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:896
+msgid "Ease-In OutQuart"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:900
+msgid "Ease-In Quint"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:904
+msgid "Ease-Out Quint"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:908
+msgid "Ease-In OutQuint"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:912
+msgid "Ease-In Sine"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:916
+msgid "Ease-Out Sine"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:920
+msgid "Ease-In OutSine"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:924
+msgid "Ease-In Expo"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:928
+msgid "Ease-Out Expo"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:932
+msgid "Ease-In OutExpo"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:936
+msgid "Ease-In Circ"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:940
+msgid "Ease-Out Circ"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:944
+msgid "Ease-In OutCirc"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:948
+msgid "Ease-In Elastic"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:952
+msgid "Ease-Out Elastic"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:956
+msgid "Ease-In OutElastic"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:960
+msgid "Ease-In Back"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:964
+msgid "Ease-Out Back"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:968
+msgid "Ease-In OutBack"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:972
+msgid "Ease-In Bounce"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:976
+msgid "Ease-Out Bounce"
+msgstr ""
+
+#: ../src/CycloneSlider/Data.php:980
+msgid "Ease-In OutBounce"
+msgstr ""
 
 #: ../src/CycloneSlider/ExportPage.php:64
 #: ../src/CycloneSlider/ExportPageNextgen.php:62
@@ -624,7 +752,7 @@ msgid "Height:"
 msgstr "高さ："
 
 #: ../src/legacy/inc/class-cyclone-slider.php:362
-#: ../views/slider-settings.php:75
+#: ../views/slider-settings.php:79
 msgid "Pause on Hover?"
 msgstr "ホバーで一時停止する？"
 
@@ -633,34 +761,34 @@ msgstr "ホバーで一時停止する？"
 #: ../src/legacy/inc/class-cyclone-slider.php:380
 #: ../views/slider-advanced-settings.php:6
 #: ../views/slider-advanced-settings.php:44 ../views/slider-settings.php:66
-#: ../views/slider-settings.php:77 ../views/slider-settings.php:85
-#: ../views/slider-settings.php:93 ../views/slider-settings.php:103
+#: ../views/slider-settings.php:81 ../views/slider-settings.php:89
+#: ../views/slider-settings.php:97 ../views/slider-settings.php:107
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: ../src/legacy/inc/class-cyclone-slider.php:365
 #: ../src/legacy/inc/class-cyclone-slider.php:373
 #: ../src/legacy/inc/class-cyclone-slider.php:381
 #: ../views/slider-advanced-settings.php:7
 #: ../views/slider-advanced-settings.php:45 ../views/slider-settings.php:65
-#: ../views/slider-settings.php:78 ../views/slider-settings.php:86
-#: ../views/slider-settings.php:94 ../views/slider-settings.php:102
+#: ../views/slider-settings.php:82 ../views/slider-settings.php:90
+#: ../views/slider-settings.php:98 ../views/slider-settings.php:106
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: ../src/legacy/inc/class-cyclone-slider.php:370
-#: ../views/slider-settings.php:83
+#: ../views/slider-settings.php:87
 msgid "Show Prev/Next Buttons?"
-msgstr ""
+msgstr "前/次のボタンを表示しますか？"
 
 #: ../src/legacy/inc/class-cyclone-slider.php:378
-#: ../views/slider-settings.php:91
+#: ../views/slider-settings.php:95
 msgid "Show Navigation?"
-msgstr ""
+msgstr "ナビゲーションを表示しますか？"
 
 #: ../src/legacy/inc/class-cyclone-slider.php:407
 msgid "Select Template to Use:"
-msgstr ""
+msgstr "使用するテンプレートを選択："
 
 #: ../src/legacy/inc/class-cyclone-slider.php:623
 #, fuzzy
@@ -685,17 +813,17 @@ msgstr "サイクロンスライダのインポート"
 
 #: ../templates/dark/slider.php:40
 msgid "View Larger Image"
-msgstr ""
+msgstr "大きな画像を見る"
 
 #: ../templates/dark/slider.php:43 ../templates/dark/slider.php:45
 msgid "Learn More"
-msgstr ""
+msgstr "もっと詳しく知る"
 
 #: ../templates/dark/slider.php:61 ../templates/default/slider.php:62
 #: ../templates/default/slider.php:66 ../templates/default/slider.php:70
 #: ../templates/standard/slider.php:67 ../templates/thumbnails/slider.php:70
 msgid "Slide type not supported."
-msgstr ""
+msgstr "スライドタイプはサポートされていません。"
 
 #: ../templates/dark/slider.php:70 ../templates/standard/slider.php:76
 #, fuzzy
@@ -960,10 +1088,6 @@ msgstr "隠された："
 msgid "Transition Effects:"
 msgstr "移行効果："
 
-#: ../views/slide-settings.php:17
-msgid "Default"
-msgstr "デフォルト"
-
 #: ../views/slide-settings.php:26
 msgid "Effects Speed:"
 msgstr "エフェクトスピード："
@@ -998,7 +1122,7 @@ msgstr "水平"
 
 #: ../views/slider-advanced-settings.php:4
 msgid "Allow Wrap?"
-msgstr ""
+msgstr "ラップを許可しますか？"
 
 #: ../views/slider-advanced-settings.php:10
 msgid ""
@@ -1172,57 +1296,67 @@ msgstr "幅管理："
 
 #: ../views/slider-settings.php:51
 msgid "Responsive"
-msgstr ""
+msgstr "応答性のある"
 
 #: ../views/slider-settings.php:52
 msgid "Full"
-msgstr ""
+msgstr "フル"
 
 #: ../views/slider-settings.php:53
 msgid "Fixed"
-msgstr ""
+msgstr "不動"
 
 #: ../views/slider-settings.php:56
 msgid ""
 "Responsive - resizes to smaller size but maximum width will be equal to the "
 "provided width."
 msgstr ""
+"応答性 - 小さいサイズにサイズ変更しますが、最大幅は指定された幅に等しくなりま"
+"す。"
 
 #: ../views/slider-settings.php:57
 msgid ""
 "Full - the same as responsive but maximum width will be equal to its "
 "container ignoring the provided width."
 msgstr ""
+"フル - 応答性であるが最大幅と同じは、指定された幅を無視してコンテナに等しくな"
+"ります。"
 
 #: ../views/slider-settings.php:58
 msgid "Fixed - width and height are not resized."
-msgstr ""
+msgstr "固定幅と高さはリサイズされません。"
 
 #: ../views/slider-settings.php:63
 msgid "Resize Images?"
-msgstr ""
+msgstr "イメージのサイズを変更しますか？"
 
 #: ../views/slider-settings.php:70
 msgid "Force Resize"
-msgstr ""
+msgstr "強制的にサイズを変更する"
 
-#: ../views/slider-settings.php:71
-msgid ""
-"Yes - resize images to slideshow dimension. <br>No - use the original "
-"uploaded image. <br>Force Resize - Regenerate all images and thumbnails."
-msgstr ""
+#: ../views/slider-settings.php:72
+msgid "Yes - resize images to slideshow dimension."
+msgstr "はい - 画像をスライドショーディメンションにリサイズします。"
 
-#: ../views/slider-settings.php:96
-msgid "The thumbnails or dots depending on template."
-msgstr ""
+#: ../views/slider-settings.php:73
+msgid "No - use the original uploaded image."
+msgstr "いいえ - 元のアップロード画像を使用します。"
+
+#: ../views/slider-settings.php:74
+msgid "Force Resize - Regenerate all images and thumbnails."
+msgstr "強制的なサイズ変更 - すべての画像とサムネイルを再生成します。"
 
 #: ../views/slider-settings.php:100
-msgid "Random Slide Order?"
-msgstr ""
+msgid "The thumbnails or dots depending on template."
+msgstr "サムネイルまたはドットはテンプレートに依存します。"
 
-#: ../views/slider-settings.php:105
+#: ../views/slider-settings.php:104
+msgid "Random Slide Order?"
+msgstr "ランダムスライド注文？"
+
+#: ../views/slider-settings.php:109
 msgid "Randomize order of slides on every page visit."
-msgstr ""
+msgstr "すべてのページ訪問時にスライドの順序をランダム化します。"
 
 #: ../views/slides.php:10
 msgid "Sort"
