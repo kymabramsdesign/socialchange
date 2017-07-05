@@ -1377,7 +1377,7 @@ button#responsive-menu-button {
   }
 }
 
-.article-content p {
+.article-content p, .article-content ul {
   margin-left: 18.5vw;
   margin-right: 18.5vw;
   font-size: 22px;
@@ -1387,13 +1387,13 @@ button#responsive-menu-button {
 }
 
 @media screen and (max-width: 1024px) {
-  .article-content p {
+  .article-content p, .article-content ul {
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .article-content p {
+  .article-content p, .article-content ul {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
@@ -1401,6 +1401,18 @@ button#responsive-menu-button {
     margin-left: 0;
     margin-right: 0;
     margin-top: 15px;
+  }
+}
+
+.article-content p li, .article-content ul li {
+  font-weight: 300;
+  margin: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .article-content p li, .article-content ul li {
+    font-weight: 400;
+    margin: 10px 5px;
   }
 }
 
