@@ -896,6 +896,10 @@ button#responsive-menu-button {
 ## Home Page
 --------------------------------------------------------------*/
 /* Styling for the Home Page*/
+.home .widget-area.scrolled .widget {
+  margin: 16px 30px 17px 70px;
+}
+
 @media screen and (max-width: 767px) {
   .home .site-header {
     background-color: #fff;

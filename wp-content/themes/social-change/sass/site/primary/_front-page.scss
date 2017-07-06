@@ -1,15 +1,22 @@
 /* Styling for the Home Page*/
 
-.home .site-header {
-  @media screen and (max-width:767px) {
-    background-color:  $white;
+.home {
 
-    .site-branding hr {
-      margin-bottom: 40px;
-    }
+  .widget-area.scrolled .widget {
+    margin: 16px 30px 17px 70px;
+  }
 
-    &.scrolled {
+  .site-header {
+    @media screen and (max-width:767px) {
+      background-color:  $white;
 
+      .site-branding hr {
+        margin-bottom: 40px;
+      }
+
+      &.scrolled {
+
+      }
     }
   }
 }
