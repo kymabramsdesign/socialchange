@@ -74,7 +74,6 @@
     var isHome = $('body').hasClass('home');
 
     // Header functions for the whole site, except the Home Page
-
     if ( isHome == false ) {
 
       if ( screenWidth <= 767 ) {
@@ -83,32 +82,31 @@
       else {
         contentArea = contentArea.top + 53;
       }
-
-      if ( scrollPosition >= contentArea ) {
-        $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
-      }
-      else {
-        $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
-      }
     }
 
     // Home Page Specific Header Script
     if ( isHome == true ) {
 
       if ( screenWidth <= 767 ) {
-        contentArea = contentArea.top - 180;
+        contentArea = contentArea.top - 200;
+
+        var linkLocation = $('.link-4').position().top;
+        // alert(linkLocation);
+
       }
       else {
         contentArea = contentArea.top - 100;
       }
-
-      if ( scrollPosition >= contentArea ) {
-        $('.site-header, .search, .responsive-menu-button, .widget-area').addClass('scrolled');
-      }
-      else {
-        $('.site-header, .search, .responsive-menu-button, .widget-area').removeClass('scrolled');
-      }
     }
+
+
+    if ( scrollPosition >= contentArea ) {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
+    }
+    else {
+      $('.site-header, .search, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
+    }
+
   });
 
 

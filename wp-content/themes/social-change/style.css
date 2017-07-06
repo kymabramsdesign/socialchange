@@ -495,7 +495,14 @@ table {
   width: 100%;
 }
 
+.hide-desktop {
+  display: none !important;
+}
+
 @media screen and (max-width: 767px) {
+  .hide-desktop {
+    display: block !important;
+  }
   .hide-mobile {
     display: none !important;
   }
@@ -889,6 +896,15 @@ button#responsive-menu-button {
 ## Home Page
 --------------------------------------------------------------*/
 /* Styling for the Home Page*/
+@media screen and (max-width: 767px) {
+  .home .site-header {
+    background-color: #fff;
+  }
+  .home .site-header .site-branding hr {
+    margin-bottom: 40px;
+  }
+}
+
 .content-area.front-page {
   margin-top: 229px;
 }
@@ -905,7 +921,7 @@ button#responsive-menu-button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.32);
+  background: rgba(0, 0, 0, 0.35);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -927,8 +943,12 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .links {
-    height: calc(100vh - 77px);
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    background-color: transparent;
+    height: 175vh;
     margin-left: -20px;
+    padding: 90vh 0 300px;
   }
 }
 
@@ -940,7 +960,7 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .links li {
-    margin: 20px 20px;
+    margin: 50px 20px;
   }
 }
 
@@ -973,6 +993,16 @@ button#responsive-menu-button {
   border-bottom: 3px solid #948932;
 }
 
+.grey-overlay {
+  background: rgba(0, 0, 0, 0.35);
+  height: calc(100vh - 77px);
+  margin-left: -20px;
+  position: fixed;
+  top: 77px;
+  width: 100vw;
+  z-index: -1;
+}
+
 .image-container {
   background-position: center;
   background-size: cover;
@@ -985,7 +1015,7 @@ button#responsive-menu-button {
   -o-transition: background-image .3s ease-in-out;
   transition: background-image .3s ease-in-out;
   width: 100vw;
-  z-index: -1;
+  z-index: -2;
 }
 
 @media screen and (min-width: 1441px) {
@@ -998,7 +1028,12 @@ button#responsive-menu-button {
   .image-container {
     height: calc(100vh - 77px);
     margin-left: -20px;
-    top: 280px;
+    position: fixed;
+    top: 77px;
+  }
+  .image-container.scrolled {
+    position: fixed;
+    top: 77px;
   }
 }
 
@@ -1051,7 +1086,7 @@ button#responsive-menu-button {
   }
 }
 
-/* Change Agents Section*/
+/* Change Agents Section */
 .change-agents {
   background-color: #f7f1f4;
   margin-left: -30px;
@@ -1076,11 +1111,32 @@ button#responsive-menu-button {
   border-radius: 250px;
 }
 
+/* Alumni News Section */
+.alumni-news {
+  background-color: #fff;
+  margin-left: -30px;
+  padding: 0 30px;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1441px) {
+  .alumni-news {
+    margin-left: -2.5vw;
+    padding: 0 2.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .alumni-news {
+    margin-left: -20px;
+  }
+}
+
 .article-container {
   margin-top: 56px;
 }
 
-/* News from Adler.edu*/
+/* News from Adler.edu */
 .field-notes {
   background-color: #e5e5e5;
   margin-left: -30px;
@@ -2146,7 +2202,8 @@ button#responsive-menu-button {
 
 .site-header.scrolled .site-branding hr {
   opacity: 0;
-  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
