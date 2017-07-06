@@ -45,7 +45,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 
 		<main id="main" class="site-main" role="main">
-<!-- <div class="blog-overlay"></div> -->
 			<div class="article-headings">
 				<h5><?php echo get_the_tag_list( $post_id ); ?></h5>
 				<h1><?php echo get_the_title( $post_id ); ?></h1>
@@ -57,6 +56,19 @@ get_header(); ?>
 
 			<div class="header-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
 			</div>
+
+			<?php if( has_category('presidents-letter', $post_id) ) { ?>
+				<div class="video-page-overlay">
+					<img class="close-button" src="/wp-content/themes/social-change/img/exit.png" alt="close button" />
+				</div>
+				<div class="play-button"></div>
+				<div class="video-container">
+					<video id="video" width="900" height="570" controls>
+						<source src="<?php the_field('link'); ?>" type="video/mp4">
+					We're sorry, your browser does not support the playback of this video.
+					</video>
+				</div>
+		<?php	} ?>
 
 			<div class="article-content">
 				<?php the_field('article_content'); ?>
@@ -93,7 +105,7 @@ get_header(); ?>
 			$posts = get_field('related_articles');
 
 			if( $posts ): ?>
-				<div class="owl-carousel">
+				<div class="owl-carousel related">
 					<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 						<?php setup_postdata($post); ?>
 						<div class="item">

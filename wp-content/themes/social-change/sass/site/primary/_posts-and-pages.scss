@@ -429,3 +429,32 @@
     margin-top: -6.6%;
   }
 }
+
+/* 8 Things Styling */
+
+.eight {
+  margin-bottom: 79px;
+  margin-top: 80px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 42px;
+    margin-top: 46px;
+  }
+
+  .item {
+    line-height: 20px;
+    text-align: center;
+
+    h5 {
+      color: #572400;
+      margin-bottom: 6px;
+      margin-top: 20px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

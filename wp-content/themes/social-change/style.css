@@ -1832,6 +1832,36 @@ button#responsive-menu-button {
   margin-top: -6.6%;
 }
 
+/* 8 Things Styling */
+.eight {
+  margin-bottom: 79px;
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .eight {
+    margin-bottom: 42px;
+    margin-top: 46px;
+  }
+}
+
+.eight .item {
+  line-height: 20px;
+  text-align: center;
+}
+
+.eight .item h5 {
+  color: #572400;
+  margin-bottom: 6px;
+  margin-top: 20px;
+}
+
+.eight .item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
 /*--------------------------------------------------------------
 ## Post listing pages
 --------------------------------------------------------------*/
@@ -2805,6 +2835,150 @@ object {
   }
   .addtoany_share_save_container.addtoany_content_bottom a:hover img {
     opacity: .75;
+  }
+}
+
+/*--------------------------------------------------------------
+## Video Styling
+--------------------------------------------------------------*/
+.video-container {
+  display: none;
+  margin-left: -30px;
+  position: fixed;
+  text-align: center;
+  top: 25vh;
+  width: 100vw;
+  z-index: 99999999;
+}
+
+@media screen and (min-width: 1441px) {
+  .video-container {
+    margin-left: -2.5vw;
+  }
+}
+
+@media screen and (max-width: 962px) {
+  .video-container #video {
+    height: 489px !important;
+    width: 92.5vw !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .video-container {
+    margin-left: -20px;
+  }
+  .video-container #video {
+    height: auto !important;
+  }
+}
+
+.embed-container {
+  height: 0;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.play-button {
+  background: url("/wp-content/themes/social-change/img/play-button-white.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 105px;
+  margin-left: -30px;
+  position: absolute;
+  top: 603px;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1441px) {
+  .play-button {
+    margin-left: -2.5vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .play-button {
+    top: 538px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .play-button {
+    margin-left: -20px;
+    top: 465px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .play-button {
+    background-size: 60px;
+    top: 417px;
+  }
+}
+
+.video-page-overlay {
+  background: rgba(0, 0, 0, 0.52);
+  cursor: pointer;
+  display: none;
+  height: 100vh;
+  margin-left: -30px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999998;
+}
+
+@media screen and (min-width: 1441px) {
+  .video-page-overlay {
+    margin-left: -2.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .video-page-overlay {
+    margin-left: -20px;
+  }
+}
+
+.close-button {
+  height: 50px;
+  position: absolute;
+  right: 10vw;
+  top: 10vh;
+}
+
+@media screen and (max-width: 1120px) {
+  .close-button {
+    right: 6vw;
+    top: 20vh;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .close-button {
+    right: 30px;
+    top: 15vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .close-button {
+    right: 10px;
+    top: 10vh;
   }
 }
 

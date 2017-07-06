@@ -209,34 +209,81 @@
       }
     });
 
-    // Initialize and configure Owl Carousel
-
-    $('.owl-carousel').owlCarousel({
+    // Initialize and configure Owl Carousel for Related Stories
+    $('.owl-carousel.related').owlCarousel({
       loop: false,
       margin: 18,
       stagePadding: 60,
       nav: false,
       responsive:{
-          0:{
-              items:1
-          },
-          768:{
-              items:2
-          },
-          850:{
-              items:3
-          },
-          1120:{
-              items:3
-          },
-          1200:{
-              items:4
-          },
-          1600:{
-              items:5
-          }
+        0:{
+            items:1
+        },
+        768:{
+            items:2
+        },
+        850:{
+            items:3
+        },
+        1120:{
+            items:3
+        },
+        1200:{
+            items:4
+        },
+        1600:{
+            items:5
+        }
       }
     })
+
+    // Initialize and configure Owl Carousel for 8 Things you can do
+    $('.owl-carousel.eight').owlCarousel({
+      loop: false,
+      margin: 20,
+      stagePadding: 30,
+      nav: false,
+      responsive:{
+        0:{
+            items:1,
+            margin: 15,
+            center: true,
+        },
+        450:{
+            items:2,
+            margin: 15
+        },
+        700:{
+            items:3
+        },
+        910:{
+            items:4
+        },
+        1130:{
+            items:5
+        },
+        1367:{
+            items:6
+        },
+        1600:{
+            items:7
+        }
+      }
+    })
+
+    // Play button for video on President's page
+    $('.play-button, .video-page-overlay').on('click', function() {
+      if ( $('.video-container').is(':hidden') ) {
+        $('.video-container, .video-page-overlay').fadeIn();
+        // $('#video')[0].play(); if you want the video to autoplay when opened
+        $('body').css('overflow', 'hidden');
+      }
+      else {
+        $('body').css('overflow', 'visible');
+        $('#video')[0].pause();
+        $('.video-container, .video-page-overlay').fadeOut();
+      }
+    });
   }
 
   // Get Functions for HomePage
