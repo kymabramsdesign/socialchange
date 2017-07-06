@@ -2253,7 +2253,7 @@ button#responsive-menu-button {
   transition: all .3s ease-in-out;
 }
 
-.search {
+.search-top {
   background-image: url(/wp-content/themes/social-change/img/search.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -2271,19 +2271,19 @@ button#responsive-menu-button {
 }
 
 @media screen and (min-width: 1441px) {
-  .search {
+  .search-top {
     left: 2.5vw;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .search {
+  .search-top {
     top: 26px;
     left: 20px;
   }
 }
 
-.search.scrolled {
+.search-top.scrolled {
   top: 26px;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -2629,6 +2629,9 @@ button#responsive-menu-button {
 }
 
 /*--------------------------------------------------------------
+## Search Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -2845,6 +2848,7 @@ object {
 /*--------------------------------------------------------------
 ## Video Styling
 --------------------------------------------------------------*/
+/* Video Styling*/
 .video-container {
   display: none;
   margin-left: -30px;
@@ -2875,25 +2879,6 @@ object {
   .video-container #video {
     height: auto !important;
   }
-}
-
-.embed-container {
-  height: 0;
-  height: auto;
-  max-width: 100%;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-}
-
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 .play-button {

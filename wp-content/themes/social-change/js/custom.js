@@ -8,7 +8,7 @@
 
   // Script for toggle Search bar
 
-  $('.search').on('click', function() {
+  $('.search-top').on('click', function() {
     var visible = $('.widget-area').hasClass('visible');
 
     if ( visible == false ) {

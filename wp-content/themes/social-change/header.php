@@ -25,7 +25,7 @@
 
 <body <?php body_class(); ?>>
 <div class="page-overlay"></div>
-<div class="search"></div>
+<div class="search-top"></div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'social-change' ); ?></a>
 

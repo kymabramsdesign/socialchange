@@ -1,4 +1,4 @@
-// Video Styling
+/* Video Styling*/
 
 .video-container {
   display: none;
@@ -26,25 +26,6 @@
     #video {
       height: auto !important;
     }
-  }
-}
-
-.embed-container {
-  height: 0;
-  height: auto;
-  max-width: 100%;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-
-  iframe,
-  object,
-  embed {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
   }
 }
 
@@ -118,5 +99,4 @@
     right: 10px;
     top: 10vh;
   }
-
 }
