@@ -2360,7 +2360,7 @@ button#responsive-menu-button {
 }
 
 .widget-area.scrolled .widget {
-  margin: 15px 30px 15px 70px;
+  margin: 16px 30px 17px 70px;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -2631,6 +2631,50 @@ button#responsive-menu-button {
 /*--------------------------------------------------------------
 ## Search Page
 --------------------------------------------------------------*/
+/* Styles for the Search Results Page*/
+.search-header {
+  color: #948932;
+  text-transform: capitalize;
+}
+
+.article-container .search-field {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #948932;
+  font-size: 18px;
+  height: 47px;
+  margin-right: 20px;
+  padding: 0 5px;
+}
+
+.article-container .search-field:focus {
+  border: 0;
+  border-bottom: 2px solid #948932;
+}
+
+.nav-links {
+  text-align: center;
+  margin: -66px 0 62px;
+}
+
+.nav-links .page-numbers {
+  color: #948932;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-links .page-numbers.current {
+  color: #666;
+}
+
+.nav-links .page-numbers:hover {
+  color: #666;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

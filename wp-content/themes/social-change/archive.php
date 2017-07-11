@@ -37,6 +37,8 @@ get_header(); ?>
 			<?php endif; ?>
 			</div><!-- .article-content -->
 
+			<?php the_posts_pagination(); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

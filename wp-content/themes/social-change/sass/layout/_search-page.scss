@@ -1,9 +1,44 @@
-// Styles for the Search Results Page
+/* Styles for the Search Results Page*/
 
-.search-results {
-  .article-container {
-    .article-list {
+.search-header {
+  color: $olive;
+  text-transform: capitalize;
+}
 
+.article-container .search-field {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid $olive;
+  font-size: 18px;
+  height: 47px;
+  margin-right: 20px;
+  padding: 0 5px;
+
+  &:focus {
+    border: 0;
+    border-bottom: 2px solid $olive;
+  }
+}
+
+.nav-links {
+  text-align: center;
+  margin: -66px 0 62px;
+
+  .page-numbers {
+    color: $olive;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &.current {
+      color: $grey;
+    }
+
+    &:hover {
+      color: $grey;
     }
   }
 }
