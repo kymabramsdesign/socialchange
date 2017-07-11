@@ -188,28 +188,10 @@
 }
 
 /* Change Agents Section */
-.change-agents {
-  background-color: #f7f1f4;
-  margin-left: -30px;
-  padding: 0 30px;
-  width: 100vw;
-
-  @media screen and (min-width:1441px) {
-    margin-left: -2.5vw;
-    padding: 0 2.5vw;
-  }
-
-  @media screen and (max-width: 767px) {
-    margin-left: -20px;
-  }
-
-  img {
-    border-radius: 250px;
-  }
-}
-
-/* Alumni News Section */
-.alumni-news {
+.change-agents,
+.alumni-news,
+.institutes-centers,
+.taking-action {
   background-color: $white;
   margin-left: -30px;
   padding: 0 30px;
@@ -222,6 +204,24 @@
 
   @media screen and (max-width: 767px) {
     margin-left: -20px;
+  }
+}
+
+/* Change Agents Section */
+.change-agents {
+  background-color: #f7f1f4;
+
+  img {
+    border-radius: 250px;
+  }
+}
+
+/* Institutes and Centers Section */
+.institutes-centers {
+  background-color: #E6EFF7;
+
+  img {
+    border-radius: 250px;
   }
 }
 

@@ -1,4 +1,46 @@
-table {
-	margin: 0 0 1.5em;
-	width: 100%;
+.large-table {
+  margin: 0 18.5vw;
+  width: auto;
+
+  th {
+    padding: 0 0 0 10px;
+    text-align: left;
+
+    &:last-of-type {
+      padding: 0 0 0 8vw;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid $rules;
+    height: 90px;
+
+    &:first-of-type {
+      border-bottom: 0;
+      font-weight: 500;
+      height: 45px;
+    }
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    td {
+      padding: 0 2.5vw 0 10px;
+      width: 50%;
+
+      &:nth-of-type(2) {
+        color: #cc7029;
+        font-size: 28px;
+        line-height: 34px;
+        padding: 0 0 0 8vw;
+      }
+
+      &.small-cell {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+  }
 }

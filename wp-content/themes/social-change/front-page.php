@@ -113,9 +113,73 @@ get_header(); ?>
           </div><!-- .article-list -->
 
         <?php endif; ?>
-        </div><!-- .article-container -->
+      </div><!-- .article-container -->
 
-      </div><!-- .alumni-news -->
+    </div><!-- .alumni-news -->
+
+    <div class="institutes-centers">
+      <h1>Institutes + Centers</h1>
+
+      <div class="article-container">
+
+      <?php if( have_rows('institutes') ): ?>
+
+        <div class="article-list">
+          <?php while( have_rows('institutes') ): the_row();
+
+            // vars
+            $institute = get_sub_field('institute_stories'); ?>
+
+              <div class="item">
+                <a href="<?php the_permalink($institute_stories); ?>">
+                  <?php echo get_the_post_thumbnail($institute, 'change-circles'); ?></a>
+
+                <h5><?php $post_term = get_the_term_list($institute, 'post_tag' );
+                  print_r($post_term); ?></h5>
+                <a href="<?php the_permalink($institute); ?>" class="title"><?php echo get_the_title($institute); ?></a>
+                <p><?php $excerpt = wp_trim_words( get_field('article_content', $institute ), $num_words = 18, $more = '...' );
+                  echo $excerpt ?></p>
+             </div><!-- .item -->
+            <?php endwhile; ?>
+
+          </div><!-- .article-list -->
+
+        <?php endif; ?>
+      </div><!-- .article-container -->
+
+    </div><!-- .institutes-centers -->
+
+    <div class="taking-action">
+      <h1>Taking Action</h1>
+
+      <div class="article-container">
+
+      <?php if( have_rows('taking_action') ): ?>
+
+        <div class="article-list">
+          <?php while( have_rows('taking_action') ): the_row();
+
+            // vars
+            $action = get_sub_field('action_stories'); ?>
+
+              <div class="item">
+                <a href="<?php the_permalink($action); ?>">
+                  <?php echo get_the_post_thumbnail($action, 'article-listing'); ?></a>
+
+                <h5><?php $post_term = get_the_term_list($action, 'post_tag' );
+                  print_r($post_term); ?></h5>
+                <a href="<?php the_permalink($action); ?>" class="title"><?php echo get_the_title($action); ?></a>
+                <p><?php $excerpt = wp_trim_words( get_field('article_content', $action ), $num_words = 18, $more = '...' );
+                  echo $excerpt ?></p>
+             </div><!-- .item -->
+            <?php endwhile; ?>
+
+          </div><!-- .article-list -->
+
+        <?php endif; ?>
+      </div><!-- .article-container -->
+
+    </div><!-- .taking-actio -->
 
     <div id="field-notes" class="field-notes">
       <h1>Read More on Adler.edu</h1>
