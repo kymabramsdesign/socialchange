@@ -1842,16 +1842,13 @@ button#responsive-menu-button {
 }
 
 .cycloneslider-template-default .cycloneslider-pager {
-  bottom: -35px !important;
-  right: 8px !important;
-  top: inherit !important;
+  position: relative !important;
+  right: 0 !important;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
   .cycloneslider-template-default .cycloneslider-pager {
-    position: relative !important;
-    bottom: -18px !important;
-    right: initial !important;
     text-align: center;
   }
 }
@@ -1869,6 +1866,10 @@ button#responsive-menu-button {
     margin: 0 9px !important;
     width: 13px !important;
   }
+}
+
+.cycloneslider-template-default .cycloneslider-pager span:first-of-type {
+  margin-left: 0 !important;
 }
 
 .cycloneslider-template-default .cycloneslider-pager span.cycle-pager-active {
@@ -2584,8 +2585,12 @@ button#responsive-menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     height: 74px;
     padding: 0;
+    width: 100%;
   }
 }
 

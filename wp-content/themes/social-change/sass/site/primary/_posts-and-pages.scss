@@ -396,14 +396,11 @@
   }
 
   .cycloneslider-pager {
-    bottom: -35px !important;
-    right: 8px !important;
-    top: inherit !important;
+    position: relative !important;
+    right: 0 !important;
+    text-align: center;
 
     @media screen and (max-width: 767px) {
-      position: relative !important;
-      bottom: -18px !important;
-      right: initial !important;
       text-align: center;
     }
 
@@ -417,6 +414,10 @@
         height: 13px !important;
         margin: 0 9px !important;
         width: 13px !important;
+      }
+
+      &:first-of-type {
+        margin-left: 0 !important;
       }
 
       &.cycle-pager-active {
