@@ -558,8 +558,8 @@ input[type="reset"],
 input[type="submit"] {
   background: #f7f7f7;
   border-radius: 0;
-  border: 2px solid #d8d8d8;
-  color: #a3a3a3;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.4);
   font-family: "din-2014", sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -585,8 +585,9 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #a3a3a3;
-  color: #666;
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.5);
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -2372,8 +2373,7 @@ button#responsive-menu-button {
 .widget-area .search-field {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid #a3a3a3;
-  font-size: 18px;
+  font-size: 22px;
   height: 50px;
   margin: 0 15px;
   padding: 0 10px;
@@ -2393,12 +2393,11 @@ button#responsive-menu-button {
 
 .widget-area .search-field:focus {
   border: 0;
-  border-bottom: 2px solid #a3a3a3;
 }
 
 .widget-area .search-submit {
   float: right;
-  background-color: #e4f7e4;
+  background-color: transparent;
   height: 50px;
   padding: 13px 0 12px;
   width: 14.5%;
@@ -2700,7 +2699,34 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .search-submit {
-    margin-top: 15px;
+    margin-top: 30px;
+  }
+}
+
+.article-container .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .article-container .search-form {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+.article-container .search-form label {
+  width: 73%;
+}
+
+@media screen and (max-width: 767px) {
+  .article-container .search-form label {
+    width: 100%;
   }
 }
 
@@ -2712,6 +2738,7 @@ button#responsive-menu-button {
   height: 47px;
   margin-right: 20px;
   padding: 0 5px;
+  width: 100%;
 }
 
 .article-container .search-field:focus {

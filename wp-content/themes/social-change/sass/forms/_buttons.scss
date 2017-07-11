@@ -4,8 +4,8 @@ input[type="reset"],
 input[type="submit"] {
 	background: $beige;
 	border-radius: 0;
-	border: 2px solid $rules;
-	color: $light-grey;
+	border: 2px solid rgba(0,0,0,.3);
+	color: rgba(0,0,0,.4);
 	font-family: $font__menu;
 	font-size: 14px;
 	font-weight: 700;
@@ -22,8 +22,9 @@ input[type="submit"] {
   }
 
 	&:hover {
-		border-color: $light-grey;
-		color: $grey;
+		color: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.1);
+    border: 2px solid rgba(0,0,0,.5);
 		-webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
