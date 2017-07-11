@@ -166,21 +166,33 @@
   }
 
   .search-field {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid $light-grey;
+    font-size: 18px;
     height: 50px;
-    width: 84%;
+    margin: 0 15px;
+    padding: 0 10px;
+    width: 80%;
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 
     @media screen and (max-width:767px) {
       height: 46px;
-      margin-bottom: 15px;
+      margin: 0 0 15px 0;
       width: 100%;
+    }
+
+    &:focus {
+      border: 0;
+      border-bottom: 2px solid $light-grey;
     }
   }
 
   .search-submit {
     float: right;
+    background-color: $light-mint;
     height: 50px;
     padding: 13px 0 12px;
     width: 14.5%;
@@ -191,6 +203,7 @@
     @media screen and (max-width:767px) {
       height: 46px;
       margin-bottom: 15px;
+      margin-top: 0;
       width: 100%;
     }
   }

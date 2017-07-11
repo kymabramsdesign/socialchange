@@ -5,6 +5,12 @@
   text-transform: capitalize;
 }
 
+.search-submit {
+  @media screen and (max-width:767px) {
+    margin-top: 15px;
+  }
+}
+
 .article-container .search-field {
   background-color: transparent;
   border: 0;

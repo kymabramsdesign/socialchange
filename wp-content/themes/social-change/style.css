@@ -2370,8 +2370,14 @@ button#responsive-menu-button {
 }
 
 .widget-area .search-field {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #a3a3a3;
+  font-size: 18px;
   height: 50px;
-  width: 84%;
+  margin: 0 15px;
+  padding: 0 10px;
+  width: 80%;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -2380,13 +2386,19 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   .widget-area .search-field {
     height: 46px;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
     width: 100%;
   }
 }
 
+.widget-area .search-field:focus {
+  border: 0;
+  border-bottom: 2px solid #a3a3a3;
+}
+
 .widget-area .search-submit {
   float: right;
+  background-color: #e4f7e4;
   height: 50px;
   padding: 13px 0 12px;
   width: 14.5%;
@@ -2399,6 +2411,7 @@ button#responsive-menu-button {
   .widget-area .search-submit {
     height: 46px;
     margin-bottom: 15px;
+    margin-top: 0;
     width: 100%;
   }
 }
@@ -2683,6 +2696,12 @@ button#responsive-menu-button {
 .search-header {
   color: #948932;
   text-transform: capitalize;
+}
+
+@media screen and (max-width: 767px) {
+  .search-submit {
+    margin-top: 15px;
+  }
 }
 
 .article-container .search-field {

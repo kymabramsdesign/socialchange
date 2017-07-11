@@ -12,11 +12,14 @@
     var visible = $('.widget-area').hasClass('visible');
 
     if ( visible == false ) {
-      $('.widget-area').addClass('visible').slideDown('200');
+      $('.widget-area').addClass('visible').slideDown('200', function() {
+        $('.search-field').focus();
+      });
       $(this).delay('1000').css({
         'background-image': 'url(/wp-content/themes/social-change/img/exit.png)',
         'background-size': '90%'
       });
+
     }
     else {
       $('.widget-area').removeClass('visible').slideUp('fast');
