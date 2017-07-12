@@ -2992,7 +2992,7 @@ object {
   margin-left: -30px;
   position: fixed;
   text-align: center;
-  top: 25vh;
+  top: 20vh;
   width: 100vw;
   z-index: 99999999;
 }
@@ -3003,19 +3003,33 @@ object {
   }
 }
 
-@media screen and (max-width: 962px) {
+@media screen and (max-width: 767px) {
+  .video-container {
+    margin-left: -20px;
+  }
+}
+
+.video-container #video {
+  height: auto !important;
+  width: 95.5vw !important;
+  max-width: 1380px;
+}
+
+@media screen and (max-width: 1050px) {
   .video-container #video {
-    height: 489px !important;
+    width: 94vw !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .video-container #video {
     width: 92.5vw !important;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .video-container {
-    margin-left: -20px;
-  }
   .video-container #video {
-    height: auto !important;
+    width: 100vw !important;
   }
 }
 
@@ -3084,28 +3098,33 @@ object {
 .close-button {
   height: 50px;
   position: absolute;
-  right: 10vw;
-  top: 10vh;
+  right: 2.5vw;
+  top: 130px;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (min-width: 1441px) {
   .close-button {
-    right: 6vw;
-    top: 20vh;
+    right: 5vw;
   }
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1050px) {
+  .close-button {
+    right: 3vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
   .close-button {
     right: 30px;
-    top: 15vh;
   }
 }
 
 @media screen and (max-width: 767px) {
   .close-button {
-    right: 10px;
-    top: 10vh;
+    height: 35px;
+    right: 20px;
+    top: 86px;
   }
 }
 

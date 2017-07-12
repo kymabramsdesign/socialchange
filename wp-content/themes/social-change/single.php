@@ -59,7 +59,7 @@ get_header(); ?>
 				</div>
 				<div class="play-button"></div>
 				<div class="video-container">
-					<video id="video" width="900" height="570" controls>
+					<video id="video" width="1244" height="700" controls>
 						<source src="<?php the_field('link'); ?>" type="video/mp4">
 					We're sorry, your browser does not support the playback of this video.
 					</video>
