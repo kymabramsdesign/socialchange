@@ -253,32 +253,31 @@
     $('.owl-carousel.eight').owlCarousel({
       loop: false,
       margin: 20,
-      stagePadding: 30,
+      stagePadding: 100,
       nav: false,
       responsive:{
         0:{
             items:1,
-            margin: 15,
-            center: true,
+            stagePadding: 40
         },
         450:{
-            items:2,
-            margin: 15
+            items: 2,
+            stagePadding: 60
         },
         700:{
-            items:3
+            items:2
         },
         910:{
-            items:4
+            items:3
         },
         1130:{
-            items:5
+            items:4
         },
         1367:{
-            items:6
+            items:5
         },
         1600:{
-            items:7
+            items:6
         }
       }
     })

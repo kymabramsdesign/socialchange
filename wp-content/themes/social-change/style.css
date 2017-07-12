@@ -1882,16 +1882,31 @@ button#responsive-menu-button {
   margin-top: -6.6%;
 }
 
+.sidebar-title {
+  color: #c32033;
+  font-size: 26px;
+  line-height: 26px;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 42px;
+  }
+}
+
 /* 8 Things Styling */
 .eight {
   margin-bottom: 79px;
-  margin-top: 80px;
 }
 
 @media screen and (max-width: 767px) {
   .eight {
     margin-bottom: 42px;
-    margin-top: 46px;
   }
 }
 
@@ -1901,7 +1916,7 @@ button#responsive-menu-button {
 }
 
 .eight .item h5 {
-  color: #572400;
+  color: #c32033;
   margin-bottom: 6px;
   margin-top: 20px;
 }
