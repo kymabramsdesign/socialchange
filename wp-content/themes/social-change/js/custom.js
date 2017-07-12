@@ -192,21 +192,30 @@
 
         $(window).on('scroll', function() {
           var scrollTop = $(this).scrollTop();
-
-          var topDistance = ($('.article-content p').offset().top) - 94;
+          var pageCenter = (($(window).height()) / 2) - 66;
+          var topDistance = ($('.article-content p').offset().top) - pageCenter;
+          var relatedDistance = $('.related-comment').offset().top - (pageCenter + 142);
 
           if ( (topDistance) < scrollTop ) {
             $('.a2a_floating_style').css({
-              'top' : '94px',
+              'top' : pageCenter,
               'position' : 'fixed'
             });
           }
-
           else {
             $('.a2a_floating_style').css({
               'top' : offset,
               'position' : 'absolute'
             });
+          }
+
+          if ( relatedDistance < scrollTop ) {
+            $('.single-post .a2a_floating_style').each( function() {
+              this.style.setProperty( 'z-index', '-1', 'important');
+            });
+          }
+          else {
+            $('.single-post .a2a_floating_style').css('z-index', 'initial');
           }
         });
       }
