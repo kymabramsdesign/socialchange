@@ -192,7 +192,7 @@
 
         $(window).on('scroll', function() {
           var scrollTop = $(this).scrollTop();
-          var pageCenter = (($(window).height()) / 2) - 66;
+          var pageCenter = (($(window).height()) / 2) - 74;
           var topDistance = ($('.article-content p').offset().top) - pageCenter;
           var relatedDistance = $('.related-comment').offset().top - (pageCenter + 142);
 

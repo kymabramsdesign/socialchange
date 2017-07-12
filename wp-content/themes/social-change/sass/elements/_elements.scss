@@ -47,10 +47,14 @@ blockquote, q {
 }
 
 hr {
-	background-color: $color__background-hr;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	background-color: transparent;
+   border-bottom: 1px dotted $black;
+  margin: 36px auto 42px;
+  width: 47px;
+
+  @media screen and (max-width:767px) {
+  	margin: 32px auto;
+  }
 }
 
 @import "lists";

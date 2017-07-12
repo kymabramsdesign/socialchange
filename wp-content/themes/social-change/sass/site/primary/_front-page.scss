@@ -43,7 +43,7 @@
   flex-wrap: wrap;
   height: calc(100vh - 229px);
   list-style: none;
-  margin: 0 0 0 -30px;
+  margin: 100vh 0 0 -30px;
   padding: 0;
   text-align: center;
   width: 100vw;
@@ -59,11 +59,6 @@
     height: 175vh;
     margin-left: -20px;
     padding: 90vh 0 300px;
-
-
-    &.scrolled {
-
-    }
   }
 
   li {
@@ -119,7 +114,7 @@
   margin-left: -30px;
   overflow: hidden;
   position: absolute;
-  top: 229px;
+  top: 100vh;
   -webkit-transition: background-image .3s ease-in-out;
   -o-transition: background-image .3s ease-in-out;
   transition: background-image .3s ease-in-out;
@@ -147,6 +142,46 @@
   .image-4,
   .image-5 {
     display: none;
+  }
+}
+
+.front-page .main-title {
+  position: fixed;
+  z-index: -10;
+  width: 100vw;
+  margin-left: -30px;
+  top: 400px;
+
+  @media screen and (min-width:1441px) {
+    margin-left: -2.5vw;
+  }
+
+  @media screen and (max-width:767px) {
+    margin-left: -20px;
+  }
+
+  .issue-title {
+    color: $black;
+    font-family: $font__condensed;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin: -174px 0 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .issue-date {
+    color: $prev-next;
+    font-family: $font__menu;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-top: 23px;
+    margin-bottom: 53px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 

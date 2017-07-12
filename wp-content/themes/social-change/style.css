@@ -323,7 +323,7 @@ h3 {
 h5 {
   font-family: "din-2014", sans-serif;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 16px;
   letter-spacing: 3px;
   margin: 0;
@@ -439,10 +439,16 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
+  background-color: transparent;
+  border-bottom: 1px dotted #000;
+  margin: 36px auto 42px;
+  width: 47px;
+}
+
+@media screen and (max-width: 767px) {
+  hr {
+    margin: 32px auto;
+  }
 }
 
 ul, ol {
@@ -975,7 +981,7 @@ button#responsive-menu-button {
   flex-wrap: wrap;
   height: calc(100vh - 229px);
   list-style: none;
-  margin: 0 0 0 -30px;
+  margin: 100vh 0 0 -30px;
   padding: 0;
   text-align: center;
   width: 100vw;
@@ -1056,7 +1062,7 @@ button#responsive-menu-button {
   margin-left: -30px;
   overflow: hidden;
   position: absolute;
-  top: 229px;
+  top: 100vh;
   -webkit-transition: background-image .3s ease-in-out;
   -o-transition: background-image .3s ease-in-out;
   transition: background-image .3s ease-in-out;
@@ -1089,6 +1095,50 @@ button#responsive-menu-button {
 .image-container .image-4,
 .image-container .image-5 {
   display: none;
+}
+
+.front-page .main-title {
+  position: fixed;
+  z-index: -10;
+  width: 100vw;
+  margin-left: -30px;
+  top: 400px;
+}
+
+@media screen and (min-width: 1441px) {
+  .front-page .main-title {
+    margin-left: -2.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .front-page .main-title {
+    margin-left: -20px;
+  }
+}
+
+.front-page .main-title .issue-title {
+  color: #000;
+  font-family: "din-condensed", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin: -174px 0 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.front-page .main-title .issue-date {
+  color: #727272;
+  font-family: "din-2014", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-top: 23px;
+  margin-bottom: 53px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Section Styling*/
@@ -1884,7 +1934,7 @@ button#responsive-menu-button {
 
 .sidebar-title {
   color: #c32033;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 26px;
   margin-bottom: 30px;
   margin-top: 80px;
