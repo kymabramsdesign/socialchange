@@ -2169,6 +2169,8 @@ button#responsive-menu-button {
     bottom: 30px;
     display: block;
     position: absolute;
+    right: 9px;
+    z-index: -1;
   }
   .social-mobile a {
     margin: 15px !important;
@@ -2751,6 +2753,12 @@ button#responsive-menu-button {
   margin: -66px 0 62px;
 }
 
+@media screen and (max-width: 767px) {
+  .nav-links {
+    margin: -30px 0 50px;
+  }
+}
+
 .nav-links .page-numbers {
   color: #948932;
   font-size: 14px;
@@ -2759,6 +2767,13 @@ button#responsive-menu-button {
   margin: 0 6px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-links .page-numbers {
+    font-size: 15px;
+    margin: 0 12px;
+  }
 }
 
 .nav-links .page-numbers.current {

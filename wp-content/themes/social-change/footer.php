@@ -19,9 +19,9 @@
 			<div class="copy footer-item">ADLER UNIVERSITY <?php echo date("Y"); ?></div>
       <div class="site-subtitle footer-item">A Magazine for Alumni and Friends of Adler University</div>
       <div class="social footer-item">
-        <a href="#" target="_blank"><img src="/wp-content/themes/social-change/img/facebook-grey.png" alt="Facebook" /></a>
-        <a href="#" target="_blank"><img src="/wp-content/themes/social-change/img/twitter-grey.png" alt="Twitter" /></a>
-        <a href="#" target="_blank"><img src="/wp-content/themes/social-change/img/pinterest-grey.png" alt="Pinterest" /></a>
+        <a href="https://www.facebook.com/AdlerUniversity/" target="_blank"><img src="/wp-content/themes/social-change/img/facebook-grey.png" alt="Facebook" /></a>
+        <a href="https://twitter.com/adleruniversity" target="_blank"><img src="/wp-content/themes/social-change/img/twitter-grey.png" alt="Twitter" /></a>
+        <a href="https://www.instagram.com/adleruniversity/" target="_blank"><img src="/wp-content/themes/social-change/img/pinterest-grey.png" alt="Pinterest" /></a>
       </div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
