@@ -173,3 +173,19 @@ add_image_size( 'change-circles', 250, 250, true ); // width, height, crop
 }
 add_action('after_setup_theme','add_custom_sizes');
 
+// Chnage login logo
+function my_login_logo_one() {
+?>
+<style type="text/css">
+body.login div#login h1 a {
+background-image: url(/wp-content/themes/social-change/img/social-change-logo.png);
+background-size: 100%;
+height: 100%;
+padding-bottom: 100px;
+padding-top: 30px;
+width: 100%;
+}
+</style>
+<?php
+} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
+

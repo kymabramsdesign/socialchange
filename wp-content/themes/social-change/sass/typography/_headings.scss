@@ -9,10 +9,12 @@ h1 {
   font-weight: 500;
   line-height: 42px;
   margin: 0;
+  margin-bottom: 10px;
 
   @media screen and (max-width:767px) {
     font-size: 26px;
     line-height: 34px;
+    margin-bottom: 0;
   }
 }
 

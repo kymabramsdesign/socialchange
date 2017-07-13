@@ -3,21 +3,9 @@ Theme Name: Social Change
 Theme URI: http://underscores.me/
 Author: Brandon Trumfio for Kym Abrams Design
 Author URI: http://www.kad.com
-Description: A Custom theme for Adler University
+Description: A custom theme built for Adler University's Alumni Magazine
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: social-change
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Social Change is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -281,12 +269,14 @@ h1 {
   font-weight: 500;
   line-height: 42px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 26px;
     line-height: 34px;
+    margin-bottom: 0;
   }
 }
 
@@ -385,6 +375,12 @@ big {
 --------------------------------------------------------------*/
 html {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 *,
@@ -713,6 +709,12 @@ a {
   -webkit-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a:focus, a:hover, a:active {
@@ -763,7 +765,7 @@ button#responsive-menu-button {
 }
 
 .responsive-menu-subarrow {
-  left: 174px !important;
+  left: 136px !important;
 }
 
 .responsive-menu-subarrow img {
@@ -1136,9 +1138,35 @@ button#responsive-menu-button {
   font-weight: 500;
   letter-spacing: 3px;
   margin-top: 23px;
-  margin-bottom: 53px;
+  margin-bottom: 47px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.front-page .main-title .fullscreen-bg {
+  position: fixed;
+}
+
+.front-page .main-title .fullscreen-bg__video {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  .front-page .main-title .fullscreen-bg__video {
+    height: 300vh;
+    top: -100vh;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  .front-page .main-title .fullscreen-bg__video {
+    width: 300vw;
+    left: -100vw;
+  }
 }
 
 /* Section Styling*/
@@ -1542,6 +1570,10 @@ button#responsive-menu-button {
 .article-headings h5 a {
   text-decoration: none;
   color: #948932;
+}
+
+.article-headings h5 a:hover {
+  color: #000;
 }
 
 .article-headings .date-posted {
@@ -2294,6 +2326,7 @@ button#responsive-menu-button {
 --------------------------------------------------------------*/
 /* Header Styles*/
 .site-header {
+  height: 77px;
   position: fixed;
   width: 100%;
   z-index: 1000;
