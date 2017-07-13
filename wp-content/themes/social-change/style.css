@@ -1932,49 +1932,88 @@ button#responsive-menu-button {
   margin-top: -6.6%;
 }
 
+.sidebar {
+  background-color: #f4f4f4;
+  margin-left: -30px;
+  margin-top: 60px;
+  padding: 52px 0 83px;
+  width: 100vw;
+}
+
+@media screen and (min-width: 1441px) {
+  .sidebar {
+    margin-left: -2.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    margin-left: -20px;
+    padding: 40px 0;
+  }
+}
+
+.sidebar p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1441px) {
+  .sidebar p {
+    padding: 0 2.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar p {
+    padding: 0 20px;
+  }
+}
+
 .sidebar-title {
   color: #c32033;
-  font-size: 24px;
-  line-height: 26px;
+  font-family: "semplicitapro", sans-serif;
+  font-size: 21px;
+  line-height: 24px;
   margin-bottom: 30px;
-  margin-top: 80px;
+  margin-top: 0;
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
   .sidebar-title {
-    font-size: 20px;
     margin-bottom: 15px;
-    margin-top: 42px;
+    padding: 0 20px;
   }
 }
 
-/* 8 Things Styling */
-.eight {
-  margin-bottom: 79px;
-}
-
-@media screen and (max-width: 767px) {
-  .eight {
-    margin-bottom: 42px;
-  }
-}
-
-.eight .item {
+/* 8 Things & Travel Ban Styling */
+.eight .item, .ban .item {
   line-height: 20px;
   text-align: center;
 }
 
-.eight .item h5 {
+.eight .item h5, .ban .item h5 {
   color: #c32033;
+  font-family: "semplicitapro", sans-serif;
+  letter-spacing: 1px;
   margin-bottom: 6px;
   margin-top: 20px;
 }
 
-.eight .item p {
-  margin: 0;
+.eight .item p, .ban .item p {
   font-size: 14px;
-  line-height: 22px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 10px 0 0;
+}
+
+.ban .item h5 {
+  font-size: 21px;
+  letter-spacing: 3px;
 }
 
 /*--------------------------------------------------------------

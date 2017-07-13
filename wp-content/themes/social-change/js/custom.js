@@ -282,6 +282,37 @@
       }
     })
 
+    // Initialize and configure Owl Carousel for Travel Ban
+    $('.owl-carousel.ban').owlCarousel({
+      loop: false,
+      margin: 80,
+      stagePadding: 170,
+      nav: false,
+      responsive:{
+        0:{
+            items:1,
+            margin: 20,
+            stagePadding: 60
+        },
+        700:{
+            items: 2,
+            margin: 40,
+            stagePadding: 75
+        },
+        900:{
+            items:2,
+            margin: 70,
+            stagePadding: 140
+        },
+        1025:{
+            items:3
+        },
+        1600:{
+            items:4
+        }
+      }
+    })
+
     // Play button for video on President's page
     $('.play-button, .video-page-overlay').on('click', function() {
       if ( $('.video-container').is(':hidden') ) {
