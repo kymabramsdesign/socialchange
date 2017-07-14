@@ -53,6 +53,12 @@ get_header(); ?>
 			<div class="header-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
 			</div>
 
+			<?php
+				$caption = get_field('image_caption');
+				if ( !empty($caption) ): ?>
+				<p class="caption"><?php echo $caption ?></p>
+				<?php endif; ?>
+
 			<?php if( has_category('presidents-letter', $post_id) ) { ?>
 				<div class="video-page-overlay">
 					<img class="close-button" src="/wp-content/themes/social-change/img/exit.png" alt="close button" />

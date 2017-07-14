@@ -313,6 +313,29 @@
       }
     })
 
+    // Initialize and configure Owl Carousel for Day After Quotes
+    $('.owl-carousel.quote').owlCarousel({
+      loop: false,
+      margin: 20,
+      stagePadding: 120,
+      nav: false,
+      responsive:{
+        0:{
+            items:1,
+            margin: 20,
+            stagePadding: 40
+        },
+        500:{
+            items:1,
+            margin: 20,
+            stagePadding: 100
+        },
+        1100:{
+            items:2
+        }
+      }
+    })
+
     // Play button for video on President's page
     $('.play-button, .video-page-overlay').on('click', function() {
       if ( $('.video-container').is(':hidden') ) {

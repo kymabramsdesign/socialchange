@@ -370,6 +370,18 @@ big {
   font-size: 125%;
 }
 
+.caption {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 16px 18px -39px;
+}
+
+@media screen and (max-width: 767px) {
+  .caption {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1964,6 +1976,7 @@ button#responsive-menu-button {
   margin-top: -6.6%;
 }
 
+/* Sidebar Styling */
 .sidebar {
   background-color: #f4f4f4;
   margin-left: -30px;
@@ -2022,13 +2035,16 @@ button#responsive-menu-button {
   }
 }
 
-/* 8 Things & Travel Ban Styling */
-.eight .item, .ban .item {
+.eight .item,
+.ban .item,
+.quote .item {
   line-height: 20px;
   text-align: center;
 }
 
-.eight .item h5, .ban .item h5 {
+.eight .item h5,
+.ban .item h5,
+.quote .item h5 {
   color: #c32033;
   font-family: "semplicitapro", sans-serif;
   letter-spacing: 1px;
@@ -2036,7 +2052,9 @@ button#responsive-menu-button {
   margin-top: 20px;
 }
 
-.eight .item p, .ban .item p {
+.eight .item p,
+.ban .item p,
+.quote .item p {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -2046,6 +2064,18 @@ button#responsive-menu-button {
 .ban .item h5 {
   font-size: 21px;
   letter-spacing: 3px;
+}
+
+.quote img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50% !important;
+}
+
+@media screen and (max-width: 767px) {
+  .quote img {
+    width: 100% !important;
+  }
 }
 
 /*--------------------------------------------------------------
