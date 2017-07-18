@@ -102,7 +102,7 @@
         var videoPosition = $('.main-title').offset().top;
         var videoHeight = $('.fullscreen-bg__video').height() - 357; // video minus the top
 
-        if ( scrollPosition <= 200  ) {
+        if ( scrollPosition == 0  ) {
           $('.fullscreen-bg').animate({
             top: 357
           }, 250 );
@@ -110,11 +110,13 @@
 
         else if ( scrollPosition >= videoHeight ) {
 
-          $('.main-title').addClass('scrolled');
+          $('.main-title, .links').addClass('scrolled');
           $('.fullscreen-bg').css('top', (videoHeight+357-scrollPosition) );
+          $('.links').css('background', 'rgba(0,0,0,.35)');
         }
         else {
-          $('.main-title').removeClass('scrolled');
+          $('.main-title, .links').removeClass('scrolled');
+          $('.links').css('background', 'initial');
         }
       }
     }

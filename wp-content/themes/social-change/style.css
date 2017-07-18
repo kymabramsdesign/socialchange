@@ -1003,6 +1003,9 @@ button#responsive-menu-button {
   padding: 0;
   text-align: center;
   width: 100vw;
+  -webkit-transition: background .1s ease-in-out;
+  -o-transition: background .1s ease-in-out;
+  transition: background .1s ease-in-out;
 }
 
 @media screen and (min-width: 1441px) {
@@ -1020,6 +1023,12 @@ button#responsive-menu-button {
     margin-left: -20px;
     padding: 90vh 0 300px;
   }
+}
+
+.links.scrolled {
+  -webkit-transition: background .8s ease-in-out;
+  -o-transition: background .8s ease-in-out;
+  transition: background .8s ease-in-out;
 }
 
 .links li {
