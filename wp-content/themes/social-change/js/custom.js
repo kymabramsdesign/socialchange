@@ -99,6 +99,23 @@
       }
       else {
         contentArea = contentArea.top - 100;
+        var videoPosition = $('.main-title').offset().top;
+        var videoHeight = $('.fullscreen-bg__video').height() - 357; // video minus the top
+
+        if ( scrollPosition <= 200  ) {
+          $('.fullscreen-bg').animate({
+            top: 357
+          }, 250 );
+        }
+
+        else if ( scrollPosition >= videoHeight ) {
+
+          $('.main-title').addClass('scrolled');
+          $('.fullscreen-bg').css('top', (videoHeight+357-scrollPosition) );
+        }
+        else {
+          $('.main-title').removeClass('scrolled');
+        }
       }
     }
 
@@ -362,7 +379,7 @@
     var image4 = $('.image-4').attr('src');
     var image5 = $('.image-5').attr('src');
 
-    $('.image-container').css('background-image', 'url(' + image1 +')' );
+    // $('.image-container').css('background-image', 'url(' + image1 +')' );
 
     $('.links li a').on('hover', function() {
       var currentStory = $(this).parent().attr('class');
@@ -391,7 +408,9 @@
       else {
 
         if ( currentStory == 'link-1') {
-          $('.image-container').css('background-image', 'url(' + image1 +')' );
+          $('.image-container').css({
+            'background-image': 'url(' + image1 +')',
+            'opacity': 1 });
         }
         else if ( currentStory == 'link-2') {
           $('.image-container').css('background-image', 'url(' + image2 +')' );
