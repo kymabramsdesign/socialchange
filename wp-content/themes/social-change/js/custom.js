@@ -98,25 +98,28 @@
 
       }
       else {
-        contentArea = contentArea.top - 100;
+        contentArea = contentArea.top - 87;
         var videoPosition = $('.main-title').offset().top;
         var videoHeight = $('.fullscreen-bg__video').height() - 357; // video minus the top
+        var screenHeight = $(window).height();
 
-        if ( scrollPosition == 0  ) {
-          $('.fullscreen-bg').animate({
-            top: 357
-          }, 250 );
+        if ( scrollPosition >= screenHeight ) {
+          $('.fullscreen-bg').css('top', 0 );
+          $('.image-container').css({
+            top: 0,
+            position: 'fixed'
+          });
         }
 
         else if ( scrollPosition >= videoHeight ) {
-
           $('.main-title, .links').addClass('scrolled');
-          $('.fullscreen-bg').css('top', (videoHeight+357-scrollPosition) );
+          $('.fullscreen-bg, .image-container').css('top', (videoHeight+357-scrollPosition) );
           $('.links').css('background', 'rgba(0,0,0,.35)');
         }
         else {
           $('.main-title, .links').removeClass('scrolled');
           $('.links').css('background', 'initial');
+          $('.fullscreen-bg, .image-container').css('top', 357 );
         }
       }
     }
@@ -415,16 +418,24 @@
             'opacity': 1 });
         }
         else if ( currentStory == 'link-2') {
-          $('.image-container').css('background-image', 'url(' + image2 +')' );
+          $('.image-container').css({
+            'background-image': 'url(' + image2 +')',
+            'opacity': 1 });
         }
         else if ( currentStory == 'link-3') {
-          $('.image-container').css('background-image', 'url(' + image3 +')' );
+          $('.image-container').css({
+            'background-image': 'url(' + image3 +')',
+            'opacity': 1 });
         }
         else if ( currentStory == 'link-4') {
-          $('.image-container').css('background-image', 'url(' + image4 +')' );
+          $('.image-container').css({
+            'background-image': 'url(' + image4 +')',
+            'opacity': 1 });
         }
         else if ( currentStory == 'link-5') {
-          $('.image-container').css('background-image', 'url(' + image5 +')' );
+          $('.image-container').css({
+            'background-image': 'url(' + image5 +')',
+            'opacity': 1 });
         }
       }
 

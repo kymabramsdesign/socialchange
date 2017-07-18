@@ -997,7 +997,7 @@ button#responsive-menu-button {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: calc(100vh - 78px);
+  height: 100vh;
   list-style: none;
   margin: 100vh 0 0 -30px;
   padding: 0;
@@ -1086,7 +1086,7 @@ button#responsive-menu-button {
   background-position: center;
   background-size: cover;
   background-image: none;
-  height: calc(100vh - 78px);
+  height: 100vh;
   margin-left: -30px;
   overflow: hidden;
   opacity: 0;
