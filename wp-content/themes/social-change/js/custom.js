@@ -412,6 +412,8 @@
 
       else {
 
+        $('.fullscreen-bg').css('opacity', 0);
+
         if ( currentStory == 'link-1') {
           $('.image-container').css({
             'background-image': 'url(' + image1 +')',
