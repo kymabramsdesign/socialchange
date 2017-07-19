@@ -113,7 +113,10 @@
 
         else if ( scrollPosition >= videoHeight ) {
           $('.main-title, .links').addClass('scrolled');
-          $('.fullscreen-bg, .image-container').css('top', (videoHeight+357-scrollPosition) );
+          $('.fullscreen-bg, .image-container').css({
+            top: (videoHeight+357-scrollPosition),
+            position: 'fixed'
+          });
           $('.links').css('background', 'rgba(0,0,0,.35)');
         }
         else {
