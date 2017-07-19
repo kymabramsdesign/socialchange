@@ -978,6 +978,9 @@ button#responsive-menu-button {
   .home .site-header {
     background-color: #fff;
   }
+  .home .site-header .site-branding img {
+    padding-top: 25vh;
+  }
   .home .site-header .site-branding hr {
     margin-bottom: 40px;
   }
@@ -985,14 +988,63 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .carousel {
+    height: calc(100vh);
     margin-left: -20px;
-    height: 100vh;
+    margin-top: 100vh;
     width: 100vw;
+  }
+  .carousel .owl-dots {
+    position: absolute;
+    text-align: center;
+    top: 80vh;
+    width: 100vw;
+  }
+  .carousel .owl-dot {
+    display: inline-block;
+  }
+  .carousel .owl-dot span {
+    -webkit-backface-visibility: visible;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    display: block;
+    height: 11px;
+    margin: 0 10px;
+    -webkit-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    width: 11px;
+  }
+  .carousel .owl-dot.active span {
+    background: #fff;
   }
   .carousel .owl-carousel .owl-item .item {
     background-position: center;
-    height: 100vh;
+    height: calc(100vh);
     max-width: initial;
+    text-align: center;
+    width: 100vw;
+  }
+  .carousel .owl-carousel .owl-item .item a {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "din-2014", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    height: calc(100vh);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    letter-spacing: 8px;
+    line-height: 32px;
+    padding: 0 20px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
     width: 100vw;
   }
 }
@@ -1014,6 +1066,7 @@ button#responsive-menu-button {
   -ms-flex-align: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.35);
+  /* original*/
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.45)));
   background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.45));
   background: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.45));
@@ -1024,6 +1077,7 @@ button#responsive-menu-button {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 110vh;
+  /* Must match the .image-container*/
   list-style: none;
   margin: 100vh 0 0 -30px;
   padding: 0;
@@ -1093,21 +1147,12 @@ button#responsive-menu-button {
   border-bottom: 3px solid #948932;
 }
 
-.grey-overlay {
-  background: rgba(0, 0, 0, 0.35);
-  height: calc(100vh - 77px);
-  margin-left: -20px;
-  position: fixed;
-  top: 77px;
-  width: 100vw;
-  z-index: -1;
-}
-
 .image-container {
   background-position: center;
   background-size: cover;
   background-image: none;
   height: 100vh;
+  /* Must match the .links*/
   margin-left: -30px;
   overflow: hidden;
   opacity: 0;
@@ -1157,6 +1202,14 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   .front-page .main-title {
     margin-left: -20px;
+    position: absolute;
+    top: 88vh;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .front-page .main-title {
+    top: 92vh;
   }
 }
 
@@ -1188,6 +1241,12 @@ button#responsive-menu-button {
   position: fixed;
 }
 
+@media screen and (max-width: 767px) {
+  .front-page .main-title .fullscreen-bg {
+    display: none;
+  }
+}
+
 .front-page .main-title .fullscreen-bg__video {
   width: 100vw;
   height: 100vh;
@@ -1207,6 +1266,12 @@ button#responsive-menu-button {
   .front-page .main-title .fullscreen-bg__video {
     width: 300vw;
     left: -100vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .front-page .main-title .fullscreen-bg__video {
+    display: none;
   }
 }
 
@@ -2472,9 +2537,9 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .site-header.scrolled .site-branding img {
-    -webkit-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
   }
 }
 

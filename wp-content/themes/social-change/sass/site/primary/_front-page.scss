@@ -23,8 +23,15 @@
     @media screen and (max-width:767px) {
       background-color:  $white;
 
-      .site-branding hr {
-        margin-bottom: 40px;
+      .site-branding {
+
+        img {
+          padding-top: 25vh;
+        }
+
+        hr {
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -32,15 +39,69 @@
 
 .carousel {
   @media screen and (max-width: 767px) {
+    height: calc(100vh);
     margin-left: -20px;
-    height: 100vh;
+    margin-top: 100vh;
     width: 100vw;
+
+    .owl-dots {
+      position: absolute;
+      text-align: center;
+      top: 80vh;
+      width: 100vw;
+    }
+
+    .owl-dot {
+      display: inline-block;
+
+      span {
+        -webkit-backface-visibility: visible;
+        background: rgba(255,255,255,.5);
+        border-radius: 30px;
+        display: block;
+        height: 11px;
+        margin: 0 10px;
+        -webkit-transition: opacity .2s ease;
+        -o-transition: opacity .2s ease;
+        transition: opacity .2s ease;
+        width: 11px;
+      }
+    }
+
+    .owl-dot.active span {
+      background: $white;
+    }
 
     .owl-carousel .owl-item .item {
       background-position: center;
-      height: 100vh;
+      height: calc(100vh);
       max-width: initial;
+      text-align: center;
       width: 100vw;
+
+      a {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background: rgba(0,0,0,.2);
+        color: $white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-family: $font__menu;
+        font-size: 24px;
+        font-weight: 600;
+        height: calc(100vh);
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        letter-spacing: 8px;
+        line-height: 32px;
+        padding: 0 20px 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100vw;
+      }
     }
   }
 }
@@ -59,7 +120,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: rgba(0,0,0,.35); // original
+  background: rgba(0,0,0,.35); /* original*/
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0,0,0,.45)));
   background: -webkit-linear-gradient(transparent, rgba(0,0,0,.45));
   background: -o-linear-gradient(transparent, rgba(0,0,0,.45));
@@ -69,7 +130,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 110vh; // Must match the .image-container
+  height: 110vh; /* Must match the .image-container*/
   list-style: none;
   margin: 100vh 0 0 -30px;
   padding: 0;
@@ -84,12 +145,6 @@
   }
 
   @media screen and (max-width:767px) {
-    // -ms-flex-line-pack: distribute;
-    // align-content: space-around;
-    // background-color: transparent;
-    // height: 175vh;
-    // margin-left: -20px;
-    // padding: 90vh 0 300px;
     display: none;
   }
 
@@ -105,7 +160,6 @@
     width: 100%;
 
     @media screen and (max-width: 767px) {
-      // margin: 50px 20px;
       display: none;
     }
 
@@ -136,21 +190,11 @@
   }
 }
 
-.grey-overlay {
-  background: rgba(0,0,0,.35);
-  height: calc(100vh - 77px);
-  margin-left: -20px;
-  position: fixed;
-  top: 77px;
-  width: 100vw;
-  z-index: -1;
-}
-
 .image-container {
   background-position: center;
   background-size: cover;
   background-image: none;
-  height: 100vh; // Must match the .links
+  height: 100vh; /* Must match the .links*/
   margin-left: -30px;
   overflow: hidden;
   opacity: 0;
@@ -167,14 +211,6 @@
   }
 
   @media screen and (max-width:767px) {
-    // height: calc(100vh - 77px); // Must match the .links
-    // margin-left: -20px;
-    // position: fixed;
-    //   top: 77px;
-    // &.scrolled {
-    //   position: fixed;
-    //   top: 77px;
-  // }
     display: none;
   }
 
@@ -200,6 +236,12 @@
 
   @media screen and (max-width:767px) {
     margin-left: -20px;
+    position: absolute;
+    top: 88vh;
+  }
+
+  @media screen and (max-width:340px) {
+    top: 92vh;
   }
 
   .issue-title {
@@ -228,6 +270,10 @@
 
   .fullscreen-bg {
     position: fixed;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   .fullscreen-bg__video {
@@ -245,6 +291,10 @@
     @media (max-aspect-ratio: 16/9) {
       width: 300vw;
       left: -100vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
 }

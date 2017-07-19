@@ -46,7 +46,7 @@ get_header(); ?>
             <?php $i++ ?>
           <?php endwhile; ?>
         </ul>
-        <div class="hide-desktop grey-overlay"></div>
+
 
         <?php $i = 1 ?>
         <div class="image-container">

@@ -89,19 +89,16 @@
 
     // Home Page Specific Header Script
     if ( isHome == true ) {
+      var screenHeight = $(window).height();
+      var titlePosition = contentArea.top;
 
       if ( screenWidth <= 767 ) {
-        contentArea = contentArea.top - 200;
-
-        var linkLocation = $('.link-4').position().top;
-        // alert(linkLocation);
-
+        contentArea = contentArea.top - screenHeight + 25; // matches the margin-top of the .content-area
       }
+
       else {
         contentArea = contentArea.top - 87;
-        var videoPosition = $('.main-title').offset().top;
         var videoHeight = $('.fullscreen-bg__video').height() - 357; // video minus the top
-        var screenHeight = $(window).height();
 
         if ( scrollPosition >= screenHeight ) {
           $('.fullscreen-bg').css('top', 0 );
@@ -394,13 +391,13 @@
       center: true,
       loop: true,
       items: 1,
-      dots: true,
-      dotsEach: true
+      dots: true
     })
-    }
+  }
+
+  else {
 
     // Script for Home Page large images and links
-
     var image1 = $('.image-1').attr('src');
     var image2 = $('.image-2').attr('src');
     var image3 = $('.image-3').attr('src');
@@ -461,9 +458,9 @@
             'opacity': 1 });
         }
       }
-
     });
   }
+}
 
 
 } )( jQuery );
