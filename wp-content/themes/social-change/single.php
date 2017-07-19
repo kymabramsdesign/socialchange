@@ -61,7 +61,7 @@ get_header(); ?>
 
 			<?php if( has_category('presidents-letter', $post_id) ) { ?>
 				<div class="video-page-overlay">
-					<img class="close-button" src="/wp-content/themes/social-change/img/exit.png" alt="close button" />
+					<img class="close-button" src="/wp-content/themes/social-change/img/exit-white.png" alt="close button" />
 				</div>
 				<div class="play-button"></div>
 				<div class="video-container">

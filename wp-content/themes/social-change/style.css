@@ -963,10 +963,14 @@ button#responsive-menu-button {
 }
 
 .home .site-header .site-branding h5 {
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
 }
 
 .home .site-header.scrolled .site-branding h5 {
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
 }
 
@@ -2530,8 +2534,8 @@ button#responsive-menu-button {
 
 .widget-area {
   background-color: #CEFBCE;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: none;
   left: 0;
   position: fixed;
@@ -3302,7 +3306,7 @@ object {
 }
 
 .close-button {
-  height: 50px;
+  height: 30px;
   position: absolute;
   right: 2.5vw;
   top: 130px;
@@ -3328,7 +3332,6 @@ object {
 
 @media screen and (max-width: 767px) {
   .close-button {
-    height: 35px;
     right: 20px;
     top: 86px;
   }
