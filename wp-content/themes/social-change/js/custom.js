@@ -127,7 +127,6 @@
       }
     }
 
-
     if ( scrollPosition >= contentArea ) {
       $('.site-header, .search-top, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
     }
@@ -379,6 +378,27 @@
   // Get Functions for HomePage
   if ( isHome == true ) {
 
+    var windowWidth = $(window).width();
+
+    if ( windowWidth <= 767 ) {
+      var image1 = $('.image-1').attr('src');
+
+      $('.fullscreen-bg').css('display', 'none');
+      $('.image-container').css({
+        'background-image': 'url(' + image1 +')',
+        opacity: 1
+      });
+
+    // Initialize and configure Owl Carousel for DHome Page
+    $('.owl-carousel.featured-stories').owlCarousel({
+      center: true,
+      loop: true,
+      items: 1,
+      dots: true,
+      dotsEach: true
+    })
+    }
+
     // Script for Home Page large images and links
 
     var image1 = $('.image-1').attr('src');
@@ -386,8 +406,6 @@
     var image3 = $('.image-3').attr('src');
     var image4 = $('.image-4').attr('src');
     var image5 = $('.image-5').attr('src');
-
-    // $('.image-container').css('background-image', 'url(' + image1 +')' );
 
     $('.links li a').on('hover', function() {
       var currentStory = $(this).parent().attr('class');

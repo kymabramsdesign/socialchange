@@ -30,6 +30,21 @@
   }
 }
 
+.carousel {
+  @media screen and (max-width: 767px) {
+    margin-left: -20px;
+    height: 100vh;
+    width: 100vw;
+
+    .owl-carousel .owl-item .item {
+      background-position: center;
+      height: 100vh;
+      max-width: initial;
+      width: 100vw;
+    }
+  }
+}
+
 .content-area.front-page {
   margin-top: 229px;
 
@@ -69,12 +84,13 @@
   }
 
   @media screen and (max-width:767px) {
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    background-color: transparent;
-    height: 175vh;
-    margin-left: -20px;
-    padding: 90vh 0 300px;
+    // -ms-flex-line-pack: distribute;
+    // align-content: space-around;
+    // background-color: transparent;
+    // height: 175vh;
+    // margin-left: -20px;
+    // padding: 90vh 0 300px;
+    display: none;
   }
 
   &.scrolled {
@@ -89,7 +105,8 @@
     width: 100%;
 
     @media screen and (max-width: 767px) {
-      margin: 50px 20px;
+      // margin: 50px 20px;
+      display: none;
     }
 
     a {
@@ -150,14 +167,15 @@
   }
 
   @media screen and (max-width:767px) {
-    height: calc(100vh - 77px); // Must match the .links
-    margin-left: -20px;
-    position: fixed;
-      top: 77px;
-    &.scrolled {
-      position: fixed;
-      top: 77px;
-    }
+    // height: calc(100vh - 77px); // Must match the .links
+    // margin-left: -20px;
+    // position: fixed;
+    //   top: 77px;
+    // &.scrolled {
+    //   position: fixed;
+    //   top: 77px;
+  // }
+    display: none;
   }
 
   .image-1,

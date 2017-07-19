@@ -60,6 +60,27 @@ get_header(); ?>
           <?php endwhile; ?>
         </div>
 
+        <div class="hide-desktop carousel">
+          <?php $i = 1 ?>
+
+          <div class="owl-carousel featured-stories">
+            <?php while( have_rows('featured_stories') ): the_row();
+              // vars
+              $title = get_sub_field('story_title');
+              $link = get_sub_field('story_link');
+              $image = get_sub_field('story_image'); ?>
+
+              <div class="item" style="background-image:url(<?php echo $image['url']; ?>)">
+                <a href="<?php echo $link; ?>">
+                <?php echo $title; ?>
+                </a>
+              </div><!-- end of .item -->
+            <?php $i++ ?>
+            <?php endwhile; ?>
+          </div><!-- end of .featured-stories -->
+      </div><!-- End of mobile carousel -->
+
+
     <?php endif; ?>
 
     <div class="change-agents">
