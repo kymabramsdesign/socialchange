@@ -2554,17 +2554,9 @@ button#responsive-menu-button {
   margin: 36px auto 68px;
   width: 47px;
   border-bottom: 1px dotted #000;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-@media screen and (max-width: 767px) {
-  .site-header .site-branding hr {
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .site-header .site-branding h5 {
@@ -2633,17 +2625,9 @@ button#responsive-menu-button {
   opacity: 0;
   margin-bottom: 0;
   margin-top: 0;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-@media screen and (max-width: 767px) {
-  .site-header.scrolled .site-branding hr {
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .site-header.scrolled .site-branding h5 {
@@ -3173,7 +3157,7 @@ button#responsive-menu-button {
 
 .nav-links {
   text-align: center;
-  margin: -66px 0 62px;
+  margin: -40px 0 62px;
 }
 
 @media screen and (max-width: 767px) {
