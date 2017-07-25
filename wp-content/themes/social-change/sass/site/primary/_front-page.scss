@@ -12,6 +12,8 @@
       -webkit-transition: all .1s ease-in-out;
       -o-transition: all .1s ease-in-out;
       transition: all .1s ease-in-out;
+      margin: 22px auto 37px;
+      width: 230px;
     }
 
     &.scrolled .site-branding h5 {
@@ -179,8 +181,7 @@
       }
 
       @media screen and (max-width: 767px) {
-        font-size: 22px;
-        line-height: 28px;
+        display: none;
       }
 
       &:hover {

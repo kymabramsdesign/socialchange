@@ -346,7 +346,7 @@
       -webkit-backface-visibility: hidden;
 
       &:hover {
-        opacity: .75;
+        opacity: .8;
         -webkit-transition: opacity .3s ease-in-out;
         -o-transition: opacity .3s ease-in-out;
         transition: opacity .3s ease-in-out;
@@ -506,6 +506,12 @@
       font-weight: 500;
       line-height: 24px;
       margin: 10px 0 0;
+
+      @media screen and (max-width:500px) {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 0 10px;
+      }
     }
   }
 }

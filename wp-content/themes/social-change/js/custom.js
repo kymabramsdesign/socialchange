@@ -6,6 +6,30 @@
 
 ( function( $ ) {
 
+  // Script for scrollTo Field Notes
+
+  $('a[href*="field-notes"]').on('click', function(e) {
+    var screenWidth = $(window).width();
+    var target = this.hash;
+    var $target = $(target);
+
+    if ( screenWidth <= 767 ) {
+      $('html, body').stop().animate({
+        'scrollTop': ($target.offset().top) - 70
+      }, 700, function () {
+        window.location.hash = target;
+      });
+    }
+
+    else {
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 700, function () {
+        window.location.hash = target;
+      });
+    }
+  });
+
   // Script for toggle Search bar
 
   $('.search-top').on('click', function() {
@@ -279,14 +303,11 @@
       responsive:{
         0:{
             items:1,
-            stagePadding: 40
+            stagePadding: 60
         },
         450:{
             items: 2,
             stagePadding: 60
-        },
-        700:{
-            items:2
         },
         910:{
             items:3
@@ -313,7 +334,7 @@
         0:{
             items:1,
             margin: 20,
-            stagePadding: 60
+            stagePadding: 80
         },
         700:{
             items: 2,

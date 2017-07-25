@@ -12,6 +12,7 @@
 
     @media screen and (max-width:767px) {
       background-color: $white;
+      width: 100%;
     }
 
     img {
@@ -24,6 +25,9 @@
       @media screen and (max-width:767px) {
         padding: 91px 0 0;
         width: 220px;
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
       }
     }
 
@@ -35,6 +39,12 @@
       -webkit-transition: all .3s ease-in-out;
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
+
+      @media screen and (max-width:767px) {
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+      }
     }
 
     h5 {
@@ -47,6 +57,9 @@
 
       @media screen and (max-width:767px) {
         margin: 22px 100px 37px;
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
       }
 
       @media screen and (max-width:400px) {
@@ -66,6 +79,12 @@
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 
+    @media screen and (max-width:767px) {
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
+    }
+
     .site-branding {
       img {
         padding: 20px 0 10px;
@@ -75,9 +94,9 @@
         transition: all .3s ease-in-out;
 
         @media screen and (max-width:767px) {
-          -webkit-transition: all .3s ease-in-out;
-          -o-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+          -webkit-transition: all .1s ease-in-out;
+          -o-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
         }
       }
 
@@ -88,6 +107,12 @@
         -webkit-transition: all .3s ease-in-out;
         -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
+
+        @media screen and (max-width:767px) {
+          -webkit-transition: all .1s ease-in-out;
+          -o-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
+        }
       }
 
       h5 {
@@ -98,6 +123,12 @@
         -webkit-transition: all .3s ease-in-out;
         -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
+
+        @media screen and (max-width:767px) {
+          -webkit-transition: all .1s ease-in-out;
+          -o-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
+        }
       }
     }
   }
@@ -126,6 +157,9 @@
   @media screen and (max-width:767px) {
     top: 26px;
     left: 20px;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
   }
 
   &.scrolled {
@@ -133,6 +167,12 @@
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+
+    @media screen and (max-width:767px) {
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
+    }
   }
 }
 
@@ -159,6 +199,9 @@
 
     @media screen and (max-width:767px) {
       margin: 15px 20px 15px 60px;
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
     }
   }
 
@@ -183,6 +226,9 @@
       height: 46px;
       margin: 0 0 15px 0;
       width: 100%;
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
     }
 
     &:focus {
@@ -206,6 +252,9 @@
       margin-bottom: 15px;
       margin-top: 0;
       width: 100%;
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
     }
   }
 
@@ -220,6 +269,12 @@
       @media screen and (min-width:1441px) {
         margin: 15px 2.5vw 15px 5vw;
       }
+
+      @media screen and (max-width:767px) {
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+      }
     }
 
     .search-field,
@@ -228,6 +283,12 @@
       -webkit-transition: all .3s ease-in-out;
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
+
+      @media screen and (max-width:767px) {
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+      }
     }
   }
 }
@@ -268,6 +329,9 @@
   @media screen and (max-width: 767px) {
     margin-left: -20px;
     padding: 0 60px;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
   }
 }
 
@@ -289,6 +353,11 @@
     transition: all .3s ease-in-out;
     height: 74px;
 
+    @media screen and (max-width:767px) {
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
+    }
 
     .site-branding {
       height: 74px;
@@ -308,6 +377,9 @@
           -ms-transform: translateY(-50px);
           transform: translateY(-50px);
           width: 220px;
+          -webkit-transition: all .1s ease-in-out;
+          -o-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
         }
       }
     }
@@ -321,6 +393,12 @@
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     z-index: 1000;
+
+    @media screen and (max-width:767px) {
+      -webkit-transition: all .1s ease-in-out;
+      -o-transition: all .1s ease-in-out;
+      transition: all .1s ease-in-out;
+    }
 
     .left-item,
     .right-item {
