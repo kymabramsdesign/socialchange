@@ -1,0 +1,48 @@
+/* Audio Player Styling */
+
+.wp-audio-shortcode {
+  margin: 0 auto 56px;
+  width: 350px !important;
+
+  @media screen and (max-width:767px) {
+    width: 100% !important;
+  }
+}
+
+.mejs-container * {
+  font-family: $font__menu !important;
+  letter-spacing: 1px;
+}
+
+.mejs-container, .mejs-container .mejs-controls {
+  background: $footer-tagline !important;
+}
+
+.mejs-controls a.mejs-horizontal-volume-slider {
+  border: 0;
+}
+
+.mejs-controls .mejs-button button:focus {
+  outline: 0 !important;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+  background: $footer-grey !important;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 47px auto 10px;
+  text-align: center;
+  width: 356px;
+
+  @media screen and (max-width:767px) {
+    margin: 0 0 10px;
+    width: 100%;
+  }
+}
+
+:focus {
+  outline: none;
+}
