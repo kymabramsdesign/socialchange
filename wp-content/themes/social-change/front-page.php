@@ -162,7 +162,7 @@ get_header(); ?>
             $institute = get_sub_field('institute_stories'); ?>
 
               <div class="item">
-                <a href="<?php the_permalink($institute_stories); ?>">
+                <a href="<?php the_permalink($institute); ?>">
                   <?php echo get_the_post_thumbnail($institute, 'change-circles'); ?></a>
 
                 <h5><?php $post_term = get_the_term_list($institute, 'post_tag' );

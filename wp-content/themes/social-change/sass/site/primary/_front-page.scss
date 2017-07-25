@@ -126,6 +126,7 @@
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0,0,0,.45)));
   background: -webkit-linear-gradient(transparent, rgba(0,0,0,.45));
   background: -o-linear-gradient(transparent, rgba(0,0,0,.45));
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#73000000);
   background: linear-gradient(transparent, rgba(0,0,0,.45));
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +142,7 @@
   -webkit-transition: background .1s ease-in-out;
   -o-transition: background .1s ease-in-out;
   transition: background .1s ease-in-out;
+
 
   @media screen and (min-width:1441px) {
     margin-left: -2.5vw;
@@ -447,6 +449,12 @@
     display: none;
   }
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .field-notes-item p {
+      max-width: 70%;
+    }
+  }
+
   .field-notes-item {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -454,8 +462,10 @@
     border-bottom: 1px solid #bfbfbf;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-left: -30px;
@@ -471,12 +481,6 @@
     }
 
     @media screen and (max-width: 767px) {
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
       margin-left: -20px;
       padding: 20px 20px;
     }
@@ -516,6 +520,10 @@
 
       @media screen and (max-width: 767px) {
         line-height: 18px;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 65%;
       }
     }
 

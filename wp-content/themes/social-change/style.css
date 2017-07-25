@@ -800,7 +800,14 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   #responsive-menu-container {
     max-width: 100% !important;
+    padding-top: 75px !important;
     width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  #responsive-menu-container {
+    padding-top: 75px !important;
   }
 }
 
@@ -818,19 +825,26 @@ button#responsive-menu-button {
   color: #000 !important;
 }
 
-.responsive-menu-open body {
-  overflow: hidden;
+.page-overlay {
+  background: transparent;
+  height: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 1005;
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-menu-open body {
+    overflow: hidden;
+  }
 }
 
 .responsive-menu-open .page-overlay {
   background: rgba(0, 0, 0, 0.52);
   height: 100vh;
-  position: fixed;
-  width: 100vw;
-  z-index: 1005;
-  -webkit-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: background .4s ease-in-out;
+  -o-transition: background .4s ease-in-out;
+  transition: background .4s ease-in-out;
 }
 
 .responsive-menu-button {
@@ -1072,6 +1086,7 @@ button#responsive-menu-button {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.45)));
   background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.45));
   background: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.45));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#73000000);
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.45));
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1450,6 +1465,12 @@ button#responsive-menu-button {
   display: none;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .field-notes .field-notes-item p {
+    max-width: 70%;
+  }
+}
+
 .field-notes .field-notes-item {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1457,8 +1478,10 @@ button#responsive-menu-button {
   border-bottom: 1px solid #bfbfbf;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-left: -30px;
@@ -1478,12 +1501,6 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .field-notes .field-notes-item {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin-left: -20px;
     padding: 20px 20px;
   }
@@ -1526,6 +1543,12 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   .field-notes a p {
     line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .field-notes a p {
+    width: 65%;
   }
 }
 
@@ -2369,9 +2392,10 @@ button#responsive-menu-button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 100vw;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .site-footer .site-info {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
@@ -2395,15 +2419,10 @@ button#responsive-menu-button {
 }
 
 .site-footer .site-info .copy {
-  color: #4e554c;
-  float: left;
-  font-family: "din-2014", sans-serif;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-left: 15px;
+  margin-left: 97px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .site-footer .site-info .copy {
     width: 100%;
   }
@@ -2412,29 +2431,52 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   .site-footer .site-info .copy {
     float: none;
-    margin-left: 82px;
+    margin-left: 97px;
     width: initial;
   }
+}
+
+@media screen and (max-width: 610px) {
+  .site-footer .site-info .copy {
+    margin-left: 82px;
+  }
+}
+
+.site-footer .site-info .copy a {
+  color: #4e554c;
+  font-family: "din-2014", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.site-footer .site-info .copy a:hover {
+  color: #000;
 }
 
 .site-footer .site-info .site-subtitle {
   color: #71806f;
   font-family: "din-2014", sans-serif;
-  margin-left: -76px;
+  margin-left: -180px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .site-footer .site-info .site-subtitle {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 97px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .site-footer .site-info .site-subtitle {
     line-height: 22px;
-    margin-left: 82px;
+    margin-left: 97px;
     width: initial;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .site-footer .site-info .site-subtitle {
+    margin-left: 82px;
   }
 }
 
@@ -2442,9 +2484,16 @@ button#responsive-menu-button {
   margin-right: 21px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .site-footer .site-info .social {
     margin-top: -25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-footer .site-info .social {
+    margin-left: 88px;
+    margin-top: 8px;
   }
 }
 
@@ -2474,6 +2523,7 @@ button#responsive-menu-button {
   float: left;
   margin-top: -23px;
   margin-left: -34px;
+  position: absolute;
 }
 
 @media screen and (max-width: 610px) {
@@ -2490,11 +2540,10 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 610px) {
   .social-mobile {
-    bottom: 30px;
     display: block;
     position: absolute;
-    right: 9px;
-    z-index: -1;
+    margin-bottom: 30px !important;
+    margin-top: 15px !important;
   }
   .social-mobile a {
     margin: 15px !important;
@@ -2505,6 +2554,12 @@ button#responsive-menu-button {
   .social-mobile a img {
     height: 30px;
     width: auto;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .social-mobile {
+    margin-top: 0 !important;
   }
 }
 
@@ -2646,6 +2701,11 @@ button#responsive-menu-button {
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
   }
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .search-top {
@@ -2871,6 +2931,34 @@ button#responsive-menu-button {
   }
 }
 
+/* Safari 7.1 -8.0 (Safari 7.1+)
+---------------------------------------------------------------- */
+_::-webkit-full-page-media, _:future, :root .center-item {
+  max-width: 50vw;
+}
+
+@media screen and (max-width: 767px) {
+  _::-webkit-full-page-media, _:future, :root .center-item {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  _::-webkit-full-page-media, _:future, :root .grey {
+    display: none;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .center-item {
+    max-width: 60%;
+  }
+}
+
+.center-item {
+  width: 71%;
+}
+
 @media screen and (max-width: 767px) {
   .left-item,
   .right-item,
@@ -3042,7 +3130,7 @@ button#responsive-menu-button {
   color: #666;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1023px) {
   .single-post.scrolled .scrolled-header .center-item h4 .grey {
     display: none;
   }
@@ -3326,6 +3414,9 @@ object {
     display: flex;
     margin-top: -50px;
     margin-left: -10px;
+    top: 1000px;
+    position: absolute;
+    opacity: 0;
   }
   .single-post .a2a_floating_style:before {
     content: 'Share:';

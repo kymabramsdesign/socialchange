@@ -47,7 +47,12 @@ button#responsive-menu-button {
 
 	@media screen and (max-width: 767px) {
 		max-width: 100% !important;
+		padding-top: 75px !important;
 		width: 100% !important;
+	}
+
+	@media screen and (max-width: 340px) {
+		padding-top: 75px !important;
 	}
 
 	#responsive-menu li.responsive-menu-item a:hover {
@@ -65,21 +70,28 @@ button#responsive-menu-button {
 	color: $black !important;
 }
 
+.page-overlay {
+	background: transparent;
+	height: 0;
+	position: fixed;
+	width: 100vw;
+	z-index: 1005;
+}
+
 .responsive-menu-open {
 
-	body {
-		overflow: hidden;
+	@media screen and (max-width:767px) {
+		body {
+			overflow: hidden;
+		}
 	}
 
 	.page-overlay {
 		background: rgba(0, 0, 0, 0.52);
 		height: 100vh;
-		position: fixed;
-		width: 100vw;
-		z-index: 1005;
-		-webkit-transition: all .4s ease-in-out;
-		-o-transition: all .4s ease-in-out;
-		transition: all .4s ease-in-out;
+		-webkit-transition: background .4s ease-in-out;
+		-o-transition: background .4s ease-in-out;
+		transition: background .4s ease-in-out;
 	}
 }
 

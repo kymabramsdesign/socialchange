@@ -138,7 +138,10 @@
             top: (videoHeight+357-scrollPosition),
             position: 'fixed'
           });
-          $('.links').css('background', 'rgba(0,0,0,.35)');
+          $('.links').css({
+            background: 'rgba(0,0,0,.45)',
+              filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#BF000000)',
+          });
         }
         else {
           $('.main-title, .links').removeClass('scrolled');
@@ -222,7 +225,7 @@
 
         $('.a2a_floating_style').css({
           'top' : offset,
-          'position' : 'absolute'
+          'opacity' : 1
         });
       }
 
@@ -380,13 +383,13 @@
 
     // Play button for video on President's page
     $('.play-button, .video-page-overlay').on('click', function() {
+
       if ( $('.video-container').is(':hidden') ) {
         $('.video-container, .video-page-overlay').fadeIn();
-        // $('#video')[0].play(); if you want the video to autoplay when opened
-        $('body').css('overflow', 'hidden');
+        $('#video')[0].play(); // comment out if you don't want the video to autoplay
       }
+
       else {
-        $('body').css('overflow', 'visible');
         $('#video')[0].pause();
         $('.video-container, .video-page-overlay').fadeOut();
       }

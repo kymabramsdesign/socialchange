@@ -27,8 +27,9 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    width: 100vw;
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:1024px) {
       -ms-flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -47,46 +48,65 @@
     }
 
     .copy {
-      color: $footer-grey;
-      float: left;
-      font-family: $font__menu;
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin-left: 15px;
+      margin-left: 97px;
 
-      @media screen and (max-width:900px) {
+      @media screen and (max-width:1024px) {
         width: 100%;
       }
 
       @media screen and (max-width:767px) {
         float: none;
-        margin-left: 82px;
+        margin-left: 97px;
         width: initial;
+      }
+
+      @media screen and (max-width:610px) {
+        margin-left: 82px;
+      }
+
+      a {
+        color: $footer-grey;
+        font-family: $font__menu;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-decoration: none;
+
+        &:hover {
+          color: $black;
+        }
       }
     }
 
     .site-subtitle {
       color: $footer-tagline;
       font-family: $font__menu;
-      margin-left: -76px; //width of circle showing + left margin on copy - right margin on social
+      margin-left: -180px;
 
-      @media screen and (max-width:900px) {
-        margin-left: 15px;
-        margin-right: 15px;
+      @media screen and (max-width:1024px) {
+        margin-left: 97px;
       }
 
       @media screen and (max-width:767px) {
         line-height: 22px;
-        margin-left: 82px;
+        margin-left: 97px;
         width: initial;
+      }
+
+      @media screen and (max-width:610px) {
+        margin-left: 82px;
       }
     }
 
     .social {
       margin-right: 21px;
 
-      @media screen and (max-width:900px) {
+      @media screen and (max-width:1024px) {
         margin-top: -25px;
+      }
+
+      @media screen and (max-width:767px) {
+        margin-left: 88px;
+        margin-top: 8px;
       }
 
       @media screen and (max-width:610px) {
@@ -116,6 +136,7 @@
   float: left;
   margin-top: -23px;
   margin-left: -34px;
+  position: absolute;
 
   @media screen and (max-width:610px) {
     margin-top: -16px;
@@ -128,11 +149,10 @@
   display: none;
 
   @media screen and (max-width:610px) {
-    bottom: 30px;
     display: block;
     position: absolute;
-    right: 9px;
-    z-index: -1;
+    margin-bottom: 30px !important;
+    margin-top: 15px !important;
 
     a {
       margin: 15px !important;
@@ -146,5 +166,9 @@
         width: auto;
       }
     }
+  }
+
+  @media screen and (max-width: 340px) {
+    margin-top: 0 !important;
   }
 }

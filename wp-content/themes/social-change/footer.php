@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
   <img src="/wp-content/themes/social-change/img/adler-circle-116.png" alt="Adler circle" class="the-circle" />
 		<div class="site-info">
-			<div class="copy footer-item">ADLER UNIVERSITY <?php echo date("Y"); ?></div>
+			<div class="copy footer-item"><a href="http://www.adler.edu/" target="_blank">ADLER UNIVERSITY <?php echo date("Y"); ?></a></div>
       <div class="site-subtitle footer-item">A Magazine for Alumni and Friends of Adler University</div>
       <div class="social footer-item">
         <a href="https://www.facebook.com/AdlerUniversity/" target="_blank"><img src="/wp-content/themes/social-change/img/facebook-grey.png" alt="Facebook" /></a>

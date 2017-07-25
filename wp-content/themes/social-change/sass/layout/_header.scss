@@ -122,6 +122,12 @@
   }
 }
 
+// Fix for Safari
+input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .search-top {
   background-image: url(/wp-content/themes/social-change/img/search.png);
   background-position: center;
@@ -323,6 +329,34 @@
   }
 }
 
+/* Safari 7.1 -8.0 (Safari 7.1+)
+---------------------------------------------------------------- */
+_::-webkit-full-page-media, _:future, :root .center-item {
+  max-width: 50vw;
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width:1100px) {
+  _::-webkit-full-page-media, _:future, :root .grey {
+    display: none;
+  }
+}
+
+// IE10+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .center-item {
+    max-width: 60%;
+  }
+}
+
+
+.center-item {
+  width: 71%;
+}
+
 .left-item,
 .right-item,
 .preview {
@@ -470,7 +504,7 @@
         .grey {
           color: $grey;
 
-          @media screen and (max-width:1000px) {
+          @media screen and (max-width:1023px) {
             display: none;
           }
         }
