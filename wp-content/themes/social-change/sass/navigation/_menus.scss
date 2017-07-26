@@ -102,9 +102,9 @@ button#responsive-menu-button {
 
 	&.scrolled {
 		top: 12px !important;
-		-webkit-transition: top .3s ease-in-out !important;
-	  -o-transition: top .3s ease-in-out !important;
-	  transition: top .3s ease-in-out !important;
+		-webkit-transition: top .1s ease-in-out !important;
+	  -o-transition: top .1s ease-in-out !important;
+	  transition: top .1s ease-in-out !important;
 	}
 }
 

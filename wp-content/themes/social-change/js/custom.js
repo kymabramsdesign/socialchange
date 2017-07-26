@@ -172,9 +172,9 @@
 
       $('.right-item, .preview.next-image').on('mouseover', function() {
         $('.preview.next-image').css({
-          '-webkit-transform': 'translateX(0)',
-          '-ms-transform': 'translateX(0)',
-          'transform': 'translateX(0)',
+          '-webkit-transform': 'translate3d(0, 0, 0)',
+          '-ms-transform': 'translate3d(0, 0, 0)',
+          'transform': 'translate3d(0, 0, 0)',
           '-webkit-transition': 'all .3s ease-in-out',
           '-o-transition': 'all .3s ease-in-out',
           'transition': 'all .3s ease-in-out'
@@ -184,9 +184,9 @@
       })
       .on('mouseout', function() {
         $('.preview.next-image').css({
-          '-webkit-transform': 'translateX(300px)',
-          '-ms-transform': 'translateX(300px)',
-          'transform': 'translateX(300px)'
+          '-webkit-transform': 'translate3d(300px, 0, 0)',
+          '-ms-transform': 'translate3d(300px, 0, 0)',
+          'transform': 'translate3d(300px, 0, 0)'
         });
         $('.left-item a, .right-item a').css('color', '#727272');
         $('.preview').css('background', 'transparent');
@@ -194,9 +194,9 @@
 
       $('.left-item, .preview.previous-image').on('mouseover', function() {
         $('.preview.previous-image').css({
-          '-webkit-transform': 'translateX(0)',
-          '-ms-transform': 'translateX(0)',
-          'transform': 'translateX(0)',
+          '-webkit-transform': 'translate3d(0, 0, 0)',
+          '-ms-transform': 'translate3d(0, 0, 0)',
+          'transform': 'translate3d(0, 0, 0)',
           '-webkit-transition': 'all .3s ease-in-out',
           '-o-transition': 'all .3s ease-in-out',
           'transition': 'all .3s ease-in-out'
@@ -206,9 +206,9 @@
       })
       .on('mouseout', function() {
         $('.preview.previous-image').css({
-          '-webkit-transform': 'translateX(-300px)',
-          '-ms-transform': 'translateX(-300px)',
-          'transform': 'translateX(-300px)'
+          '-webkit-transform': 'translate3d(-300px, 0, 0)',
+          '-ms-transform': 'translate3d(-300px, 0, 0)',
+          'transform': 'translate3d(-300px, 0, 0)'
         });
          $('.left-item a, .right-item a').css('color', '#727272');
          $('.preview').css('background', 'transparent');

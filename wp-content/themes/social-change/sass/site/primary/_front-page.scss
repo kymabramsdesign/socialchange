@@ -9,31 +9,56 @@
   .site-header {
 
     .site-branding h5 {
-      -webkit-transition: all .1s ease-in-out;
-      -o-transition: all .1s ease-in-out;
-      transition: all .1s ease-in-out;
+      -webkit-transition: all .1s ease-in-out .1s;
+      -o-transition: all .1s ease-in-out .1s;
+      transition: all .1s ease-in-out .1s;
       margin: 22px auto 37px;
       width: 230px;
+      height: 32px;
     }
 
-    &.scrolled .site-branding h5 {
-      -webkit-transition: all .1s ease-in-out;
-      -o-transition: all .1s ease-in-out;
-      transition: all .1s ease-in-out;
+    &.scrolled .site-branding {
+      -webkit-transition: all .1s ease-in-out .1s;
+      -o-transition: all .1s ease-in-out .1s;
+      transition: all .1s ease-in-out .1s;
+
+      img {
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+        height: 69px;
+      }
+
+      h5 {
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+      }
+    }
+
+    .site-branding {
+      -webkit-transition: all .3s ease-in-out .1s;
+      -o-transition: all .3s ease-in-out .1s;
+      transition: all .3s ease-in-out .1s;
+    }
+
+    img {
+      -webkit-transition: all .3s ease-in-out .1s;
+      -o-transition: all .3s ease-in-out .1s;
+      transition: all .3s ease-in-out .1s;
+      height: 104px;
+
+      @media screen and (max-width:767px) {
+        height: 141px;
+        padding-top: 25vh;
+      }
     }
 
     @media screen and (max-width:767px) {
       background-color:  $white;
 
-      .site-branding {
-
-        img {
-          padding-top: 25vh;
-        }
-
-        hr {
-          margin-bottom: 40px;
-        }
+      hr {
+        margin-bottom: 40px;
       }
     }
   }
