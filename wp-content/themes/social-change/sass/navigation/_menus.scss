@@ -4,6 +4,14 @@
 
 // Responsive Menu Overrides
 
+.responsive-menu-button.is-active {
+	.responsive-menu-inner,
+	.responsive-menu-inner::after
+	 {
+		background-color: rgba(255,255,255,.75) !important;
+	}
+}
+
 button#responsive-menu-button {
 	right: 21px !important;
 
@@ -17,10 +25,59 @@ button#responsive-menu-button {
   }
 }
 
+#responsive-menu-container #responsive-menu li.responsive-menu-item a,
+#responsive-menu-container #responsive-menu li.responsive-menu-item a .responsive-menu-subarrow,
+#responsive-menu-container #responsive-menu li.responsive-menu-item a:hover .responsive-menu-subarrow {
+	background-color: transparent !important;
+}
+
+#responsive-menu-container {
+	background-color: transparent;
+
+	#responsive-menu-wrapper{
+	background-image: url('/wp-content/themes/social-change/img/bg-circle.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: -141px 44px !important;
+	height: 100%;
+}
+
+	#responsive-menu-title {
+		background-color: transparent !important;
+		background-image: url('/wp-content/themes/social-change/img/menu-logo.png');
+		background-repeat: no-repeat;
+		background-size: 30px;
+		background-position: 15px 1px;
+		padding: 4px 0 70px !important;
+
+		 a {
+		  color: rgba(255,255,255,.75) !important;
+		  font-family: $font__menu;
+		  font-size: 16px;
+		  letter-spacing: 1.5px;
+		  margin: 0;
+		  padding-left: 55px;
+		  text-decoration: none;
+
+		  &:hover {
+		  	color: $white !important;
+		  }
+
+		  &:first-of-type {
+		  	display: none;
+		  }
+		}
+	}
+}
+
 .responsive-menu-item-link {
 	font-family: $font__menu;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
+}
+
+.responsive-menu-submenu-open,
+.responsive-menu-submenu-depth-1 {
+	padding-left: 15px !important;
 }
 
 .responsive-menu-subarrow {
@@ -33,17 +90,17 @@ button#responsive-menu-button {
 
 .menu-item-has-children:last-of-type {
  	.responsive-menu-subarrow {
- 		left: 115px !important;
+ 		left: 120px !important;
  	}
 }
 
 .responsive-menu-item-link,
 #responsive-menu-additional-content {
-	padding-left: 50px !important;
+	padding-left: 55px !important;
 }
 
 #responsive-menu-container {
-	padding-top: 140px !important;
+	padding-top: 57px !important;
 
 	@media screen and (max-width: 767px) {
 		max-width: 100% !important;
@@ -55,19 +112,20 @@ button#responsive-menu-button {
 		padding-top: 75px !important;
 	}
 
-	#responsive-menu li.responsive-menu-item a:hover {
-		color: $grey !important;
+	#responsive-menu li.responsive-menu-item a {
+		color: rgba(255,255,255,.75) !important;
+		&:hover {
+			color: $white !important;
+		}
 	}
 }
 
 .responsive-menu-submenu-open li a {
-	background-color: $mint !important;
-	color: $grey !important;
+	color: rgba(255,255,255,.75) !important;
 }
 
 #responsive-menu-container #responsive-menu li.responsive-menu-item.responsive-menu-item-has-children ul li a:hover {
-	background-color: $light-mint !important;
-	color: $black !important;
+	color: $white !important;
 }
 
 .page-overlay {
