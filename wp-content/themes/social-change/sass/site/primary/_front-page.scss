@@ -2,6 +2,11 @@
 
 .home {
 
+  .site {
+     background-image: url('/wp-content/themes/social-change/img/orange-background.png');
+     background-repeat: repeat-x;
+  }
+
   .widget-area.scrolled .widget {
     margin: 16px 30px 17px 70px;
   }
@@ -9,12 +14,14 @@
   .site-header {
 
     .site-branding h5 {
+      font-size: 15px;
+      height: 32px;
+      line-height: 20px;
+      margin: 34px auto 182px;
       -webkit-transition: all .1s ease-in-out .1s;
       -o-transition: all .1s ease-in-out .1s;
       transition: all .1s ease-in-out .1s;
-      margin: 22px auto 37px;
-      width: 230px;
-      height: 32px;
+      width: 270px;
     }
 
     &.scrolled .site-branding {
@@ -23,10 +30,10 @@
       transition: all .1s ease-in-out .1s;
 
       img {
+        margin-top: 0;
         -webkit-transition: all .1s ease-in-out;
         -o-transition: all .1s ease-in-out;
         transition: all .1s ease-in-out;
-        height: 69px;
       }
 
       h5 {
@@ -37,20 +44,24 @@
     }
 
     .site-branding {
+      background-color: transparent;
       -webkit-transition: all .3s ease-in-out .1s;
       -o-transition: all .3s ease-in-out .1s;
       transition: all .3s ease-in-out .1s;
-    }
 
-    img {
-      -webkit-transition: all .3s ease-in-out .1s;
-      -o-transition: all .3s ease-in-out .1s;
-      transition: all .3s ease-in-out .1s;
-      height: 104px;
+      img {
+        height: auto;
+        margin-top: 76px;
+        -webkit-transition: all .3s ease-in-out .1s;
+        -o-transition: all .3s ease-in-out .1s;
+        transition: all .3s ease-in-out .1s;
+        width: 290px;
 
-      @media screen and (max-width:767px) {
-        height: 141px;
-        padding-top: 25vh;
+
+        @media screen and (max-width:767px) {
+          height: 141px;
+          padding-top: 25vh;
+        }
       }
     }
 
@@ -251,12 +262,37 @@
   }
 }
 
+.issue-title {
+  color: $black;
+  font-family: $font__condensed;
+  font-size: 83px;
+  font-weight: 400;
+  letter-spacing: 12px;
+  line-height: 78px;
+  margin: 0 0 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.issue-date {
+  color: $prev-next;
+  font-family: $font__menu;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-top: 23px;
+  margin-bottom: 47px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .front-page .main-title {
-  position: fixed;
-  z-index: -10;
-  width: 100vw;
   margin-left: -30px;
-  top: 400px;
+  position: fixed;
+  top: 349px;
+  width: 100vw;
+  z-index: -10;
 
   @media screen and (min-width:1441px) {
     margin-left: -2.5vw;
@@ -270,30 +306,6 @@
 
   @media screen and (max-width:340px) {
     top: 92vh;
-  }
-
-  .issue-title {
-    color: $black;
-    font-family: $font__condensed;
-    font-size: 50px;
-    font-weight: 400;
-    letter-spacing: 10px;
-    margin: -174px 0 0;
-    padding: 0;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .issue-date {
-    color: $prev-next;
-    font-family: $font__menu;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    margin-top: 23px;
-    margin-bottom: 47px;
-    text-align: center;
-    text-transform: uppercase;
   }
 
   .fullscreen-bg {

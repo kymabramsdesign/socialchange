@@ -18,8 +18,6 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
     <div class="main-title">
-      <h1 class="issue-title"><?php echo get_field(issue_title); ?></h1>
-      <p class="issue-date"><?php echo get_field(issue_date); ?></p>
       <div class="fullscreen-bg">
         <video loop muted autoplay poster="<?php the_field('video_still'); ?>" class="fullscreen-bg__video">
           <source src="<?php the_field('video_link'); ?>" type="video/mp4">

@@ -122,7 +122,7 @@
 
       else {
         contentArea = contentArea.top - 87;
-        var videoHeight = $('.fullscreen-bg__video').height() - 357; // video minus the top
+        var videoHeight = $('.fullscreen-bg__video').height() - 349; // video minus the top
 
         if ( scrollPosition >= screenHeight ) {
           $('.fullscreen-bg').css('top', 0 );
@@ -135,7 +135,7 @@
         else if ( scrollPosition >= videoHeight ) {
           $('.main-title, .links').addClass('scrolled');
           $('.fullscreen-bg, .image-container').css({
-            top: (videoHeight+357-scrollPosition),
+            top: (videoHeight+349-scrollPosition),
             position: 'fixed'
           });
           $('.links').css({
@@ -146,7 +146,7 @@
         else {
           $('.main-title, .links').removeClass('scrolled');
           $('.links').css('background', 'initial');
-          $('.fullscreen-bg, .image-container').css('top', 357 );
+          $('.fullscreen-bg, .image-container').css('top', 349 );
         }
       }
     }

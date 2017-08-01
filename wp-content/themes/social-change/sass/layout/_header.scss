@@ -1,9 +1,9 @@
 /* Header Styles*/
 
 .watermark {
-  left: -42px;
+  left: -40px;
   position: fixed;
-  top: 2px;
+  top: 3px;
   z-index: 10000;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -24,8 +24,8 @@
   z-index: 1000;
 
   .site-branding {
-    background-color: rgba(255,255,255,.97);
     text-align: center;
+    background-color: rgba(255,255,255,.97);
 
     @media screen and (max-width:767px) {
       background-color: $white;
@@ -97,7 +97,8 @@
     }
 
     .site-branding {
-      background-image: none;
+      background-color: rgba(255,255,255,.97);
+      height: 77px;
 
       img {
         padding: 20px 0 10px;
@@ -173,9 +174,9 @@ input[type=search] {
   &.scrolled {
     left: 30px;
     top: 28px;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out .2s;
+    -o-transition: all .3s ease-in-out .2s;
+    transition: all .3s ease-in-out .2s;
 
     @media screen and (max-width:767px) {
       left: 20px;

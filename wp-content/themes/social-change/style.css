@@ -1022,17 +1022,24 @@ button#responsive-menu-button {
 ## Home Page
 --------------------------------------------------------------*/
 /* Styling for the Home Page*/
+.home .site {
+  background-image: url("/wp-content/themes/social-change/img/orange-background.png");
+  background-repeat: repeat-x;
+}
+
 .home .widget-area.scrolled .widget {
   margin: 16px 30px 17px 70px;
 }
 
 .home .site-header .site-branding h5 {
+  font-size: 15px;
+  height: 32px;
+  line-height: 20px;
+  margin: 34px auto 182px;
   -webkit-transition: all .1s ease-in-out .1s;
   -o-transition: all .1s ease-in-out .1s;
   transition: all .1s ease-in-out .1s;
-  margin: 22px auto 37px;
-  width: 230px;
-  height: 32px;
+  width: 270px;
 }
 
 .home .site-header.scrolled .site-branding {
@@ -1042,10 +1049,10 @@ button#responsive-menu-button {
 }
 
 .home .site-header.scrolled .site-branding img {
+  margin-top: 0;
   -webkit-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
-  height: 69px;
 }
 
 .home .site-header.scrolled .site-branding h5 {
@@ -1055,20 +1062,23 @@ button#responsive-menu-button {
 }
 
 .home .site-header .site-branding {
+  background-color: transparent;
   -webkit-transition: all .3s ease-in-out .1s;
   -o-transition: all .3s ease-in-out .1s;
   transition: all .3s ease-in-out .1s;
 }
 
-.home .site-header img {
+.home .site-header .site-branding img {
+  height: auto;
+  margin-top: 76px;
   -webkit-transition: all .3s ease-in-out .1s;
   -o-transition: all .3s ease-in-out .1s;
   transition: all .3s ease-in-out .1s;
-  height: 104px;
+  width: 290px;
 }
 
 @media screen and (max-width: 767px) {
-  .home .site-header img {
+  .home .site-header .site-branding img {
     height: 141px;
     padding-top: 25vh;
   }
@@ -1282,12 +1292,37 @@ button#responsive-menu-button {
   display: none;
 }
 
+.issue-title {
+  color: #000;
+  font-family: "din-condensed", sans-serif;
+  font-size: 83px;
+  font-weight: 400;
+  letter-spacing: 12px;
+  line-height: 78px;
+  margin: 0 0 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.issue-date {
+  color: #727272;
+  font-family: "din-2014", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-top: 23px;
+  margin-bottom: 47px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .front-page .main-title {
-  position: fixed;
-  z-index: -10;
-  width: 100vw;
   margin-left: -30px;
-  top: 400px;
+  position: fixed;
+  top: 349px;
+  width: 100vw;
+  z-index: -10;
 }
 
 @media screen and (min-width: 1441px) {
@@ -1308,30 +1343,6 @@ button#responsive-menu-button {
   .front-page .main-title {
     top: 92vh;
   }
-}
-
-.front-page .main-title .issue-title {
-  color: #000;
-  font-family: "din-condensed", sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  letter-spacing: 10px;
-  margin: -174px 0 0;
-  padding: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.front-page .main-title .issue-date {
-  color: #727272;
-  font-family: "din-2014", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  margin-top: 23px;
-  margin-bottom: 47px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .front-page .main-title .fullscreen-bg {
@@ -2650,9 +2661,9 @@ button#responsive-menu-button {
 --------------------------------------------------------------*/
 /* Header Styles*/
 .watermark {
-  left: -42px;
+  left: -40px;
   position: fixed;
-  top: 2px;
+  top: 3px;
   z-index: 10000;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -2674,8 +2685,8 @@ button#responsive-menu-button {
 }
 
 .site-header .site-branding {
-  background-color: rgba(255, 255, 255, 0.97);
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.97);
 }
 
 @media screen and (max-width: 767px) {
@@ -2760,7 +2771,8 @@ button#responsive-menu-button {
 }
 
 .site-header.scrolled .site-branding {
-  background-image: none;
+  background-color: rgba(255, 255, 255, 0.97);
+  height: 77px;
 }
 
 .site-header.scrolled .site-branding img {
@@ -2840,9 +2852,9 @@ input[type=search] {
 .search-top.scrolled {
   left: 30px;
   top: 28px;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out .2s;
+  -o-transition: all .3s ease-in-out .2s;
+  transition: all .3s ease-in-out .2s;
 }
 
 @media screen and (max-width: 767px) {
