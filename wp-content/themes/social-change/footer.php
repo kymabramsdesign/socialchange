@@ -14,14 +14,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-  <img src="/wp-content/themes/social-change/img/adler-circle-116.png" alt="Adler circle" class="the-circle" />
+  <img src="/wp-content/themes/social-change/img/adler-circle-2.png" alt="Adler circle" class="the-circle" />
 		<div class="site-info">
 			<div class="copy footer-item"><a href="http://www.adler.edu/" target="_blank">ADLER UNIVERSITY <?php echo date("Y"); ?></a></div>
       <div class="site-subtitle footer-item">A Magazine for Alumni and Friends of Adler University</div>
       <div class="social footer-item">
-        <a href="https://www.facebook.com/AdlerUniversity/" target="_blank"><img src="/wp-content/themes/social-change/img/facebook-grey.png" alt="Facebook" /></a>
-        <a href="https://twitter.com/adleruniversity" target="_blank"><img src="/wp-content/themes/social-change/img/twitter-grey.png" alt="Twitter" /></a>
-        <a href="https://www.instagram.com/adleruniversity/" target="_blank"><img src="/wp-content/themes/social-change/img/pinterest-grey.png" alt="Pinterest" /></a>
+        <a href="https://www.facebook.com/AdlerUniversity/" target="_blank"><img src="/wp-content/themes/social-change/img/facebook.png" alt="Facebook" /></a>
+        <a href="https://twitter.com/adleruniversity" target="_blank"><img src="/wp-content/themes/social-change/img/twitter.png" alt="Twitter" /></a>
+        <a href="https://www.instagram.com/adleruniversity/" target="_blank"><img src="/wp-content/themes/social-change/img/pinterest.png" alt="Pinterest" /></a>
       </div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

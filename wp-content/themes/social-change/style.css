@@ -2399,7 +2399,7 @@ button#responsive-menu-button {
 }
 
 .site-footer {
-  background-color: #CEFBCE;
+  background-color: #c97431;
   height: 116px;
 }
 
@@ -2474,7 +2474,7 @@ button#responsive-menu-button {
 }
 
 .site-footer .site-info .copy a {
-  color: #4e554c;
+  color: #000;
   font-family: "din-2014", sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
@@ -2482,13 +2482,14 @@ button#responsive-menu-button {
 }
 
 .site-footer .site-info .copy a:hover {
-  color: #000;
+  color: #666;
 }
 
 .site-footer .site-info .site-subtitle {
-  color: #71806f;
+  color: #000;
   font-family: "din-2014", sans-serif;
   margin-left: -180px;
+  opacity: .6;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2541,13 +2542,13 @@ button#responsive-menu-button {
 }
 
 .site-footer .site-info .social a img {
-  opacity: .5;
-  transition: opacity .5s ease-in-out;
+  opacity: .4;
+  transition: opacity .3s ease-in-out;
 }
 
 .site-footer .site-info .social a:hover img {
-  opacity: 1;
-  transition: opacity .35s ease-in-out;
+  opacity: .8;
+  transition: opacity .3s ease-in-out;
 }
 
 .the-circle {
