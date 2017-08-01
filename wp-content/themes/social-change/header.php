@@ -33,10 +33,10 @@
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() || is_home() ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/social-change//img/social-change-logo.png" alt="Social Change" /></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/social-change/img/social-change-logo.png" alt="Social Change" /></a>
 				<h5 class="site-description">For Alumni and Friends of Adler University</h5>
 			<?php else : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="../../wp-content/themes/social-change//img/social-change-logo.png" alt="Social Change" /></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="../../wp-content/themes/social-change/img/social-change-orange.png" alt="Social Change" /></a>
 			<?php
 			endif; ?>
 			<hr />

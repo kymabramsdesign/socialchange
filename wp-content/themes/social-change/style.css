@@ -831,7 +831,7 @@ button#responsive-menu-button {
 }
 
 .responsive-menu-subarrow {
-  left: 136px !important;
+  left: 120px !important;
 }
 
 .responsive-menu-subarrow img {
@@ -910,7 +910,7 @@ button#responsive-menu-button {
 }
 
 .responsive-menu-button.scrolled {
-  top: 12px !important;
+  top: 14px !important;
   -webkit-transition: top .1s ease-in-out !important;
   -o-transition: top .1s ease-in-out !important;
   transition: top .1s ease-in-out !important;
@@ -2797,7 +2797,7 @@ input[type=search] {
 }
 
 .search-top {
-  background-image: url(/wp-content/themes/social-change/img/search.png);
+  background-image: url(/wp-content/themes/social-change/img/search-black.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -2806,7 +2806,7 @@ input[type=search] {
   left: 30px;
   position: fixed;
   top: 62px;
-  width: 23px;
+  width: 22px;
   z-index: 9999997;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -2830,7 +2830,7 @@ input[type=search] {
 }
 
 .search-top.scrolled {
-  top: 26px;
+  top: 28px;
   -webkit-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
@@ -2845,9 +2845,9 @@ input[type=search] {
 }
 
 .widget-area {
-  background-color: #CEFBCE;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #eaeaea;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   display: none;
   left: 0;
   position: fixed;
@@ -2858,9 +2858,9 @@ input[type=search] {
 
 .widget-area .widget {
   margin: 48px 30px 28px 70px;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .31s ease-in-out;
 }
 
 @media screen and (min-width: 1441px) {
@@ -2872,9 +2872,6 @@ input[type=search] {
 @media screen and (max-width: 767px) {
   .widget-area .widget {
     margin: 15px 20px 15px 60px;
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
   }
 }
 
@@ -2885,14 +2882,15 @@ input[type=search] {
 .widget-area .search-field {
   background-color: transparent;
   border: 0;
+  border-bottom: 2px dotted #a20234;
   font-size: 22px;
   height: 50px;
   margin: 0 15px;
   padding: 0 10px;
   width: 80%;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -2900,14 +2898,12 @@ input[type=search] {
     height: 46px;
     margin: 0 0 15px 0;
     width: 100%;
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
   }
 }
 
 .widget-area .search-field:focus {
   border: 0;
+  border-bottom: 2px dotted #a20234;
 }
 
 .widget-area .search-submit {
@@ -2916,9 +2912,9 @@ input[type=search] {
   height: 50px;
   padding: 13px 0 12px;
   width: 14.5%;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -2927,17 +2923,14 @@ input[type=search] {
     margin-bottom: 15px;
     margin-top: 0;
     width: 100%;
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
   }
 }
 
 .widget-area.scrolled .widget {
   margin: 16px 30px 17px 70px;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 @media screen and (min-width: 1441px) {
@@ -2946,29 +2939,12 @@ input[type=search] {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .widget-area.scrolled .widget {
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
-}
-
 .widget-area.scrolled .search-field,
 .widget-area.scrolled .search-submit {
   height: 44px;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-@media screen and (max-width: 767px) {
-  .widget-area.scrolled .search-field,
-  .widget-area.scrolled .search-submit {
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .content-area {
@@ -3066,7 +3042,7 @@ _::-webkit-full-page-media, _:future, :root .center-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 74px;
+  height: 77px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -3123,7 +3099,7 @@ _::-webkit-full-page-media, _:future, :root .center-item {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    height: 74px;
+    height: 77px;
     padding: 0;
     width: 100%;
   }
@@ -3165,7 +3141,7 @@ _::-webkit-full-page-media, _:future, :root .center-item {
 .single-post .preview {
   background-color: transparent;
   position: absolute;
-  top: 74px;
+  top: 77px;
   text-align: center;
   width: 252px;
   z-index: 9999999;
@@ -3207,7 +3183,7 @@ _::-webkit-full-page-media, _:future, :root .center-item {
   -webkit-transition: all .3s ease-in-out .05s;
   -o-transition: all .3s ease-in-out .05s;
   transition: all .3s ease-in-out .05s;
-  height: 74px;
+  height: 77px;
 }
 
 @media screen and (max-width: 767px) {
@@ -3219,7 +3195,7 @@ _::-webkit-full-page-media, _:future, :root .center-item {
 }
 
 .single-post.scrolled .site-header .site-branding {
-  height: 74px;
+  height: 77px;
 }
 
 .single-post.scrolled .site-header .site-branding img {
