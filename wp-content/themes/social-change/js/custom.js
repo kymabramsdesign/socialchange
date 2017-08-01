@@ -140,7 +140,7 @@
           });
           $('.links').css({
             background: 'rgba(0,0,0,.45)',
-              filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#BF000000)',
+            filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#BF000000)',
           });
         }
         else {
@@ -152,10 +152,10 @@
     }
 
     if ( scrollPosition >= contentArea ) {
-      $('.site-header, .search-top, .responsive-menu-button, .widget-area, .single-post').addClass('scrolled');
+      $('.site-header, .search-top, .responsive-menu-button, .widget-area, .single-post, .watermark').addClass('scrolled');
     }
     else {
-      $('.site-header, .search-top, .responsive-menu-button, .widget-area, .single-post').removeClass('scrolled');
+      $('.site-header, .search-top, .responsive-menu-button, .widget-area, .single-post, .watermark').removeClass('scrolled');
     }
 
   });

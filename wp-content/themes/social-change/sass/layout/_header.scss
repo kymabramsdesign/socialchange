@@ -1,5 +1,22 @@
 /* Header Styles*/
 
+.watermark {
+  left: -42px;
+  position: fixed;
+  top: 2px;
+  z-index: 10000;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  &.scrolled {
+    opacity: 0;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+}
+
 .site-header {
   height: 77px;
   position: fixed;
@@ -80,6 +97,8 @@
     }
 
     .site-branding {
+      background-image: none;
+
       img {
         padding: 20px 0 10px;
         width: 170px;
@@ -135,34 +154,31 @@ input[type=search] {
   background-size: 100%;
   cursor: pointer;
   height: 23px;
-  left: 30px;
+  left: -30px;
   position: fixed;
-  top: 62px;
+  top: 28px;
   width: 22px;
   z-index: 9999997;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-
-  @media screen and (min-width:1441px) {
-    left: 2.5vw;
-  }
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 
   @media screen and (max-width:767px) {
     top: 26px;
-    left: 20px;
     -webkit-transition: all .1s ease-in-out;
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
   }
 
   &.scrolled {
+    left: 30px;
     top: 28px;
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 
     @media screen and (max-width:767px) {
+      left: 20px;
       -webkit-transition: all .1s ease-in-out;
       -o-transition: all .1s ease-in-out;
       transition: all .1s ease-in-out;

@@ -762,12 +762,6 @@ button#responsive-menu-button {
   right: 21px !important;
 }
 
-@media screen and (min-width: 1441px) {
-  button#responsive-menu-button {
-    right: 2vw !important;
-  }
-}
-
 @media screen and (max-width: 767px) {
   button#responsive-menu-button {
     right: 11px !important;
@@ -2655,6 +2649,23 @@ button#responsive-menu-button {
 ## Header
 --------------------------------------------------------------*/
 /* Header Styles*/
+.watermark {
+  left: -42px;
+  position: fixed;
+  top: 2px;
+  z-index: 10000;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.watermark.scrolled {
+  opacity: 0;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
 .site-header {
   height: 77px;
   position: fixed;
@@ -2748,6 +2759,10 @@ button#responsive-menu-button {
   }
 }
 
+.site-header.scrolled .site-branding {
+  background-image: none;
+}
+
 .site-header.scrolled .site-branding img {
   padding: 20px 0 10px;
   width: 170px;
@@ -2803,26 +2818,19 @@ input[type=search] {
   background-size: 100%;
   cursor: pointer;
   height: 23px;
-  left: 30px;
+  left: -30px;
   position: fixed;
-  top: 62px;
+  top: 28px;
   width: 22px;
   z-index: 9999997;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-@media screen and (min-width: 1441px) {
-  .search-top {
-    left: 2.5vw;
-  }
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
   .search-top {
     top: 26px;
-    left: 20px;
     -webkit-transition: all .1s ease-in-out;
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
@@ -2830,14 +2838,16 @@ input[type=search] {
 }
 
 .search-top.scrolled {
+  left: 30px;
   top: 28px;
-  -webkit-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
   .search-top.scrolled {
+    left: 20px;
     -webkit-transition: all .1s ease-in-out;
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
