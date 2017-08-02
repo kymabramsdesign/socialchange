@@ -29,6 +29,11 @@
 <div class="watermark">
 	<img src="/wp-content/themes/social-change/img/adler-logo-2.png" alt="Adler University Logo" />
 </div>
+
+<?php if ( is_front_page() || is_home() ) : ?>
+<div class="link-overlay"></div>
+<?php endif; ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'social-change' ); ?></a>
 
@@ -40,6 +45,7 @@
 				<h5 class="site-description">For Alumni and Friends of Adler University</h5>
 				<h1 class="issue-title"><?php echo get_field(issue_title); ?></h1>
       	<p class="issue-date"><?php echo get_field(issue_date); ?></p>
+      	<div class="more"></div>
 			<?php else : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="../../wp-content/themes/social-change/img/social-change-orange.png" alt="Social Change" /></a>
 				<hr />
