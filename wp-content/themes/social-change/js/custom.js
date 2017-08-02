@@ -125,6 +125,34 @@
 
       if ( screenWidth <= 767 ) {
         contentArea = contentArea.top - screenHeight + 25; // matches the margin-top of the .content-area
+        if ( scrollPosition >= (screenHeight/3) ) {
+          $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-orange.png');
+          $('.issue-title, .issue-date').css('color','#fff');
+          $('.site-description').fadeOut();
+          $('.more').css('bottom', '-30px');
+        }
+        else {
+          $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-white.png');
+          $('.site-description').fadeIn();
+          $('.issue-title, .issue-date').css('color','#000');
+        }
+
+        if ( scrollPosition >= 250 ) {
+          $('.site-header, .search-top, .responsive-menu-button, .widget-area, .watermark').addClass('scrolled');
+        }
+        else {
+          $('.site-header, .search-top, .responsive-menu-button, .watermark').removeClass('scrolled');
+
+        }
+
+        if ( scrollPosition >= (screenHeight-77) ) {
+          $('.issue-title, .issue-date').fadeOut(200);
+          $('.carousel .owl-carousel .owl-item .item a').css('opacity', 1);
+        }
+        else {
+          $('.issue-title, .issue-date').fadeIn(400);
+          $('.carousel .owl-carousel .owl-item .item a').css('opacity', 0);
+        }
       }
 
       else {
@@ -148,34 +176,33 @@
             top: (349-scrollPosition)
           });
         }
-      }
+        if ( scrollPosition >= 100 ) {
+          $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-orange.png');
+          $('.site-description').fadeOut();
+          $('.more').css('bottom', '-30px');
+        }
+        else {
+          $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-white.png');
+          $('.site-description').fadeIn();
+        }
 
-      if ( scrollPosition >= 100 ) {
-        $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-orange.png');
-        $('.site-description').fadeOut();
-        $('.more').css('bottom', '-30px');
-      }
-      else {
-        $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-white.png');
-        $('.site-description').fadeIn();
-      }
+        if ( scrollPosition >= 250 ) {
+          $('.site-header, .search-top, .responsive-menu-button, .widget-area, .watermark').addClass('scrolled');
+          $('.link-overlay').fadeIn();
+          $('.issue-title, .issue-date').css('color','#fff');
+        }
+        else {
+          $('.site-header, .search-top, .responsive-menu-button, .watermark').removeClass('scrolled');
+          $('.link-overlay').fadeOut();
+          $('.issue-title, .issue-date').css('color','#000');
+        }
 
-      if ( scrollPosition >= 250 ) {
-        $('.site-header, .search-top, .responsive-menu-button, .widget-area, .watermark').addClass('scrolled');
-        $('.link-overlay').fadeIn();
-        $('.issue-title, .issue-date').css('color','#fff');
-      }
-      else {
-        $('.site-header, .search-top, .responsive-menu-button, .watermark').removeClass('scrolled');
-        $('.link-overlay').fadeOut();
-        $('.issue-title, .issue-date').css('color','#000');
-      }
-
-      if ( scrollPosition >= (titlePosition-300) ) {
-        $('.issue-title, .issue-date').fadeOut(200);
-      }
-      else {
-        $('.issue-title, .issue-date').fadeIn(400);
+        if ( scrollPosition >= (titlePosition-300) ) {
+          $('.issue-title, .issue-date').fadeOut(200);
+        }
+        else {
+          $('.issue-title, .issue-date').fadeIn(400);
+        }
       }
     }
   });
@@ -184,18 +211,6 @@
   // Find out what page a user is on
   var isHome = $('body').hasClass('home');
   var isPost = $('body').hasClass('single');
-  var windowWidth = $(window).width();
-  // Get Global header
-  if ( isHome == false ) {
-
-    if ( windowWidth <= 767 ) {
-
-    }
-
-    else {
-
-    }
-  }
 
   // Get Functions for Single Posts
   if ( isPost == true ) {
@@ -446,6 +461,14 @@
     var windowWidth = $(window).width();
 
     if ( windowWidth <= 767 ) {
+      // Mobile Header
+      $('.watermark').css({
+        'background-image':'url(/wp-content/themes/social-change/img/adler-logo-2.png)',
+        'opacity': 1,
+        'width': '286px',
+        'height': '186px'
+
+      });
       var image1 = $('.image-1').attr('src');
 
       $('.fullscreen-bg').css('display', 'none');

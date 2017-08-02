@@ -9,9 +9,9 @@
   height: 186px;
   top: 3px;
   z-index: 10000;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 
   @media screen and (max-width:767px) {
     background-image: url('/wp-content/themes/social-change/img/adler-logo-3.png');
@@ -29,9 +29,9 @@
 
   &.scrolled {
     opacity: 0;
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
+    -o-transition: opacity .1s ease-in-out;
+    transition: opacity .1s ease-in-out;
     z-index: -2;
   }
 }

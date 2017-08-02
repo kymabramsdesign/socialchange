@@ -42,14 +42,17 @@
 
 
         @media screen and (max-width:767px) {
-          height: 141px;
-          padding-top: 25vh;
+          margin-top: 90px;
+          width: 280px;
+        }
+
+        @media screen and (max-width:340px) {
+          width: 250px;
         }
       }
     }
 
     @media screen and (max-width:767px) {
-      background-color:  $white;
 
       hr {
         margin-bottom: 40px;
@@ -122,6 +125,10 @@
         text-decoration: none;
         text-transform: uppercase;
         width: 100vw;
+
+         @media screen and (max-width:767px) {
+          opacity: 0;
+         }
       }
     }
   }
@@ -258,6 +265,15 @@
   text-align: center;
   top: 225px;
   width: 100%;
+
+  @media screen and (max-width:767px) {
+    padding: 0 15vw;
+    top: 265px;
+  }
+
+  @media screen and (max-width:340px) {
+    padding: 0 10vw;
+  }
 }
 
 .issue-title {
@@ -277,6 +293,13 @@
   -webkit-transition: color .3s ease-in-out;
   -o-transition: color .3s ease-in-out;
   transition: color .8s ease-in-out;
+
+  @media screen and (max-width:767px) {
+    font-size: 50px;
+    letter-spacing: 8px;
+    line-height: 50px;
+    top: 375px;
+  }
 }
 
 .issue-date {
@@ -294,6 +317,9 @@
   -webkit-transition: color .3s ease-in-out;
   -o-transition: color .3s ease-in-out;
   transition: color .8s ease-in-out;
+  @media screen and (max-width:767px) {
+    top: 410px;
+  }
 }
 
 .front-page .main-title {
@@ -628,4 +654,9 @@
   position: fixed;
   bottom: 30px;
   transition: bottom .3s ease-in-out;
+
+  @media screen and (max-width:767px) {
+    background-image: url(/wp-content/themes/social-change/img/more-arrow-grey.png);
+    bottom: 20px;
+  }
 }
