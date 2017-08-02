@@ -786,6 +786,13 @@ button#responsive-menu-button {
   height: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  #responsive-menu-container #responsive-menu-wrapper {
+    background-position: -73px 44px !important;
+    background-size: 500px !important;
+  }
+}
+
 #responsive-menu-container #responsive-menu-title {
   background-color: transparent !important;
   background-image: url("/wp-content/themes/social-change/img/menu-logo.png");
@@ -793,6 +800,18 @@ button#responsive-menu-button {
   background-size: 30px;
   background-position: 15px 1px;
   padding: 4px 0 70px !important;
+}
+
+@media screen and (max-width: 767px) {
+  #responsive-menu-container #responsive-menu-title {
+    padding: 4px 0 50px !important;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  #responsive-menu-container #responsive-menu-title {
+    padding: 4px 0 40px !important;
+  }
 }
 
 #responsive-menu-container #responsive-menu-title a {
@@ -848,14 +867,8 @@ button#responsive-menu-button {
 @media screen and (max-width: 767px) {
   #responsive-menu-container {
     max-width: 100% !important;
-    padding-top: 75px !important;
+    padding-top: 23px !important;
     width: 100% !important;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  #responsive-menu-container {
-    padding-top: 75px !important;
   }
 }
 
@@ -1153,7 +1166,7 @@ button#responsive-menu-button {
   display: none;
   background-color: rgba(0, 0, 0, 0.35);
   height: 210vh;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   z-index: -1;
 }

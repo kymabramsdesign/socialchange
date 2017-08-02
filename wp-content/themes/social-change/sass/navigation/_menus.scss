@@ -35,6 +35,11 @@ button#responsive-menu-button {
 	background-repeat: no-repeat !important;
 	background-position: -141px 44px !important;
 	height: 100%;
+
+	@media screen and (max-width:767px) {
+		background-position: -73px 44px !important;
+		background-size: 500px !important;
+	}
 }
 
 	#responsive-menu-title {
@@ -44,6 +49,14 @@ button#responsive-menu-button {
 		background-size: 30px;
 		background-position: 15px 1px;
 		padding: 4px 0 70px !important;
+
+		@media screen and (max-width:767px) {
+			padding: 4px 0 50px !important;
+		}
+
+		@media screen and (max-width:374px) {
+			padding: 4px 0 40px !important;
+		}
 
 		 a {
 		  color: rgba(255,255,255,.75) !important;
@@ -100,12 +113,8 @@ button#responsive-menu-button {
 
 	@media screen and (max-width: 767px) {
 		max-width: 100% !important;
-		padding-top: 75px !important;
+		padding-top: 23px !important;
 		width: 100% !important;
-	}
-
-	@media screen and (max-width: 340px) {
-		padding-top: 75px !important;
 	}
 
 	#responsive-menu li.responsive-menu-item a {
