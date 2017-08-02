@@ -26,9 +26,7 @@
 <body <?php body_class(); ?>>
 <div class="page-overlay"></div>
 <div class="search-top"></div>
-<div class="watermark">
-	<img src="/wp-content/themes/social-change/img/adler-logo-2.png" alt="Adler University Logo" />
-</div>
+<div class="watermark"></div>
 
 <?php if ( is_front_page() || is_home() ) : ?>
 <div class="link-overlay"></div>

@@ -158,7 +158,6 @@
       else {
         $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-white.png');
         $('.site-description').fadeIn();
-        // $('.more').css('bottom', '30px');
       }
 
       if ( scrollPosition >= 250 ) {
@@ -185,6 +184,18 @@
   // Find out what page a user is on
   var isHome = $('body').hasClass('home');
   var isPost = $('body').hasClass('single');
+  var windowWidth = $(window).width();
+  // Get Global header
+  if ( isHome == false ) {
+
+    if ( windowWidth <= 767 ) {
+
+    }
+
+    else {
+
+    }
+  }
 
   // Get Functions for Single Posts
   if ( isPost == true ) {

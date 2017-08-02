@@ -1,13 +1,31 @@
 /* Header Styles*/
 
 .watermark {
+  background-image: url('/wp-content/themes/social-change/img/adler-logo-2.png');
+  background-repeat: no-repeat;
   left: -40px;
   position: fixed;
+  width: 286px;
+  height: 186px;
   top: 3px;
   z-index: 10000;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+
+  @media screen and (max-width:767px) {
+    background-image: url('/wp-content/themes/social-change/img/adler-logo-3.png');
+    background-size: 100%;
+    left: -42px;
+    opacity: .45;
+    width: 172px;
+    height: 172px;
+
+    img {
+      width: 131%;
+      max-width: 131%;
+    }
+  }
 
   &.scrolled {
     opacity: 0;
