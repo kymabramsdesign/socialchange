@@ -2,6 +2,23 @@
 
 .home {
 
+  .watermark {
+    @media screen and (max-width:767px) {
+      background-image: url('/wp-content/themes/social-change/img/adler-logo-2.png');
+      opacity: 1;
+      width: 286px;
+      height: 186px;
+    }
+
+    &.scrolled {
+      opacity: 0;
+      -webkit-transition: opacity .1s ease-in-out;
+      -o-transition: opacity .1s ease-in-out;
+      transition: opacity .1s ease-in-out;
+      z-index: -2;
+    }
+  }
+
   .site {
      background-image: url('/wp-content/themes/social-change/img/orange-background.jpg');
      background-repeat: repeat-x;
@@ -63,7 +80,7 @@
 
 .carousel {
   @media screen and (max-width: 767px) {
-    height: calc(100vh);
+    height: 100vh;
     margin-left: -20px;
     margin-top: 100vh;
     width: 100vw;
@@ -71,7 +88,7 @@
     .owl-dots {
       position: absolute;
       text-align: center;
-      top: 80vh;
+      top: 85vh;
       width: 100vw;
     }
 
@@ -104,9 +121,10 @@
       width: 100vw;
 
       a {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
         background: rgba(0,0,0,.2);
         color: $white;
         display: -webkit-box;
@@ -121,7 +139,7 @@
         justify-content: center;
         letter-spacing: 8px;
         line-height: 32px;
-        padding: 0 20px 50px;
+        padding: 275px 20px 50px;
         text-decoration: none;
         text-transform: uppercase;
         width: 100vw;
@@ -266,9 +284,13 @@
   top: 225px;
   width: 100%;
 
+
   @media screen and (max-width:767px) {
     padding: 0 15vw;
     top: 265px;
+    -webkit-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
   }
 
   @media screen and (max-width:340px) {
@@ -290,8 +312,8 @@
   text-transform: uppercase;
   top: 436px;
   width: 100%;
-  -webkit-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
+  -webkit-transition: color .8s ease-in-out;
+  -o-transition: color .8s ease-in-out;
   transition: color .8s ease-in-out;
 
   @media screen and (max-width:767px) {
@@ -299,6 +321,9 @@
     letter-spacing: 8px;
     line-height: 50px;
     top: 375px;
+    -webkit-transition: color .4s ease-in-out, top .6s ease-in-out;
+    -o-transition: color .4s ease-in-out, top .6s ease-in-out;
+    transition: color .4s ease-in-out, top .6s ease-in-out;
   }
 }
 
@@ -314,11 +339,15 @@
   text-transform: uppercase;
   top: 506px;
   width: 100%;
-  -webkit-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
+  -webkit-transition: color .8s ease-in-out;
+  -o-transition: color .8s ease-in-out;
   transition: color .8s ease-in-out;
+
   @media screen and (max-width:767px) {
     top: 410px;
+    -webkit-transition: color .4s ease-in-out, top .6s ease-in-out;
+    -o-transition: color .4s ease-in-out, top .6s ease-in-out;
+    transition: color .4s ease-in-out, top .6s ease-in-out;
   }
 }
 

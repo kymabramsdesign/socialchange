@@ -125,32 +125,57 @@
 
       if ( screenWidth <= 767 ) {
         contentArea = contentArea.top - screenHeight + 25; // matches the margin-top of the .content-area
-        if ( scrollPosition >= (screenHeight/3) ) {
+        if ( scrollPosition >= (screenHeight-440) ) {
           $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-orange.png');
-          $('.issue-title, .issue-date').css('color','#fff');
-          $('.site-description').fadeOut();
           $('.more').css('bottom', '-30px');
         }
         else {
           $('.site-branding a img').attr('src', '/wp-content/themes/social-change/img/social-change-white.png');
-          $('.site-description').fadeIn();
-          $('.issue-title, .issue-date').css('color','#000');
         }
 
-        if ( scrollPosition >= 250 ) {
+        if ( scrollPosition >= (screenHeight-390) ) {
+          $('.issue-date').css('color','#fff');
+        }
+        else {
+          $('.issue-date').css('color','#000');
+        }
+
+        if ( scrollPosition >= (screenHeight-340) ) {
+          $('.issue-title').css('color','#fff');
+        }
+        else {
+          $('.issue-title').css('color','#000');
+        }
+
+        if ( scrollPosition >= (screenHeight/2) ) {
+          $('.site-description').fadeOut();
+        }
+        else {
+          $('.site-description').fadeIn();
+        }
+
+        if ( scrollPosition >= (screenHeight/1.75) ) {
           $('.site-header, .search-top, .responsive-menu-button, .widget-area, .watermark').addClass('scrolled');
+          $('.issue-title').css('top', 280);
+          $('.issue-date').css('top', 315);
         }
         else {
           $('.site-header, .search-top, .responsive-menu-button, .watermark').removeClass('scrolled');
-
+          $('.issue-title').css('top', '375px');
+          $('.issue-date').css('top', '410px');
         }
 
         if ( scrollPosition >= (screenHeight-77) ) {
-          $('.issue-title, .issue-date').fadeOut(200);
-          $('.carousel .owl-carousel .owl-item .item a').css('opacity', 1);
+          $('.issue-title, .issue-date').fadeOut(800);
         }
         else {
           $('.issue-title, .issue-date').fadeIn(400);
+        }
+
+        if ( scrollPosition >= (screenHeight-50) ) {
+          $('.carousel .owl-carousel .owl-item .item a').css('opacity', 1);
+        }
+        else {
           $('.carousel .owl-carousel .owl-item .item a').css('opacity', 0);
         }
       }
@@ -461,14 +486,7 @@
     var windowWidth = $(window).width();
 
     if ( windowWidth <= 767 ) {
-      // Mobile Header
-      $('.watermark').css({
-        'background-image':'url(/wp-content/themes/social-change/img/adler-logo-2.png)',
-        'opacity': 1,
-        'width': '286px',
-        'height': '186px'
 
-      });
       var image1 = $('.image-1').attr('src');
 
       $('.fullscreen-bg').css('display', 'none');
