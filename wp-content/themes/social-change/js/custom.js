@@ -41,7 +41,8 @@
       });
       $(this).delay('1000').css({
         'background-image': 'url(/wp-content/themes/social-change/img/exit.png)',
-        'background-size': '90%'
+        'background-size': '90%',
+        'z-index': 9999997
       });
 
     }
@@ -49,7 +50,8 @@
       $('.widget-area').removeClass('visible').slideUp('fast');
       $(this).delay('1000').css({
         'background-image': 'url(/wp-content/themes/social-change/img/search-black.png)',
-        'background-size': '100%'
+        'background-size': '100%',
+        'z-index': 9999
       });
     }
   });
