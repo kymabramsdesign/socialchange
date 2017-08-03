@@ -1772,8 +1772,11 @@ button#responsive-menu-button {
 
 @media screen and (max-width: 767px) {
   .field-notes img {
-    width: 100px;
+    height: 100%;
     margin-left: 15px;
+    max-height: 75px;
+    max-width: 100px;
+    width: 100%;
   }
 }
 

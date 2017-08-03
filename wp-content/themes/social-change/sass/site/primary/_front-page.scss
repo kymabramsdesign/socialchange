@@ -664,8 +664,11 @@
     }
 
     @media screen and (max-width: 767px) {
-      width: 100px;
+      height: 100%;
       margin-left: 15px;
+      max-height: 75px;
+      max-width: 100px;
+      width: 100%;
     }
 
     @media screen and (max-width: 374px) {

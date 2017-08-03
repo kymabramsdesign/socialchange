@@ -48,7 +48,7 @@
     else {
       $('.widget-area').removeClass('visible').slideUp('fast');
       $(this).delay('1000').css({
-        'background-image': 'url(/wp-content/themes/social-change/img/search.png)',
+        'background-image': 'url(/wp-content/themes/social-change/img/search-black.png)',
         'background-size': '100%'
       });
     }
