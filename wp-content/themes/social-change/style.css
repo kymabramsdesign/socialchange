@@ -3835,7 +3835,7 @@ object {
 }
 
 .mejs-container, .mejs-container .mejs-controls {
-  background: #71806f !important;
+  background: #a20234 !important;
 }
 
 .mejs-controls a.mejs-horizontal-volume-slider {
@@ -3847,7 +3847,7 @@ object {
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-current {
-  background: #4e554c !important;
+  background: #a20234 !important;
 }
 
 h6 {
