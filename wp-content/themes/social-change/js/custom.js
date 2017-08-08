@@ -113,10 +113,10 @@
       }
 
       if ( scrollPosition >= contentArea ) {
-        $('.site-header, .search-top, .responsive-menu-button, .widget-area, .single-post, .watermark').addClass('scrolled');
+        $('.site-header, .search-top, .responsive-menu-button, #responsive-menu-container, .widget-area, .single-post, .watermark').addClass('scrolled');
       }
       else {
-        $('.site-header, .search-top, .responsive-menu-button, .widget-area, .single-post, .watermark').removeClass('scrolled');
+        $('.site-header, .search-top, .responsive-menu-button, #responsive-menu-container, .widget-area, .single-post, .watermark').removeClass('scrolled');
       }
     }
 
@@ -157,12 +157,12 @@
         }
 
         if ( scrollPosition >= (screenHeight/1.75) ) {
-          $('.site-header, .search-top, .responsive-menu-button, .widget-area, .watermark').addClass('scrolled');
+          $('.site-header, .search-top, .responsive-menu-button, #responsive-menu-container, .widget-area, .watermark').addClass('scrolled');
           $('.issue-title').css('top', 280);
           $('.issue-date').css('top', 315);
         }
         else {
-          $('.site-header, .search-top, .responsive-menu-button, .watermark').removeClass('scrolled');
+          $('.site-header, .search-top, .responsive-menu-button, #responsive-menu-container, .watermark').removeClass('scrolled');
           $('.issue-title').css('top', '375px');
           $('.issue-date').css('top', '410px');
         }
@@ -214,12 +214,12 @@
         }
 
         if ( scrollPosition >= 250 ) {
-          $('.site-header, .search-top, .responsive-menu-button, .widget-area, .watermark').addClass('scrolled');
+          $('.site-header, .search-top, .responsive-menu-button, #responsive-menu-container, .widget-area, .watermark').addClass('scrolled');
           $('.link-overlay').fadeIn();
           $('.issue-title, .issue-date').css('color','#fff');
         }
         else {
-          $('.site-header, .search-top, .responsive-menu-button, .watermark').removeClass('scrolled');
+          $('.site-header, .search-top, .responsive-menu-button, #responsive-menu-container, .watermark').removeClass('scrolled');
           $('.link-overlay').fadeOut();
           $('.issue-title, .issue-date').css('color','#000');
         }

@@ -29,18 +29,24 @@ button#responsive-menu-button {
 
 #responsive-menu-container {
 	background-color: transparent;
-
-	#responsive-menu-wrapper{
 	background-image: url('/wp-content/themes/social-change/img/bg-circle.png') !important;
 	background-repeat: no-repeat !important;
-	background-position: -141px 44px !important;
-	height: 100%;
+	background-position: -141px 68px !important;
 
 	@media screen and (max-width:767px) {
-		background-position: -73px 44px !important;
+		background-position: -120px 75px !important;
+		background-size: 600px !important;
+	}
+
+	@media screen and (max-width:400px) {
+		background-position: -73px 68px !important;
 		background-size: 500px !important;
 	}
-}
+
+	#responsive-menu-wrapper {
+		background: transparent !important;
+		height: 100%;
+	}
 
 	#responsive-menu-title {
 		background-color: transparent !important;
@@ -141,23 +147,6 @@ button#responsive-menu-button {
 	z-index: 1005;
 }
 
-.responsive-menu-open {
-
-	@media screen and (max-width:767px) {
-		body {
-			overflow: hidden;
-		}
-	}
-
-	.page-overlay {
-		background: rgba(0, 0, 0, 0.52);
-		height: 100vh;
-		-webkit-transition: background .4s ease-in-out;
-		-o-transition: background .4s ease-in-out;
-		transition: background .4s ease-in-out;
-	}
-}
-
 .responsive-menu-button {
 	-webkit-transition: top .3s ease-in-out !important;
 	-o-transition: top .3s ease-in-out !important;
@@ -171,7 +160,29 @@ button#responsive-menu-button {
 	}
 }
 
-// this is just for the call today
-#responsive-menu-additional-content button {
-	display: none;
+.responsive-menu-open {
+
+	body {
+		overflow: hidden;
+	}
+
+	.page-overlay {
+		background: rgba(0, 0, 0, 0.52);
+		height: 100vh;
+		-webkit-transition: background .4s ease-in-out;
+		-o-transition: background .4s ease-in-out;
+		transition: background .4s ease-in-out;
+	}
+}
+
+#responsive-menu-container.scrolled {
+	padding-top: 24px !important;
+}
+
+#responsive-menu {
+	margin-bottom: 56px !important;
+
+	@media screen and (max-height:600px) {
+		margin-bottom: 25px !important;
+	}
 }

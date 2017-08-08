@@ -777,20 +777,28 @@ button#responsive-menu-button {
 
 #responsive-menu-container {
   background-color: transparent;
-}
-
-#responsive-menu-container #responsive-menu-wrapper {
   background-image: url("/wp-content/themes/social-change/img/bg-circle.png") !important;
   background-repeat: no-repeat !important;
-  background-position: -141px 44px !important;
-  height: 100%;
+  background-position: -141px 68px !important;
 }
 
 @media screen and (max-width: 767px) {
-  #responsive-menu-container #responsive-menu-wrapper {
-    background-position: -73px 44px !important;
+  #responsive-menu-container {
+    background-position: -120px 75px !important;
+    background-size: 600px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #responsive-menu-container {
+    background-position: -73px 68px !important;
     background-size: 500px !important;
   }
+}
+
+#responsive-menu-container #responsive-menu-wrapper {
+  background: transparent !important;
+  height: 100%;
 }
 
 #responsive-menu-container #responsive-menu-title {
@@ -896,20 +904,6 @@ button#responsive-menu-button {
   z-index: 1005;
 }
 
-@media screen and (max-width: 767px) {
-  .responsive-menu-open body {
-    overflow: hidden;
-  }
-}
-
-.responsive-menu-open .page-overlay {
-  background: rgba(0, 0, 0, 0.52);
-  height: 100vh;
-  -webkit-transition: background .4s ease-in-out;
-  -o-transition: background .4s ease-in-out;
-  transition: background .4s ease-in-out;
-}
-
 .responsive-menu-button {
   -webkit-transition: top .3s ease-in-out !important;
   -o-transition: top .3s ease-in-out !important;
@@ -923,8 +917,30 @@ button#responsive-menu-button {
   transition: top .1s ease-in-out !important;
 }
 
-#responsive-menu-additional-content button {
-  display: none;
+.responsive-menu-open body {
+  overflow: hidden;
+}
+
+.responsive-menu-open .page-overlay {
+  background: rgba(0, 0, 0, 0.52);
+  height: 100vh;
+  -webkit-transition: background .4s ease-in-out;
+  -o-transition: background .4s ease-in-out;
+  transition: background .4s ease-in-out;
+}
+
+#responsive-menu-container.scrolled {
+  padding-top: 24px !important;
+}
+
+#responsive-menu {
+  margin-bottom: 56px !important;
+}
+
+@media screen and (max-height: 600px) {
+  #responsive-menu {
+    margin-bottom: 25px !important;
+  }
 }
 
 /*--------------------------------------------------------------
