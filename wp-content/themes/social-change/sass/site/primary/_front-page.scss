@@ -152,6 +152,34 @@
   }
 }
 
+/* ----------- iPhone 5 and 5S ----------- */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .carousel {
+      height: 568px;
+      margin-left: -20px;
+      margin-top: 568px;
+      width: 320px;
+
+      .owl-dots {
+        top: 85%;
+        width: 100%;
+      }
+
+      .owl-carousel .owl-item .item {
+        height: 568px;
+        width: 320px;
+
+        a {
+          height: 568px;
+          width: 320px;
+        }
+      }
+    }
+}
+
 .content-area.front-page {
   margin-top: 229px;
 
@@ -176,8 +204,15 @@
   -ms-flex-align: center;
   align-items: center;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 110vh; /* Must match the .image-container*/

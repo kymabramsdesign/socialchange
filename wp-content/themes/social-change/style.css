@@ -1195,6 +1195,28 @@ button#responsive-menu-button {
   }
 }
 
+/* ----------- iPhone 5 and 5S ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .carousel {
+    height: 568px;
+    margin-left: -20px;
+    margin-top: 568px;
+    width: 320px;
+  }
+  .carousel .owl-dots {
+    top: 85%;
+    width: 100%;
+  }
+  .carousel .owl-carousel .owl-item .item {
+    height: 568px;
+    width: 320px;
+  }
+  .carousel .owl-carousel .owl-item .item a {
+    height: 568px;
+    width: 320px;
+  }
+}
+
 .content-area.front-page {
   margin-top: 229px;
 }
@@ -1221,8 +1243,15 @@ button#responsive-menu-button {
   -ms-flex-align: center;
   align-items: center;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 110vh;
@@ -2455,6 +2484,7 @@ button#responsive-menu-button {
 
 .article-container .article-list {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
@@ -2480,6 +2510,10 @@ button#responsive-menu-button {
 @media screen and (max-width: 900px) {
   .article-container .article-list {
     -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
     justify-content: space-around;
   }
 }

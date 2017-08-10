@@ -28,6 +28,7 @@
 
   .article-list {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
@@ -52,6 +53,10 @@
 
     @media screen and (max-width: 900px) {
       -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
       justify-content: space-around;
     }
 
