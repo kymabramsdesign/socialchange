@@ -152,41 +152,41 @@
   }
 }
 
-/* ----------- iPhone 5 and 5S ----------- */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .carousel {
-      height: 568px;
-      margin-left: -20px;
-      margin-top: 568px;
-      width: 320px;
+// /* ----------- iPhone 5 and 5S ----------- */
+// @media only screen
+//   and (min-device-width: 320px)
+//   and (max-device-width: 568px)
+//   and (-webkit-min-device-pixel-ratio: 2) {
+//     .carousel {
+//       height: 568px;
+//       margin-left: -20px;
+//       margin-top: 568px;
+//       width: 320px;
 
-      .owl-dots {
-        top: 85%;
-        width: 100%;
-      }
+//       .owl-dots {
+//         top: 85%;
+//         width: 100%;
+//       }
 
-      .owl-carousel .owl-item .item {
-        height: 568px;
-        width: 320px;
+//       .owl-carousel .owl-item .item {
+//         height: 568px;
+//         width: 320px;
 
-        a {
-          height: 568px;
-          width: 320px;
-        }
-      }
-    }
-}
+//         a {
+//           height: 568px;
+//           width: 320px;
+//         }
+//       }
+//     }
+// }
 
-.content-area.front-page {
-  margin-top: 229px;
+// .content-area.front-page {
+//   margin-top: 229px;
 
-  @media screen and (max-width:767px) {
-    margin-top: 280px;
-  }
-}
+//   @media screen and (max-width:767px) {
+//     margin-top: 280px;
+//   }
+// }
 
 .link-overlay {
   display: none;
